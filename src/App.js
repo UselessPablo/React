@@ -6,17 +6,17 @@ import Navbar from './components/Navbar';
 import './index.css'
 
 function App() {
-const Saludo = 'Bienvenidos';
+  const Saludo = 'Bienvenidos';
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
         <ItemListContainer Valor1={Saludo} >
           Esta aplicación esta en desarrollo
-      </ItemListContainer>
+        </ItemListContainer>
       </header>
     </div>
-  
+
   );
 }
 
