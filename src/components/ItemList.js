@@ -14,15 +14,15 @@ const ItemList = () => {
   }, [datos])
 
   return (
-
+    
+    
     <div className="cards">
       {datos.map((product, i) =>
         <h2 key={i}>
           <p>{product.nombre}</p>
           <img className="imagenes" src={product.img} alt='logo'></img>
-          {product.precio}
-
-          <Link Link to={`/descripcion/${product.id}`}> <button >Detalle</button></Link>
+          <Link to={`/descripcion/${product.id}`}> <button >Detalle</button></Link>
+        
         </h2>
       )
       }

@@ -11,44 +11,51 @@ const Productos = [
         nombre: 'Mate',
         'cantidad': 6,
         'img': img1,
-        'precio': '$600'
+        'precio': '$600',
+        'detalles': 'Mate de Cerámica pintado a mano'
     }, {
         'id': 2,
         nombre: 'Mate',
         'cantidad': 6,
         'img': img2,
-        'precio': '$600'
+        'precio': '$650',
+    'detalles': 'Mates de Cerámica pintados a mano y con Calcos'
     }, {
         'id': 3,
         nombre: 'Mate',
         'cantidad': 6,
         'img': img3,
-        'precio': '$600'
+        'precio': '$650',
+    'detalles': 'Mates de Cerámica pintados a mano y con Calcos'
     }, {
         'id': 4,
         nombre: 'Maceta',
         'cantidad': 2,
         'img': img4,
-        'precio': '$600'
+        'precio': '$1200',
+    'detalles': 'Maceta colgante de Cerámica pintada a mano'
     }, {
         'id': 5,
         nombre: 'Maceta',
         'cantidad': 1,
         'img': img5,
-        'precio': '$600'
+        'precio': '$1200',
+    'detalles': 'Maceta con patas de Cerámica pintada a mano'
     }, {
         'id': 6,
         nombre: 'Maceta',
         'cantidad':3,
        'img':img6,
-        'precio':'$600'
+        'precio':'$1200',
+    'detalles': 'Maceta con patas de Cerámica pintada a mano'
     },
     {
         'id': 7,
         nombre:'Maceta',
         cantidad:3,
         'img':img7,
-        'precio': '$800'
+        'precio': '$1200',
+   'detalles': 'Maceta con patas de Cerámica pintada a mano'
     }
 ]
  
@@ -56,16 +63,16 @@ const Productos = [
     const task = new Promise((resolve, reject) => {
         resolve(nombre?Productos.find(product => product.nombre ===  'nombre' ):Productos);    
     });  
-console.log(nombre);
+
     return task
    
 }
 
-
 export const GetProduct = (id) => {
-    const task= new Promise((resolve, reject) => {
+    const productid = new Promise((resolve, reject) => {
             resolve(Productos.find(product => product.id === Number(id)));
-     console.log(id);
+       
     });
-return task
+return  productid
 }
+

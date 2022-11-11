@@ -12,7 +12,7 @@ const Counter = ({stock}) => {
     }
     return (
         <div className='counter'>
-            <p>{Valor}</p>
+            <span>{Valor}</span>
             <button className='valores' onClick={() => setValor(Valor + 1)}>+</button>
             <button className='valores' onClick={() => setValor(Valor - 1)}> -</button>
         </div>

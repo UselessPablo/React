@@ -46,6 +46,7 @@ button{
   border-radius: 1.2rem;
   border-style: none;
   margin: 15px;
+  background-color: rgba(30, 207, 30, 0.315);
 }
 .small{
  font-size: 0.5rem;
@@ -87,4 +88,18 @@ p{
 }
 .cart{
   width: 40px;
+}
+.item {
+ justify-content: center;
+  border: 1px solid;
+ text-align: center;
+ width: 400px;
+margin-left: 35%;
+border-radius: 0.5rem 3rem 1rem ;
+box-shadow: 2px 4px rgb(85, 201, 85);
+}
+.imagenes2{
+  width: 200px;
+  border-radius: 1rem 6rem 1rem 6rem;
+  
 }
