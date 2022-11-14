@@ -1,12 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import Item from '../components/Item';
+import { GetProductname } from '../components/Servicios/Productos';
+import { useEffect, useState } from 'react';
 
 export const Page2 = () => {
-  const {id} = useParams();
+ 
+  
   return (
     <div>
-      <h2> {id} </h2> 
+      <h2> </h2> 
      <Item/>
     </div>
   )

@@ -4,59 +4,52 @@ import img3 from '../../assets/img/mate3.webp'
 import img4 from '../../assets/img/maceta1.webp'
 import img5 from '../../assets/img/maceta2.webp'
 import img6 from '../../assets/img/maceta3.webp'
-import img7 from '../../assets/img/maceta4.webp'
+
 const Productos = [
     {
         'id': 1,
         nombre: 'Mate',
         'cantidad': 6,
         'img': img1,
-        'precio': '$600',
+        'precio': 600,
         'detalles': 'Mate de Cerámica pintado a mano'
     }, {
         'id': 2,
-        nombre: 'Mate',
+        nombre: 'Matesx3',
         'cantidad': 6,
         'img': img2,
-        'precio': '$650',
+        'precio': 650,
     'detalles': 'Mates de Cerámica pintados a mano y con Calcos'
     }, {
         'id': 3,
-        nombre: 'Mate',
+        nombre: 'Matex4',
         'cantidad': 6,
         'img': img3,
-        'precio': '$650',
+        'precio': 650,
     'detalles': 'Mates de Cerámica pintados a mano y con Calcos'
     }, {
         'id': 4,
         nombre: 'Maceta',
         'cantidad': 2,
         'img': img4,
-        'precio': '$1200',
+        'precio': 1200,
     'detalles': 'Maceta colgante de Cerámica pintada a mano'
     }, {
         'id': 5,
         nombre: 'Maceta',
         'cantidad': 1,
         'img': img5,
-        'precio': '$1200',
+        'precio':  1200,
     'detalles': 'Maceta con patas de Cerámica pintada a mano'
     }, {
         'id': 6,
         nombre: 'Maceta',
         'cantidad':3,
        'img':img6,
-        'precio':'$1200',
+        'precio': 1200,
     'detalles': 'Maceta con patas de Cerámica pintada a mano'
     },
-    {
-        'id': 7,
-        nombre:'Maceta',
-        cantidad:3,
-        'img':img7,
-        'precio': '$1200',
-   'detalles': 'Maceta con patas de Cerámica pintada a mano'
-    }
+
 ]
  
  export const GetProducts = (nombre) => {
@@ -65,7 +58,6 @@ const Productos = [
     });  
 
     return task
-   
 }
 
 export const GetProduct = (id) => {
@@ -75,4 +67,11 @@ export const GetProduct = (id) => {
     });
 return  productid
 }
-
+export const GetProductname = (nombre) => {
+    const productname = new Promise((resolve, reject) => {
+        resolve(Productos.find(product => product.nombre === nombre))
+        resolve(Productos.find(product => product.img))
+       
+    });
+    return productname
+}

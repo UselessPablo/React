@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { GetProduct } from './Servicios/Productos';
 const ItemDetail = () => {
 
-  // console.log(useParams);
     const{id} = useParams()
   console.log(id);
   

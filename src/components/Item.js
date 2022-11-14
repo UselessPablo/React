@@ -1,10 +1,15 @@
 import React from 'react'
+import ItemDetailContainer from './ItemDetailContainer';
+import ItemList from './ItemList';
 
-
-const Item = ({mates}) => {
+const Item = ({Itemlist}) => {
+  use
+  
   return (
-    <div>Item
-          {/* <p>{mates.nombre}</p>  */}
+    <div>
+        
+         {/* {ItemList.name}  */}
+         <ItemDetailContainer/>
     </div>
   )
 }

@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro:wght@400;500&family=Roboto:wght@100;400&display=swap');
-body {
-  margin: 0;
+body, html{
+  margin: 3px;
   font-family: 'maven pro';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+background: linear-gradient(354deg, rgba(33, 163, 152, 0.267) 6%, rgba(119, 245, 169, 0.329) 55%);
+height: 100%;
+
 }
 a{
   text-decoration: none;
+  color: black;
+  font-weight: 600;
 }
 h1{
   font-family: 'maven pro';
@@ -75,6 +80,7 @@ text-align: center;
   width: auto;
   flex-wrap: wrap;
   border-radius: 12rem;
+  justify-content: space-evenly;
 }
 
 p{
@@ -102,4 +108,24 @@ box-shadow: 2px 4px rgb(85, 201, 85);
   width: 200px;
   border-radius: 1rem 6rem 1rem 6rem;
   
+}
+.active{
+  color: rgba(150, 133, 133, 0.308);
+}
+.footer{
+  background-color: rgba(41, 139, 106, 0.486);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+}
+.center2{
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 50px;
 }

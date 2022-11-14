@@ -13,8 +13,8 @@ const Navbar = () => {
             <div className="navbar">
                 <h1>Huma</h1>
                 <li><NavLink to='/'>Home</NavLink></li>
-                 <li>  <NavLink to='/page2/Productos'>Mates</NavLink></li>
-                 <li>  <NavLink to='/page2/Productos'>Macetas</NavLink></li>
+                 <li>  <NavLink to='/productos/Mates'>Mates</NavLink></li>
+                 <li>  <NavLink to='/page2/detalle'>Macetas</NavLink></li>
                  <li><Link> Info</Link></li>
             <CartWidget />
            
