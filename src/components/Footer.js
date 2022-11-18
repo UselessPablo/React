@@ -9,6 +9,7 @@ const Footer = () => {
       <img className='cart' src={Whatsapp} alt="Carrito" />
           <img className='cart' src={Instagram} alt="Carrito" />
           <img className='cart' src={Facebook} alt="Carrito" />
+    <p>Copyright Pablo A.</p>
     </div>
   )
 }

@@ -2,36 +2,34 @@ import React from 'react'
 import {useState} from 'react';
 
 
-const Counter = ({stock}) => {
-  const [Valor, setValor] = useState(0);
-    const onAdd = ()=> {
+ const Counter = ({stock,onAdd,initial}) => {
+  const [Valor, setValor] = useState(initial);
+      
+  const onAdds = ()=> {
         if (Valor < stock) {
            setValor(Valor + 1)
         }
     }
     const onRest = ()=>{
-        if (Valor > 1) {
+        if (Valor > 0) {
            setValor(Valor-1)
         }
     }
-  const BotonStock =({Cambios, texto})=>{
-      return (
-          <div className='counter'>
-              <button className='valores' onClick={Cambios}>{texto}</button>
-          </div>
-      )
-  }
- 
+
    return(
-    <>
+    
     <div>
-           <BotonStock texto = '-' Cambios={onRest}/>
+           <button onClick={onRest}> -</button>
            <span>{Valor}</span>
-           <BotonStock texto= '+' Cambios={onAdd}/>
+           <button onClick={onAdds}>+ </button>  
+            <button onClick={()=>onAdd(Valor)}>Agregar</button>
+          
        </div>
-       </>
+ 
+         
+ 
    )
-            
+           
   
 }
 

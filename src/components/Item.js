@@ -1,17 +1,17 @@
 import React from 'react'
-import ItemDetailContainer from './ItemDetailContainer';
-import ItemList from './ItemList';
 
-const Item = ({Itemlist}) => {
-  use
-  
+import {NavLink} from 'react-router-dom';
+
+
+const Item = ({info}) => {
+
   return (
-    <div>
-        
-         {/* {ItemList.name}  */}
-         <ItemDetailContainer/>
+    <div className='cards slideInLeft'>  
+      <img className="imagenes" src={info.img} alt='xx'></img>
+      <p className='precio'>${info.precio}</p>  
+      <NavLink to={`/detalle/${info.id}`}> <button className='info'>Info</button></NavLink> 
     </div>
   )
 }
 
-export default Item
+export default Item;

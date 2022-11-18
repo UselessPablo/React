@@ -1,8 +1,8 @@
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Date from './Date';
 import '../index.css'
-import CartWidget from './CartWidget';
+import Cart from './CartWidget';
 
 
 const Navbar = () => {
@@ -11,12 +11,11 @@ const Navbar = () => {
        <nav>
            <div className="center"><Date /> </div>
             <div className="navbar">
-                <h1>Huma</h1>
+                <h1 className='pulse'>Huma</h1>
                 <li><NavLink to='/'>Home</NavLink></li>
-                 <li>  <NavLink to='/productos/Mates'>Mates</NavLink></li>
-                 <li>  <NavLink to='/page2/detalle'>Macetas</NavLink></li>
-                 <li><Link> Info</Link></li>
-            <CartWidget />
+                 <li><NavLink to='/category/mate'>Mates</NavLink></li>
+                 <li><NavLink to='/category/maceta'>Macetas</NavLink></li>
+                 <NavLink to='Cart'><Cart /> </NavLink>  
            
             </div>
        

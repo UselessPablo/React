@@ -1,4 +1,4 @@
-import Router from './app/Router';
+import Router from './utils/Router';
 import CartProvider from './components/CartContext';
 
 import './index.css'

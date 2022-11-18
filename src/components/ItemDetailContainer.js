@@ -1,34 +1,35 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import { GetProduct } from './Servicios/Productos';
-import { useEffect, useState } from 'react';
-import CartWidget from './CartWidget';
-import Counter from './Counter';
-import { Link } from 'react-router-dom';
+import ItemDetail from './ItemDetail'
+import { Productos } from './Servicios/Productos';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 
-const ItemDetailContainer = () => {
- const { id } = useParams();
-    const [mate, setMate] = useState([])
+export const ItemDetailContainer = () => {
+  const  [data, setData]= useState([]);
+    const { detalleid } = useParams();
+ 
+  
     useEffect(() => {
-        GetProduct(id).then(data => {
-            setMate(data) 
-        })
-    },[id])
+       
     
-    return (
-         <div className='item'>
-            <h1>{mate.nombre}</h1>
-            <img className="imagenes2" src={mate.img} alt='mate'></img>
-            <p> {mate.detalles}</p>
-             <CartWidget/><Counter stock= {mate.cantidad}/>
-             <p>${mate.precio}</p> 
-            <Link to={`/compras/${mate.nombre}`} ><button>Comprar</button></Link>    
-        
-        </div>
-        )
+    const task = new Promise(resolve => {
+            
+      setTimeout(() => {
+                resolve(Productos);
+            }, 500)
+          });
+        task.then(res => setData(res.find(Productos => Productos.id === parseInt(detalleid))));
 
-    }
+    }, [detalleid])
+
+  
+    return (
+   
+    <ItemDetail data={data}/>
+  )
+}
+
 
 
 export default ItemDetailContainer;

@@ -1,25 +1,34 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { GetProduct } from './Servicios/Productos';
-const ItemDetail = () => {
+import Counter from './Counter'
+import {Link} from 'react-router-dom';
+import {useState} from 'react';
+import {UseCartContex} from './CartContext';
 
-    const{id} = useParams()
-  console.log(id);
+const ItemDetail = ({data}) => {
+  const [goToCart, setGoToCart] = useState(false);  
+    const {addProduct} = UseCartContex();
   
-  const [detail, setDetail] = useState([])
-  useEffect(() => {
-    GetProduct().then(data => {
-      setDetail(data)
-    });
-  return {detail};
-  },);
+ 
+  const onAdd = (cantidad) => {
+    setGoToCart(true);
+    addProduct(data, cantidad)
+  }
+
   return (
-    <div>ItemDetail
-     <h2>{detail.cantidad}</h2>  
-      <img className="imagenes" src={detail.img} alt='logo'></img>
+    <div className='center2 slideInLeft'>
+      <img className="imagenes2" src={data.img} alt='xx'></img>
+      <p>${data.precio}</p>
+      <p>{data.detalles}</p>
+      <button className='seguir'><Link to='/'>Seguir Comprando</Link></button>
+   {
+      goToCart
+          ? <Link to='/cart' className='finish'><h2>Finalizar compra</h2> </Link>
+      :<Counter stock={data.cantidad} onAdd={onAdd} initial={-0} />
+      }
+      
     </div>
   )
 }
+
 
 export default ItemDetail;
