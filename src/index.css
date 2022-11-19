@@ -44,7 +44,7 @@ li{
   width: 200px;
   border-radius: 15rem 3rem 3rem 15rem;
   margin-left: 40px;
-box-shadow: 5px 5px 5px rgb(133, 207, 133);
+box-shadow: 5px 5px 5px 5px rgb(116, 148, 116);
 }
 button{
   cursor: pointer;
@@ -150,8 +150,8 @@ span{
   font-size: 1rem;
 }
 .imagenes3{
-  width: 120px;
-  border-radius: 10rem 1rem 10rem 1rem;
+  width: 180px;
+  border-radius: 15rem 1rem 1rem 15rem;
 }
 .popup{
   background-color: rgb(233, 105, 45);
@@ -240,7 +240,7 @@ span{
   -webkit-animation-name: pulse;
   animation-name: pulse;
   -webkit-animation-duration: 1s;
-  animation-duration: 2s;
+  animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -252,7 +252,7 @@ span{
   }
   50% {
   -webkit-transform: scale3d(1.05, 1.05, 1.05);
-  transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.10, 1.10, 1.10);
   }
   100% {
   -webkit-transform: scale3d(1, 1, 1);
@@ -266,7 +266,7 @@ span{
   }
   50% {
   -webkit-transform: scale3d(1.05, 1.05, 1.05);
-  transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.10, 1.10, 1.10);
   }
   100% {
   -webkit-transform: scale3d(1, 1, 1);

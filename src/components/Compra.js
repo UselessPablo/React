@@ -2,7 +2,7 @@ import React from 'react'
 
 const Compra = () => {
   return (
-    <div className='center4'>con que vas a pagar</div>
+    <div className='center4'>PAGA</div>
   )
 }
 

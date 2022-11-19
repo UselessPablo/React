@@ -15,7 +15,7 @@ const ItemDetail = ({data}) => {
   }
 
   return (
-    <div className='center2 slideInLeft'>
+    <div className='center2 '>
       <img className="imagenes2" src={data.img} alt='xx'></img>
       <p>${data.precio}</p>
       <p>{data.detalles}</p>
