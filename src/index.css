@@ -12,6 +12,7 @@ a{
   text-decoration: none;
   color: rgb(13, 153, 0);
   font-weight: 600;
+  margin-right: 15px;
 }
 h1{
   font-family: 'maven pro';
@@ -22,7 +23,7 @@ h1{
   margin-bottom: 30px;
  
 }
-h2{
+h2, h3{
   text-align: center;
   font-size: 1rem;
   
@@ -38,6 +39,7 @@ li{
   justify-content: center;
   width: 100%;
   font-size: 1.2rem;
+  margin-bottom: 40px;
 
 }
 .imagenes{
@@ -86,6 +88,7 @@ text-align: center;
   width: auto;
   justify-content: space-evenly;
 margin-top: 50px;
+align-items: center;
 }
 
 p{
@@ -116,7 +119,7 @@ box-shadow: 2px 4px rgb(85, 201, 85);
   
 }
 .active{
-  color: rgba(150, 133, 133, 0.308);
+  color: rgba(255, 95, 2, 0.884);
 }
 .footer{
   margin-top: 60px;
@@ -237,7 +240,8 @@ span{
     font-weight: 600;
   }
        .pulse {
-  -webkit-animation-name: pulse;
+  margin-right: 40px;
+        -webkit-animation-name: pulse;
   animation-name: pulse;
   -webkit-animation-duration: 1s;
   animation-duration: 3s;
@@ -273,3 +277,36 @@ span{
   transform: scale3d(1, 1, 1);
   }
   } 
+  .compra{
+    display: flex;
+    margin-left:3%;
+    padding: 37px;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .formulario{
+   margin-top: 50px;
+    display: flex;
+   width: 90%;
+   justify-content: center;
+  }
+  input{
+    width: 250px;
+    height: 20px;
+    border-radius: 1rem;
+    background-color: rgba(60, 255, 0, 0.336);
+    margin-top: 7px;
+    text-align: start;
+    border: none;
+    
+  }
+  form{
+    text-align: center;
+    font-weight: 600;
+    color: rgb(255, 72, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
