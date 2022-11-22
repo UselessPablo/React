@@ -64,13 +64,13 @@ setComprador({...comprador, [name]:value})
       <div className='formulario'>
       <form >
         <label>Nombre</label>
-        <input   name='name' placeholder='Nombre' onChange={inputCapture} value={comprador.name} required />
+        <input   name='name' placeholder='Nombre' onChange={inputCapture} value={comprador.name} />
         <label>Email</label>
-          <input name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} required/>
+          <input name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
         <label>Dirección</label>
-          <input name='direccion' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} required />
+          <input name='direccion' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
         <label>Teléfono</label>
-          <input name='telefono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} required={true}/>
+          <input name='telefono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           
       </form>
         <button className='compra' onClick={handleClick}>Confirmar Compra</button> 
