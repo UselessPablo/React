@@ -2,7 +2,6 @@ import React from 'react'
 import Whatsapp from '../assets/img/logos/whatsapp.png'
 import Instagram from '../assets/img/logos/instagram.png'
 import Facebook from '../assets/img/logos/facebook.png'
-import {Link} from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Footer = () => {

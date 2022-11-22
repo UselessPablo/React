@@ -6,11 +6,11 @@ import '../index.css'
 
  const Layout = () => {
   return (
-    <div>
+    <>
         <Navbar/>
         <Outlet/>
       <Footer />
-    </div>
+    </>
   )
 }
 export default Layout;
