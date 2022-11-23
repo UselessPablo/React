@@ -11,6 +11,7 @@ const { removeProduct } = UseCartContex();
         <img className="imagenes3" src={product.img} alt='xx'></img>
         <p>subtotal : $ {product.cantidad * product.precio}</p>
         <button onClick={()=> removeProduct(product.id) }>Borrar</button>
+        
     </div>
   )
 }
