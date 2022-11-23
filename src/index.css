@@ -44,12 +44,14 @@ border: solid;
     border-color: rgb(0 0 0 / 0%);
     border-radius: 20rem 3rem 3rem 20rem;
     box-shadow: 10px 10px 10px 10px rgb(109, 96, 129);
-}
+  background-color: rgba(135, 64, 201, 0.596);
+  }
 nav{
   width: 80%;
   display: flex;
   justify-content: center;
   height: 130px;
+ 
 }
 .imagenes{
   width: 200px;
@@ -65,7 +67,7 @@ button{
   font-weight: 600;
   width: 60px;
   padding: 5px;
-  color:rgb(240, 243, 40);
+  color:rgb(0, 0, 0);
   border-radius: 1.2rem;
   border-style: none;
   margin: 15px;
@@ -130,7 +132,7 @@ box-shadow: 2px 4px rgb(85, 201, 85);
   
 }
 .active{
-  color: rgba(255, 230, 2, 0.884);
+  color: rgba(255, 237, 78, 0.884);
 }
 .footer{
   margin-top: 60px;
@@ -354,7 +356,7 @@ border-radius: 1rem;
 text-align: center;
 }
 
-.dropdowncontent a:hover {background-color: rgb(152, 109, 177);
+.dropdowncontent a:hover {background-color: rgba(152, 109, 177, 0.5);
 width: 83%;
 border-radius: 1.4rem;
 }

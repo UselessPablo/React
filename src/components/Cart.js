@@ -28,15 +28,16 @@ setComprador({...comprador, [name]:value})
 
 }
 
- const handleClick = ()=>{
-   const db = getFirestore();
+ const handleClick = (e)=>{
+   e.preventDefault();
+  const db = getFirestore();
   const ordersCollection = collection(db, 'order');
   addDoc(ordersCollection, comprador)
   .then(({id})=> console.log(id));
- alert('Sus datos fueron ingresados correctamente, Gracias');
- setTimeout(() => {
+//  alert('Sus datos fueron ingresados correctamente, Gracias');
+//  setTimeout(() => {
   setComprador({...buyer,...order})
-}, 5000);
+// }, 3000);
 
  }
  
@@ -44,12 +45,13 @@ setComprador({...comprador, [name]:value})
         return(
             <>
                 <div className='center2'>
+              <p>Sus datos se ingresaron correctamente, el envio esta en proceso</p>
                 <Link to='/'>Seguir comprando</Link>
             </div>
             </>
         );
     }
-      <p>Sus datos se ingresaron correctamente, el envio esta en proceso</p>
+     
     
   
   
@@ -62,7 +64,7 @@ setComprador({...comprador, [name]:value})
       
       <h3> Ingrese sus datos para el envio</h3>
       <div className='formulario'>
-      <form >
+      <form action={handleClick}>
         <label>Nombre</label>
         <input   name='name' placeholder='Nombre' onChange={inputCapture} value={comprador.name} />
         <label>Email</label>
@@ -73,6 +75,7 @@ setComprador({...comprador, [name]:value})
           <input name='telefono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           
       </form>
+
         <button className='compra' onClick={handleClick}>Confirmar Compra</button> 
         <h3 className='center2'> Total: $ {totalPrice()}</h3>
       </div>
