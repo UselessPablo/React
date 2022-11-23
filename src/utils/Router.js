@@ -5,7 +5,7 @@ import Cart from "../components/Cart";
 import ItemListContainer from "../components/ItemListContainer";
 import Compra from '../components/Compra'
 const Router = () => (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route element={<Layout />}>
                 <Route path='/detalle/:detalleid' element={<ItemDetailContainer/>} />
@@ -17,5 +17,6 @@ const Router = () => (
             </Route>
         </Routes>
     </BrowserRouter>
+
 )
 export default Router;

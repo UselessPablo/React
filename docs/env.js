@@ -1,3 +1,3 @@
 
 
-PUBLIC_URL = /uselesspablo.github.io/React
+PUBLIC_URL = /React

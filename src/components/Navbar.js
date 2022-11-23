@@ -12,7 +12,7 @@ const Navbar = () => {
            <div className="center"><Date /> </div>
             <div className="navbar"> 
                 <h1 className='pulse'>Huma</h1>
-                <li><NavLink to='/'>Home</NavLink></li>
+           <li><NavLink to='/'>Home</NavLink></li> 
                  <div className='dropdown'>
                      <button className='prods'> Productos</button>
                     <div className='dropdowncontent'>
