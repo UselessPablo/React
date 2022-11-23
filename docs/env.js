@@ -1,3 +1,3 @@
-PUBLIC_URL: /React
-REACT_APP_PROYECT_ID = React2236
 
+
+PUBLIC_URL = /React
