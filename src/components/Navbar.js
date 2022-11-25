@@ -9,7 +9,7 @@ const Navbar = () => {
   
      return (
        <nav>
-           <div className="center"><Date /> </div>
+           <div className="date"><Date /> </div>
             <div className="navbar"> 
                 <h1 className='pulse'>Huma</h1>
            <li><NavLink to='/'>Home</NavLink></li> 

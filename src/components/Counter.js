@@ -1,10 +1,12 @@
+
 import React from 'react'
 import {useState} from 'react';
 
 
+
  const Counter = ({stock,onAdd,initial}) => {
   const [Valor, setValor] = useState(initial);
-      
+     
   const onAdds = ()=> {
         if (Valor < stock) {
            setValor(Valor + 1)

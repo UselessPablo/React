@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.448cb4d4.css",
-    "main.js": "/static/js/main.b4982ff4.js",
-    "static/js/787.93c83cab.chunk.js": "/static/js/787.93c83cab.chunk.js",
-    "static/media/whatsapp.png": "/static/media/whatsapp.fdd4b7007148bcf6ce48.png",
-    "static/media/instagram.png": "/static/media/instagram.9836f120000f0e2b6e3c.png",
-    "static/media/cart.svg": "/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
-    "index.html": "/index.html",
-    "main.448cb4d4.css.map": "/static/css/main.448cb4d4.css.map",
-    "main.b4982ff4.js.map": "/static/js/main.b4982ff4.js.map",
-    "787.93c83cab.chunk.js.map": "/static/js/787.93c83cab.chunk.js.map"
+    "main.css": "/React/static/css/main.448cb4d4.css",
+    "main.js": "/React/static/js/main.9a8e3ae4.js",
+    "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
+    "static/media/whatsapp.png": "/React/static/media/whatsapp.fdd4b7007148bcf6ce48.png",
+    "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
+    "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
+    "index.html": "/React/index.html",
+    "main.448cb4d4.css.map": "/React/static/css/main.448cb4d4.css.map",
+    "main.9a8e3ae4.js.map": "/React/static/js/main.9a8e3ae4.js.map",
+    "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.448cb4d4.css",
-    "static/js/main.b4982ff4.js"
+    "static/js/main.9a8e3ae4.js"
   ]
 }

@@ -1,15 +1,22 @@
 import React from 'react'
 import Counter from './Counter'
-import {Link} from 'react-router-dom';
-import {useState} from 'react';
-import {UseCartContex} from './CartContext';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { UseCartContex } from './CartContext';
 
 
-const ItemDetail = ({data}) => {
-  const [goToCart, setGoToCart] = useState(false);  
-    const {addProduct} = UseCartContex();
-  
- 
+const ItemDetail = ({ data }) => {
+  const [goToCart, setGoToCart] = useState(false);
+  const { addProduct, isInCart } = UseCartContex();
+
+  const getStock = () => {
+    const item = isInCart(data.id)
+    if (item)
+      return data.cantidad - item.cantidad
+    else
+      return data.cantidad
+  }
+
   const onAdd = (cantidad) => {
     setGoToCart(true);
     addProduct(data, cantidad)
@@ -21,12 +28,13 @@ const ItemDetail = ({data}) => {
       <p>${data.precio}</p>
       <p>{data.detalle}</p>
       <button className='seguir'><Link to='/'>Seguir Comprando</Link></button>
-   {
-      goToCart
+      {
+
+        goToCart
           ? <Link to='/cart' className='finish'><h2>Finalizar compra</h2> </Link>
-      :<Counter stock={data.cantidad} onAdd={onAdd} initial={-0} />
+          : <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       }
-      
+
     </div>
   )
 }

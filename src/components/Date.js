@@ -3,7 +3,7 @@
 const Now = ()=>{
     new Date()
     return(
-        <div className="center"> 
+        <div className="date"> 
         < Now/>
         </div>
     )

@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='footer'>
-      <NavLink to='https://www.whatsapp.com/?lang=es'><img className='cart' src={Whatsapp} alt="whatsapp" /> </NavLink>  
+     <img className='cart' src={Whatsapp} alt="whatsapp" /> 
           <img className='cart' src={Instagram} alt="Carrito" />
           <img className='cart' src={Facebook} alt="Carrito" />
           <NavLink>Quienes Somos</NavLink>

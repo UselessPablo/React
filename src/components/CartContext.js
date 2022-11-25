@@ -15,17 +15,19 @@ const CartProvider = ({ children }) => {
 
   const totalProducts = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.cantidad, 0);
 
-  const redirectTo = () => { <ItemListContainer />  }
+  const redirectTo = () => { <ItemListContainer /> }
 
   const cleanCart = () => setCart([]);
 
-  const isInCart = (id) => { return cart.find(product => product.id === id) ? true : false; }
+  const isInCart = (id) => { return cart.find(product => product.id === id)}
 
+ 
   const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
 
   const addProduct = (item, newQuantity) => {
+ 
     const { cantidad = 0 } = cart.find(prod => prod.id === item.id) || {};
-    const newCart = cart.filter(prod => prod.id !== item.id);
+    const newCart = cart.filter(prod => prod.id !== item.id)
     setCart([...newCart, { ...item, cantidad: cantidad + newQuantity }])
   }
 

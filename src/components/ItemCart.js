@@ -1,10 +1,11 @@
-import React from 'react'
+
 import { UseCartContex } from './CartContext'
 
-const ItemCart = ({product}) => {
+const ItemCart = ({product, cantidad}) => {
 const { removeProduct } = UseCartContex(); 
-  
-    return (
+
+
+  return (
     <div className='center3'>
         <h2>{product.name}</h2>
         <p>$ {product.precio} x {product.cantidad} unidades</p>
