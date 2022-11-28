@@ -210,7 +210,7 @@ span {
 .menu{
   font-size: 1rem;
 }
-.seguir {
+#seguir {
   cursor: pointer;
   text-align: center;
   font-family: "maven pro";
@@ -220,6 +220,8 @@ span {
   border-style: none;
   margin: 15px;
   background-color: rgba(30, 207, 30, 0.315);
+
+  
 }
 .center4 {
   width: auto;
@@ -350,7 +352,7 @@ form {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-right: 35px;
+  margin-right: 15%;
 }
 
 .dropdowncontent {
