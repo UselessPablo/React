@@ -1,5 +1,5 @@
 
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import Date from './Date';
 import '../index.css'
 import Cart from './CartWidget';
@@ -11,10 +11,10 @@ const Navbar = () => {
        <nav>
            <div className="date"><Date /> </div>
             <div className="navbar"> 
-                <h1 className='pulse'>Huma</h1>
-           <li><NavLink to='/'>Home</NavLink></li> 
+                 <h1 className='pulse'><Link to='/'>Huma</Link></h1>
+           <li><NavLink to='/'>🏡Home</NavLink></li> 
                  <div className='dropdown'>
-                     <button className='prods'> Productos</button>
+                     <button className='prods'>Productos</button>
                     <div className='dropdowncontent'>
                      <li><NavLink to='/category/mate'>Mates</NavLink></li>
                      <li><NavLink to='/category/maceta'>Macetas</NavLink></li>

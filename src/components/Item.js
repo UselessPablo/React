@@ -8,8 +8,8 @@ const Item = ({info}) => {
   return (
     <div className='cards slideInLeft'>  
       <img className="imagenes" src={info.img} alt='xx'></img>
-      <p className='precio'>${info.precio}</p>  
-      <NavLink to={`/detalle/${info.id}`}> <button className='info'>Info</button></NavLink> 
+      <p className='precio'>Precio $ {info.precio}</p>  
+      <NavLink to={`/detalle/${info.id}`}> <button className='info'>I n f o </button></NavLink> 
     </div>
   )
 }

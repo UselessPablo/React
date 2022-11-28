@@ -16,7 +16,7 @@ const Footer = () => {
       <Link target='_blank' to="https://www.https://es-la.facebook.com/.com/?lang=es">  
           <img className='cart' src={Facebook} alt="facebook link" />
          </Link> 
-          <NavLink to='/pages/QuienesSomos'>Info</NavLink>
+          <NavLink to='/pages/QuienesSomos'>About Us</NavLink>
     <p>Copyright Pablo A.</p>
     </div>
   )
