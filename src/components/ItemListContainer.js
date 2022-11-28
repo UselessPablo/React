@@ -16,39 +16,32 @@ export const ItemListContainer = () => {
         setLoading(true)
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'productos')
-        
+
         if (name) {
-           
-            const queryFilter = query(queryCollection, where('nombre', '==', name))  
+            const queryFilter = query(queryCollection, where('nombre', '==', name))
             getDocs(queryFilter)
-            .then(res => setData(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))))     
-           
+                .then(res => setData(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))))
         } else {
             getDocs(queryCollection)
-            .then(res => setData(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))))
+                .then(res => setData(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))))
         }
-        setLoading(false) 
+        setLoading(false)
     }, [name])
 
     return (
         <>
-                  
-                 <h1 className="slideInLeft">Productos</h1>
-                {
-                    loading ? <Loader />
-                        : 
-            <div className="slideInLeft" >                 
-        <ItemList data={data}/>
-                                       
-                        </div>          
-                         
-            
-                  
-            }
-        </> 
+            <h1 className="slideInLeft">Productos</h1>
+            {
+                loading ? <Loader />
+                    :
+                    <div className="slideInLeft" >
+                        <ItemList data={data} />
 
+                    </div>
+            }
+        </>
     );
-        }
+}
 
 
 

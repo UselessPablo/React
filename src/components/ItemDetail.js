@@ -29,12 +29,10 @@ const ItemDetail = ({ data }) => {
       <p>{data.detalle}</p>
       <button id='seguir'><Link to='/'>Seguir Comprando</Link></button>
       {
-
         goToCart
           ? <Link to='/cart' className='finish'><h2>Finalizar compra</h2> </Link>
           : <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       }
-
     </div>
   )
 }

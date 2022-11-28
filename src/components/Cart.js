@@ -42,7 +42,6 @@ const Cart = () => {
           sell ? <Compra comprador={comprador} /> :
             <ItemListContainer />
         }
-
         <div className='center2'>
           <p>Carrito Vacio</p>
           <Link to='/'>Seguir comprando</Link>
