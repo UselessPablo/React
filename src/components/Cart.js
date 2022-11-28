@@ -7,6 +7,7 @@ import Date from './Date'
 import Compra from './Compra'
 import ItemListContainer from './ItemListContainer';
 
+
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();
   const [sell, setSell] = useState(false)
@@ -22,17 +23,15 @@ const Cart = () => {
 
   }
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     
     const db = getFirestore();
     const ordersCollection = collection(db, 'order');
     addDoc(ordersCollection, comprador)
       .then(({ id }) => console.log(id));
-    console.log(comprador);
-    cleanCart()
-    console.log(comprador)
-    setSell(true)
-  
+      cleanCart();
+    setSell(true);
+    
   }
 
   if (cart.length <= 0) {
@@ -52,9 +51,6 @@ const Cart = () => {
     );
   }
 
-
-
-
   return (
     <>
 
@@ -68,17 +64,15 @@ const Cart = () => {
       <div className='formulario'>
         <form>
           <label>Nombre</label>
-          <input name='name' placeholder='Nombre' onChange={inputCapture} value={comprador.name} />
+          <input name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />
           <label>Email</label>
-          <input name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
+          <input type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
           <label>Dirección</label>
-          <input name='direccion' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
+          <input type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
           <label>Teléfono</label>
-          <input name='telefono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
-          <button className='compra' onClick={handleClick}>Confirmar Compra</button>
+          <input type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
+          <button type='submit' value='Submit' className='compra' onClick={handleClick} >Confirmar Compra</button>
         </form>
-
-
         <h3 className='center2'> Total: $ {totalPrice()}</h3>
       </div>
     </>

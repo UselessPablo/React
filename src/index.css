@@ -388,7 +388,9 @@ border-radius: 1.4rem;
 body #root{
   overflow-x: hidden;
 padding: 10px;
-width: 100vw
+width: 100vw;
+background-size: inherit;
+    background-position-x: -260px;
 }
   .navbar {
   margin-top: 20px;

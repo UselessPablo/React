@@ -8,9 +8,9 @@ const Compra = ({ comprador }) => {
     <>
       {
         <div>
-          <h2> Gracias  por tu compra: {comprador.name}</h2>
-          <h2> Dirección de envio: {comprador.direccion}</h2>
-          <h2>Teléfono:  {comprador.telefono}</h2>
+          <h2> Gracias  por tu compra: {comprador.Nombre}</h2>
+          <h2> Dirección de envio: {comprador.dirección}</h2>
+          <h2>Teléfono:  {comprador.Teléfono}</h2>
           <h2> Email de contacto:  {comprador.email}</h2>
         </div>
       }
