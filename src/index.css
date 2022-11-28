@@ -17,6 +17,7 @@ a {
   color: rgb(74, 52, 94);
   font-weight: 600;
   margin-right: 15px;
+  font-size: 1.6rem;
 }
 h1 {
   font-family: "maven pro";
@@ -206,6 +207,9 @@ span {
   box-shadow: 10px 10px 10px rgb(160, 248, 160);
   height: 15px;
 }
+.menu{
+  font-size: 1rem;
+}
 .seguir {
   cursor: pointer;
   text-align: center;
@@ -263,6 +267,7 @@ span {
   font-weight: 600;
 }
 .pulse {
+  font-size: 1.8rem;
   margin-right: 40px;
   -webkit-animation-name: pulse;
   animation-name: pulse;
@@ -345,6 +350,7 @@ form {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-right: 35px;
 }
 
 .dropdowncontent {
@@ -379,7 +385,7 @@ form {
     padding: 10px;
     width: 100vw;
     background-size: inherit;
-    background-position-x: -260px;
+    background-position-x: -250px;
   }
   .navbar {
     margin-top: 20px;
@@ -400,7 +406,7 @@ form {
     display: flex;
     justify-content: center;
     height: 130px;
-    font-size: 0.8rem;
+    font-size: 1.6rem;
   }
   .date {
     display: none;

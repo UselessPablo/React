@@ -15,7 +15,7 @@ const Cart = () => {
     items: cart.map(producto => ({ id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad: producto.cantidad })),
     total: totalPrice(),
   }
- 
+
   const [comprador, setComprador] = useState(order);
   const inputCapture = (e) => {
     const { name, value } = e.target
@@ -24,14 +24,14 @@ const Cart = () => {
   }
 
   const handleClick = () => {
-    
+
     const db = getFirestore();
     const ordersCollection = collection(db, 'order');
     addDoc(ordersCollection, comprador)
       .then(({ id }) => console.log(id));
-      cleanCart();
+    cleanCart();
     setSell(true);
-    
+
   }
 
   if (cart.length <= 0) {
@@ -39,7 +39,7 @@ const Cart = () => {
     return (
       <>
         {
-          sell ? <Compra comprador={comprador}/> :
+          sell ? <Compra comprador={comprador} /> :
             <ItemListContainer />
         }
 

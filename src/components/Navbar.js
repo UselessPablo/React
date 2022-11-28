@@ -12,13 +12,13 @@ const Navbar = () => {
            <div className="date"><Date /> </div>
             <div className="navbar"> 
                  <h1 className='pulse'><Link to='/'>Huma</Link></h1>
-           <li><NavLink to='/'>🏡Home</NavLink></li> 
+           {/* <li><NavLink to='/'>Home</NavLink></li>  */}
                  <div className='dropdown'>
                      <button className='prods'>Productos</button>
                     <div className='dropdowncontent'>
-                     <li><NavLink to='/category/mate'>Mates</NavLink></li>
-                     <li><NavLink to='/category/maceta'>Macetas</NavLink></li>
-                     <li><NavLink to='/category/tasa'>Tasas</NavLink></li>
+                     <li><NavLink  className='menu' to='/category/mate'>Mates</NavLink></li>
+                         <li><NavLink className='menu' to='/category/maceta'>Macetas</NavLink></li>
+                         <li><NavLink className='menu' to='/category/tasa'>Tasas</NavLink></li>
                      </div>
                  </div>
                  <NavLink to='Cart'><Cart /> </NavLink>  
