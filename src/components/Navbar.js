@@ -20,9 +20,10 @@ const Navbar = () => {
                         <li><NavLink className='menu' to='/category/maceta'>Macetas</NavLink></li>
                         <li><NavLink className='menu' to='/category/tasa'>Tasas</NavLink></li>
                     </div>
-                </div>
+                </div> 
                 <NavLink to='Cart'><Cart /> </NavLink>
             </div>
+           
         </nav>
     );
 };

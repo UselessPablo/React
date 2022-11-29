@@ -57,7 +57,7 @@ const Cart = () => {
         cart.map(product => <ItemCart key={product.id} product={product} cantidad={product.cantidad} />)
       }
 
-      <div className='center'><button className='seguir'><Link to='/'>Seguir Comprando</Link></button></div>
+      <div className='center2'><Link to='/'>Seguir Comprando</Link></div>
       <h2 className='center2'> Total: $ {totalPrice()}</h2>
       <h3> Ingrese sus datos para el envio</h3>
       <div className='formulario'>

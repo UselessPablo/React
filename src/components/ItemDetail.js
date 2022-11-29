@@ -25,9 +25,10 @@ const ItemDetail = ({ data }) => {
   return (
     <div className='center2 '>
       <img className="imagenes2" src={data.img} alt='xx'></img>
-      <p>${data.precio}</p>
-      <p>{data.detalle}</p>
-      <button id='seguir'><Link to='/'>Seguir Comprando</Link></button>
+      Descripción
+      <p className='center'>${data.precio}</p>
+      <p className='center'>{data.detalle}</p>
+       <Link to='/' id='seguir'>Seguir Comprando</Link>
       {
         goToCart
           ? <Link to='/cart' className='finish'><h2>Finalizar compra</h2> </Link>
