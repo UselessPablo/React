@@ -8,7 +8,7 @@ html,
   -moz-osx-font-smoothing: grayscale;
   background-color: transparent;
   height: 100%;
-  background-image: url("./assets/img/fondo2.svg");
+  /* background-image: url("./assets/img/fondo2.svg"); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -46,21 +46,22 @@ li {
   margin-bottom: 40px;
   border: solid;
   border-color: rgb(0 0 0 / 0%);
-  border-radius: 20rem 3rem 3rem 20rem;
-  box-shadow: 10px 10px 10px 10px rgb(109, 96, 129);
-  background-color: rgba(135, 64, 201, 0.596);
+  border: 1.4px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 3px 3px rgb(109, 96, 129);
+
 }
 nav {
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   justify-content: center;
   height: 130px;
 }
 .imagenes {
   width: 200px;
-  border-radius: 15rem 3rem 3rem 15rem;
-  margin-left: 40px;
-  box-shadow: 10px 10px 10px 10px rgb(109, 101, 139);
+  border-radius: 1rem;
+  margin: 20px;
+  /* box-shadow: 10px 10px 10px 10px rgb(109, 101, 139); */
   filter: grayscale(40%);
 }
 button {
@@ -103,14 +104,16 @@ button {
 }
 .cards {
   display: flex;
-  width: auto;
+  width: 90%;
+  flex-direction: column;
   justify-content: space-evenly;
   margin-top: 50px;
   align-items: center;
+  flex-basis: content;
 }
 
 p {
-  margin-right: 25px;
+ 
   background-color: yellow;
   border-radius: 0.6rem;
   padding: 5px;
@@ -189,6 +192,8 @@ span {
   color: white;
   font-size: 0.8rem;
   padding: 2px 4px 2px 4px;
+  margin-left: 10px;
+  position: absolute;
 }
 .center3 {
   text-align: center;
@@ -239,6 +244,10 @@ span {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 @-webkit-keyframes slideInLeft {
   0% {
@@ -355,7 +364,7 @@ form {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-right: 15%;
+  /* margin-right: 15%; */
 }
 
 .dropdowncontent {
@@ -392,42 +401,20 @@ form {
     background-size: inherit;
     background-position-x: -250px;
   }
-  .navbar {
-    margin-top: 20px;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    font-size: 0.8rem;
-    margin-bottom: 40px;
-    border:none; 
-    border-color: rgb(0 0 0 / 0%);
-    border-radius: 20rem 3rem 3rem 20rem;
-     box-shadow: 10px 10px 10px 10px rgb(109, 96, 129); 
-    background-color:rgba(135, 64, 201, 0.596);
-  }
-    nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 130px;
-    font-size: 1.6rem;
-    background-color: transparent;
-  }
-    .date {
-    display: none;
-  }
+
   h1 {
     font-size: 1.3rem;
     margin-left: 20px;
   }
-  .cart {
+  /* .cart {
     width: 25px;
     margin-right: 7px;
-  }
+  } */
   .carrito {
-    width: 30px;
+
+    display: flex;
+    flex-direction: row;
+    
 
   }
   .popup {
@@ -448,8 +435,9 @@ form {
   }
   .cards {
     display: flex;
-    width: 100%;
+    width: 70%;
     justify-content: space-evenly;
+    flex-direction: column;
     margin-top: 50px;
     align-items: center;
   }
@@ -458,3 +446,45 @@ form {
     margin-right: 20px;
   }
 }
+.cartWidget {
+  background-color: transparent;
+  width: auto;
+  align-items: center;
+  display: flex;
+}
+ .carrito {
+
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .btn3{
+    display: flex;
+    margin-left: 43%;
+    width: 12rem;
+    justify-content: center;
+
+  }
+  label{
+    margin: 10px;
+   
+  }
+  .pTop{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+  }
+  small{
+ display: flex;
+ justify-content: right;
+ align-items: center;
+ color: rgb(18, 177, 31);
+  }
+  .oferta{
+    position: absolute;
+    color: rgb(255, 115, 0);
+    margin-bottom: 110%;
+
+  }

@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
 
     return (
         <>
-            <h1 className="slideInLeft">Productos</h1>
+            <h2 className="slideInLeft">Productos</h2>
             {
                 loading ? <Loader />
                     :

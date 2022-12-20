@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
+
+
 const Counter = ({ stock, onAdd, initial }) => {
   const [Valor, setValor] = useState(initial);
 
@@ -17,10 +19,10 @@ const Counter = ({ stock, onAdd, initial }) => {
 
   return (
     <div>
-      <button onClick={onRest}> -</button>
+      <button onClick={onRest}>-</button>  
       <span>{Valor}</span>
-      <button onClick={onAdds}>+ </button>
-      <button onClick={() => onAdd(Valor)}>Agregar</button>
+      <button onClick={onAdds}>-</button>
+      <button onClick={()=>onAdd(Valor)}>Agregar</button>
     </div>
   );
 };
