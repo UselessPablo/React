@@ -395,13 +395,18 @@ form {
 }
 @media only screen and (max-width: 480px) {
   body #root {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     padding: 10px;
     width: 100vw;
-    background-size: inherit;
-    background-position-x: -250px;
+    /* background-size: inherit;
+    background-position-x: -250px; */
   }
+.oferta{
+    position: absolute;
+    color: rgb(255, 115, 0);
+    margin-bottom: 150%;
 
+  }
   h1 {
     font-size: 1.3rem;
     margin-left: 20px;
@@ -423,6 +428,7 @@ form {
     color: white;
     font-size: 0.8rem;
     padding: 1;
+    position: absolute;
   }
   .footer {
     margin-top: 60px;
@@ -453,10 +459,8 @@ form {
   display: flex;
 }
  .carrito {
-
     display: flex;
     flex-direction: row;
-    
   }
   .btn3{
     display: flex;
@@ -485,6 +489,21 @@ form {
   .oferta{
     position: absolute;
     color: rgb(255, 115, 0);
-    margin-bottom: 110%;
+    margin-bottom: 120%;
 
+  }
+  .offer{
+    width: 30px;
+    position: absolute;
+    display: flex;
+    margin-left: 88%;
+    margin-bottom: 10%;
+    z-index: 5;
+  }
+  .offer2{
+    width: 30px;
+    z-index: 6;
+    position: absolute;
+    margin-left: 19%;
+    margin-bottom: 30%;
   }

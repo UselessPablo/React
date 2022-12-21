@@ -24,10 +24,15 @@ const ItemDetail = ({ data }) => {
 
   return (
     <div className='center2 '>
+      
       <img className="imagenes2" src={data.img} alt='xx'></img>
-      Descripción
-      <p className='center'>${data.precio}</p>
-      <p className='center'>{data.detalle}</p>
+      <img className="offer2" src={data.offer} alt='' />
+     
+      
+      <h3> {data.destacado}</h3>
+      <h2 className='center'>${data.precio}</h2>
+      <h2 className='center'>{data.detalle}</h2>
+
        <Link to='/' id='seguir'>Seguir Comprando</Link>
       {
         goToCart
