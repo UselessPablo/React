@@ -30,15 +30,19 @@ const Item = ({ info }) => {
 
       <button className="btnNone" onClick={getBigImage}>
         <img src={info.img} alt="xx" className={clicked ? 'big ' : 'imagenes'}>
-
         </img>
       </button>
-
+      <div className="detalleInfo">
+      <p> {info.detalle}</p>
+      </div>
+      <div className="cards2">
+      
       <p className="precio">Precio $ {info.precio}</p>
       <NavLink to={`/detalle/${info.id}`}>
         {" "}
         <button className="info">I n f o </button>
       </NavLink>
+      </div>
     </div>
   );
 };

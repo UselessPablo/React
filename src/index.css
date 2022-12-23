@@ -52,7 +52,7 @@ nav {
   height: 130px;
 }
 .imagenes {
-  width: 200px;
+  width: 220px;
   border-radius: 1rem;
   margin: 20px;
   /* box-shadow: 10px 10px 10px 10px rgb(109, 101, 139); */
@@ -104,12 +104,14 @@ button {
   margin-top: 50px;
   align-items: center;
   flex-basis: content;
+  border: solid;
+  border-style: groove;
+  margin: 7px;
+  border-radius: 0.5rem;
 }
 
 p {
- 
-  background-color: yellow;
-  border-radius: 0.6rem;
+ font-size: 0.9rem;
   padding: 5px;
 }
 .center {
@@ -232,6 +234,7 @@ span {
   text-align: center;
 }
 .slideInLeft {
+   
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
   -webkit-animation-duration: 1s;
@@ -440,6 +443,9 @@ form {
     flex-direction: column;
     margin-top: 50px;
     align-items: center;
+    border: solid;
+    border-style: groove;
+
   }
   .imagenes {
     width: 170px;
@@ -500,7 +506,6 @@ display: none;
   .btnNone{
     background-color: transparent;
     width: 200px;
-    margin: 20px;
     display: flex;
     justify-content: center;
   }
@@ -512,6 +517,15 @@ display: none;
     position: absolute;
     z-index: 10;
     opacity: 1;
-    top:-45%;
+    top:-4%;
   }
-   
+   .cards2{
+    display: flex;
+    flex-direction: row;
+   }
+   .detalleInfo{
+    width: 200px;
+   text-align: center;
+   font-size: 0.8rem;
+   height: 90px;
+   }
