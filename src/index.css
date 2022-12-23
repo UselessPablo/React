@@ -4,13 +4,12 @@ html,
 #root {
   margin: 3px;
   font-family: "maven pro";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: transparent;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+ position: relative;
   height: 100%;
   /* background-image: url("./assets/img/fondo2.svg"); */
-  background-size: cover;
-  background-repeat: no-repeat;
+z-index: 0;
 }
 a {
   text-decoration: none;
@@ -44,11 +43,6 @@ li {
   width: 100%;
   font-size: 1.2rem;
   margin-bottom: 40px;
-  border: solid;
-  border-color: rgb(0 0 0 / 0%);
-  border: 1.4px;
-  border-radius: 1rem;
-  box-shadow: 3px 3px 3px 3px rgb(109, 96, 129);
 
 }
 nav {
@@ -411,10 +405,10 @@ form {
     font-size: 1.3rem;
     margin-left: 20px;
   }
-  /* .cart {
-    width: 25px;
-    margin-right: 7px;
-  } */
+  .offer2{
+ display: none;
+  }
+
   .carrito {
 
     display: flex;
@@ -448,7 +442,7 @@ form {
     align-items: center;
   }
   .imagenes {
-    width: 140px;
+    width: 170px;
     margin-right: 20px;
   }
 }
@@ -496,14 +490,28 @@ form {
     width: 30px;
     position: absolute;
     display: flex;
-    margin-left: 88%;
-    margin-bottom: 10%;
+    margin-left: -72%;
+    margin-bottom: 76%;
     z-index: 5;
   }
   .offer2{
-    width: 30px;
-    z-index: 6;
-    position: absolute;
-    margin-left: 19%;
-    margin-bottom: 30%;
+display: none;
   }
+  .btnNone{
+    background-color: transparent;
+    width: 200px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .big{
+    width: 200%;
+    transform: translate(0px);
+    transition: 1s;
+    border-radius: 1rem;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    top:-45%;
+  }
+   
