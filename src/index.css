@@ -4,8 +4,8 @@ html,
 #root {
   margin: 3px;
   font-family: "maven pro";
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+ /* background: rgb(0, 0, 0);  */
+background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%);
   
 z-index: 0;
 }
@@ -552,11 +552,11 @@ ul{
   background-color: orangered;
 }
 .dark {
-background-color: #222222;
+background: #222222;
 color: rgb(255, 255, 255);
 }
 .light {
-background-color: rgb(247, 254, 255);
+background: rgb(247, 254, 255);
 color: rgb(27, 27, 27);
 }
 .btnTheme{
