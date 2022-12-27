@@ -283,7 +283,6 @@ span {
 }
 .pulse {
   font-size: 1.8rem;
-  margin-right: 40px;
   -webkit-animation-name: pulse;
   animation-name: pulse;
   -webkit-animation-duration: 1s;
