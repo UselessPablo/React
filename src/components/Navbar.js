@@ -1,8 +1,9 @@
 
 import { NavLink, Link, useNavigate} from 'react-router-dom';
-
 import '../index.css'
 import Cart from './CartWidget';
+
+
 
 
 const Navbar = ({user}) => {
@@ -16,8 +17,9 @@ const cartBtn =()=>{
     navigate(path);
 
 }
-console.log(user);
+
     return (
+        <header>
         <nav>
            
             <div className="navbar">
@@ -29,9 +31,10 @@ console.log(user);
                     <div className='dropdowncontent'>
                         <li><NavLink className='menu' to='/category/mate'>Mates</NavLink></li>
                         <li><NavLink className='menu' to='/category/maceta'>Macetas</NavLink></li>
-                        <li><NavLink className='menu' to='/category/tasa'>Tasas</NavLink></li>
+                        <li><NavLink className='menu' to='/category/taza'>Tazas</NavLink></li>
                         <li><NavLink className='menu' to='/category/destacado'>Oferta</NavLink></li>
                     </div>
+                   
                     
                 </div> 
                 <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
@@ -40,6 +43,7 @@ console.log(user);
             </div>
            
         </nav>
+        </header>
     );
 };
 

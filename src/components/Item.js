@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { UseCartContex } from './CartContext';
+import Counter from './Counter';
 
 const Item = ({ info }) => {
 
-  const [toggle, setToggle] = useState(0.5)
-
-  // function makeBlur1() {
-  //   if (toggle === 0.5) {
-  //     setToggle(1)
-  //   } else {
-  //     setToggle(0.5)
-  //   }
-  //   document.body.style.opacity= toggle;
-  // }
-
+  const { addProduct, isInCart } = UseCartContex();
+  const [goToCart, setGoToCart] = useState(false);
   const [clicked, setClicked] = useState('')
+  const getStock = () => {
+    const item = isInCart(info.id)
+    if (item)
+      return info.cantidad - item.cantidad
+    else
+      return info.cantidad
+  }
 
+  const onAdd = (cantidad) => {
+    setGoToCart(true);
+    addProduct(info, cantidad)
+  }
   const getBigImage = () => {
     setClicked(!clicked);
 //  makeBlur1();
@@ -25,23 +29,30 @@ const Item = ({ info }) => {
 
   return (
     <div className="cards slideInLeft">
+      <img className="offer" src={info.offer} alt='' /> 
       <h2 className="oferta"> {info.destacado}</h2>
-      <img className="offer" src={info.offer} alt='' />
-
+      
+   
       <button className="btnNone" onClick={getBigImage}>
+       
         <img src={info.img} alt="xx" className={clicked ? 'big ' : 'imagenes'}>
         </img>
       </button>
+      
       <div className="detalleInfo">
       <p> {info.detalle}</p>
       </div>
       <div className="cards2">
       
+       
       <p className="precio">Precio $ {info.precio}</p>
       <NavLink to={`/detalle/${info.id}`}>
         {" "}
         <button className="info">I n f o </button>
       </NavLink>
+      </div>
+      <div className="contadorCard">
+        <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const Counter = ({ stock, onAdd, initial }) => {
       <button onClick={onRest}>-</button>  
       <span>{Valor}</span>
       <button onClick={onAdds}>+</button>
-      <button onClick={()=>onAdd(Valor)}>Agregar</button>
+      <button className="agregar" onClick={()=>onAdd(Valor)}>Agregar</button>
     </div>
   );
 };
