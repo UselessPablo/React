@@ -438,7 +438,7 @@ form {
     justify-content: center;
     align-items: center;
     height: 55px;
-    width: 90%;
+  
   }
   .cards {
     display: flex;
@@ -565,4 +565,7 @@ color: rgb(27, 27, 27);
 }
 .btnTheme:hover{
   background-color: #f1f1f1;
+}
+.footImg{
+  width: 35px;
 }

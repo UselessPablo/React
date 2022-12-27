@@ -2,24 +2,15 @@ import React from "react";
 import Whatsapp from "../assets/img/logos/whatsapp.png";
 import Instagram from "../assets/img/logos/instagram.png";
 import Facebook from "../assets/img/logos/facebook.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 
 const Footer = () => {
   return (
     <div className="footer">
-      <Link target="_blank" to="https://www.whatsapp.com/?lang=es">
-        <img className="cart" src={Whatsapp} alt="whatsapp link" />
-      </Link>
-      <Link
-        target="_blank"
-        to="https://www.https://www.instagram.com/.com/?lang=es">
-        <img className="cart" src={Instagram} alt="Instagram link" />
-      </Link>
-      <Link
-        target="_blank"
-        to="https://www.https://es-la.facebook.com/.com/?lang=es">
-        <img className="cart" src={Facebook} alt="facebook link" />
-      </Link>
+      <a className='footImg' href='https://www.whatsapp.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Whatsapp} alt='whatsapp logo' /></a>
+      <a className='footImg' href='https://www.instagram.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Instagram} alt='Instagram logo' /></a>
+      <a className='footImg' href='https://www.facebook.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Facebook} alt='Facebook logo' /></a>
       <NavLink to="/pages/QuienesSomos">About Us</NavLink>
       <p>Copyright Pablo A.</p>
     </div>
