@@ -2,6 +2,7 @@
 import { NavLink, Link, useNavigate} from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
+import Theme from './Theme';
 
 
 
@@ -23,7 +24,7 @@ const cartBtn =()=>{
         <nav>
            
             <div className="navbar">
-                
+                <Theme/>
                 <h1 className='pulse'><Link to='/'>Huma</Link></h1>
                 {/* <li><NavLink to='/'>Home</NavLink></li>  */}
                 <div className='dropdown'>

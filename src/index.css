@@ -552,3 +552,17 @@ ul{
 .agregar{
   background-color: orangered;
 }
+.dark {
+background-color: #222222;
+color: rgb(255, 255, 255);
+}
+.light {
+background-color: rgb(247, 254, 255);
+color: rgb(27, 27, 27);
+}
+.btnTheme{
+  background-color: transparent;
+}
+.btnTheme:hover{
+  background-color: #f1f1f1;
+}
