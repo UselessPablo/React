@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.caf78d44.css",
+    "main.css": "/React/static/css/main.8504a07e.css",
     "main.js": "/React/static/js/main.0781292e.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
     "static/media/whatsapp.png": "/React/static/media/whatsapp.fdd4b7007148bcf6ce48.png",
@@ -8,12 +8,12 @@
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
     "static/media/dark.svg": "/React/static/media/dark.b792a463fa58eda8eeea721ba837ac08.svg",
-    "main.caf78d44.css.map": "/React/static/css/main.caf78d44.css.map",
+    "main.8504a07e.css.map": "/React/static/css/main.8504a07e.css.map",
     "main.0781292e.js.map": "/React/static/js/main.0781292e.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.caf78d44.css",
+    "static/css/main.8504a07e.css",
     "static/js/main.0781292e.js"
   ]
 }
