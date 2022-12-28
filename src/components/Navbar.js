@@ -18,11 +18,11 @@ const cartBtn =()=>{
     navigate(path);
 
 }
-
+console.log({user});
     return (
         <header>
         <nav>
-           
+           <p>{user}</p>
             <div className="navbar">
                 <Theme/>
                 <h1 className='pulse'><Link to='/'>Huma</Link></h1>

@@ -2,15 +2,16 @@
 body,
 html,
 #root {
-
   font-family: "maven pro";
  /* background: rgb(0, 0, 0);  */
 /* background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%); */
   width: 100vw;
 z-index: 0;
+
+
 }
 /* header{
-  background-image: url('./assets/img/fondo4.png');
+ 
   background-size: cover;
 } */
 
@@ -107,10 +108,11 @@ button {
   margin-top: 50px;
   align-items: center;
   flex-basis: content;
-  border: solid;
+  border: solid 1px;
   border-style: groove;
   margin: 7px;
   border-radius: 0.5rem;
+  box-shadow: 1px 1px 7px 4px rgba(243, 129, 253, 0.493);
 }
 
 p {
@@ -209,7 +211,6 @@ span {
   border-radius: 2rem;
   color: rgb(134, 72, 14);
   background-color: rgba(166, 14, 226, 0.315);
-  box-shadow: 10px 10px 10px rgb(214, 178, 255);
   height: 15px;
 }
 .menu{
@@ -225,7 +226,6 @@ span {
   border-radius: 1.2rem;
   margin: 30px;
   background-color: rgba(172, 30, 207, 0.315);
-  box-shadow: 4px 4px 4px 2px rgb(231, 201, 231);
   padding-top: 9px;
 
   
@@ -549,7 +549,7 @@ ul{
   flex-direction: row;
 }
 .agregar{
-  background-color: orangered;
+  background-color: rgb(255, 123, 0);
 }
 .dark {
 background: #222222;
@@ -567,4 +567,12 @@ color: rgb(27, 27, 27);
 }
 .footImg{
   width: 35px;
+}
+.add {
+  background-color: rgb(237, 145, 240);
+  width: 45px;
+}
+.rest {
+  background-color: aqua;
+  width: 45px;
 }

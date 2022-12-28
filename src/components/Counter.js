@@ -19,9 +19,9 @@ const Counter = ({ stock, onAdd, initial }) => {
 
   return (
     <div>
-      <button onClick={onRest}>-</button>  
+      <button className="rest" onClick={onRest}>-</button>  
       <span>{Valor}</span>
-      <button onClick={onAdds}>+</button>
+      <button className="add" onClick={onAdds}>+</button>
       <button className="agregar" onClick={()=>onAdd(Valor)}>Agregar</button>
     </div>
   );

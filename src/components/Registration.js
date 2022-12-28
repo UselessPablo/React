@@ -87,6 +87,10 @@ const Registration = () => {
     //     navigate('../pages/home')
 
     // }
+        const usuario = (e) =>{
+            setName(e.target.value)
+        }
+        console.log(name);
         return (
         
         <div>
@@ -94,7 +98,7 @@ const Registration = () => {
                 <h3 className='text-warning my-3'>Te Debes Registrar Para Ingresar,</h3>
                     <div className="pTop">
                     <label htmlFor="formGroupExampleInput" className="">Name:</label>
-                    <input type="text" name='name' className="" id="formGroupExampleInput" placeholder="FullName" />
+                    <input type="text" name='name' className="" id="formGroupExampleInput" placeholder="FullName" onChange={usuario} />
                 </div>
                     <div className="pTop">
                     <label htmlFor="formGroupExampleInput2" className="">Email:</label>
@@ -109,7 +113,7 @@ const Registration = () => {
                 </div>
                 {/* <input className="center bold green" type="submit" value=" Sign In" /> */}
                     <button type="submit"  className="btn3 bold">Enviar</button>
-                <h3 className='bold'><small>Already have an account? <Link to={'/Login'} onClick={clear}>Login</Link></small></h3>
+                <h3 className='bold'><small>Already have an account? <Link props={name} to={'/Login'} onClick={clear}>Login</Link></small></h3>
             </form>
                  
         </div>

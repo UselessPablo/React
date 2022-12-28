@@ -2,6 +2,7 @@ import { getAuth,  signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import app from '../utils/Config';
+import Navbar from './Navbar';
 
 
 
@@ -9,7 +10,7 @@ import app from '../utils/Config';
 
 const auth = getAuth(app)
 
-const Login = () => {
+const Login = (props) => {
   
   const navigate = useNavigate();
   //state for login error
@@ -66,12 +67,13 @@ const Login = () => {
  
   const goTo = ()=>{
    
-    navigate('../')
+    navigate('../ ')  
      
   }
-
+console.log(props.name);
   return (
     <div>
+     <h1>Bienvenido {props.name}</h1>
       <form className='' onSubmit={handleLogin}>
         <h3 className=''>Login Here please, {user}</h3>
         <div className="pTop">
