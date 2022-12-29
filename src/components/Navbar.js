@@ -31,9 +31,9 @@ console.log({user});
                     <button className='prods'>Productos</button>
                     <div className='dropdowncontent'>
                         <li><NavLink className='menu' to='/category/mate'>Mates</NavLink></li>
-                        <li><NavLink className='menu' to='/category/maceta'>Macetas</NavLink></li>
-                        <li><NavLink className='menu' to='/category/taza'>Tazas</NavLink></li>
-                        <li><NavLink className='menu' to='/category/destacado'>Oferta</NavLink></li>
+                        <li><NavLink className='menu1' to='/category/maceta'>Macetas</NavLink></li>
+                        <li><NavLink className='menu2' to='/category/taza'>Tazas</NavLink></li>
+                        <li><NavLink className='menu3' to='/category/destacado'>Oferta</NavLink></li>
                     </div>
                    
                     

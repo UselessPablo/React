@@ -113,8 +113,8 @@ button {
   margin: 7px;
   border-radius: 0.5rem;
   /* background: #e0e0e0; */
-  box-shadow: 0px 10px 10px  #73567a,
-               0px 0px 20px  rgba(144, 147, 151, 0.527);
+  /* box-shadow: 0px 10px 10px  #73567a,
+               0px 0px 20px  rgba(144, 147, 151, 0.527); */
 }
 
 p {
@@ -217,8 +217,24 @@ span {
   background-color: rgba(166, 14, 226, 0.315);
   height: 15px;
 }
-.menu{
+.menu, .menu1, .menu2, .menu3{
   font-size: 1rem;
+}
+  .menu:hover{
+  background-color: rgb(183, 125, 223);
+ box-shadow: 3px 3px 10px rgb(105, 112, 119)
+}
+  .menu1:hover{
+  background-color: rgb(218, 158, 69);
+ box-shadow: 3px 3px 10px rgb(105, 112, 119)
+}
+.menu2:hover{
+  background-color: rgb(127, 180, 40);
+ box-shadow: 3px 3px 10px rgb(105, 112, 119)
+}
+ .menu3:hover{
+  background-color: rgb(118, 195, 214);
+   box-shadow: 3px 3px 10px rgb(105, 112, 119)
 }
 #seguir {
   cursor: pointer;
@@ -389,10 +405,11 @@ form {
   text-align: center;
 }
 
-.dropdowncontent a:hover {
-  background-color: rgba(152, 109, 177, 0.5);
+.dropdowncontent a:hover{
+  
   width: 83%;
   border-radius: 1.4rem;
+  box-shadow: 3px 3px 10px rgb(105, 112, 119);
 }
 .dropdown:hover .dropdowncontent {
   display: block;
@@ -580,12 +597,15 @@ color: rgb(27, 27, 27);
   background-color: aqua;
   width: 45px;
 }
-.rest, .add, .agregar, .info, .btnTheme, .login, #seguir, .finish, .borrar, .compra, input, .imagenes, .imagenes2 {
+.rest, .add, .agregar, .info, .btnTheme, .login, #seguir, .finish, .borrar, 
+.compra, input, .imagenes, .imagenes2, .cards  {
   box-shadow: 3px 3px 10px rgb(105, 112, 119);
 }
 .login, .borrar, .compra, input{
   background-color: transparent;
 }
 .cartWidget:hover{
-  background-color: #73567a;
+   box-shadow: 3px 3px 10px rgb(105, 112, 119);
+   width: 55px;
+   padding: 10px;
 }
