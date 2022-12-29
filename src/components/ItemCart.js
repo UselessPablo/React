@@ -10,7 +10,7 @@ const { removeProduct, addProduct } = UseCartContex();
         <p>$ {product.precio} x {product.cantidad} unidades</p>
         <img className="imagenes3" src={product.img} alt='xx'></img>
         <p>subtotal : $ {product.cantidad * product.precio}</p>
-        <button onClick={()=> removeProduct(product.id) }>Borrar</button>  
+        <button className='borrar' onClick={()=> removeProduct(product.id) }>Borrar</button>  
 
     </div>
   )

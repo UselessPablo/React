@@ -112,12 +112,16 @@ button {
   border-style: groove;
   margin: 7px;
   border-radius: 0.5rem;
-  box-shadow: 1px 1px 7px 4px rgba(243, 129, 253, 0.493);
+  /* background: #e0e0e0; */
+  box-shadow: 0px 10px 10px  #73567a,
+               0px 0px 20px  rgba(144, 147, 151, 0.527);
 }
 
 p {
  font-size: 0.9rem;
   padding: 5px;
+  font-family: 'Roboto';
+  font-weight: 600;
 }
 .center {
   text-align: center;
@@ -148,7 +152,7 @@ p {
   box-shadow: 2px 4px rgb(85, 201, 85);
 }
 .imagenes2 {
-  width: 250px;
+  width: 290px;
   border-radius: 20rem 1rem 1rem 20rem;
 }
 .active {
@@ -575,4 +579,13 @@ color: rgb(27, 27, 27);
 .rest {
   background-color: aqua;
   width: 45px;
+}
+.rest, .add, .agregar, .info, .btnTheme, .login, #seguir, .finish, .borrar, .compra, input, .imagenes, .imagenes2 {
+  box-shadow: 3px 3px 10px rgb(105, 112, 119);
+}
+.login, .borrar, .compra, input{
+  background-color: transparent;
+}
+.cartWidget:hover{
+  background-color: #73567a;
 }

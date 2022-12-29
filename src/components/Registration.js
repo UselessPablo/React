@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import app from '../utils/Config';
 import {Link, useNavigate} from 'react-router-dom';
-import Login from './Login';
+
 
 
 const auth = getAuth(app);
@@ -53,6 +53,7 @@ const Registration = () => {
                 const user = result.user;
                 console.log(user);
                 setSuccess('Registration successful...');
+                goTo();
                 form.reset();
                 mailVarification();
                 clear()
@@ -83,10 +84,10 @@ const Registration = () => {
         setForm(false);
       console.log('dd');
     }
-    // const goTo = () => {
-    //     navigate('../pages/home')
+    const goTo = () => {
+        navigate('../pages/home')
 
-    // }
+    }
         const usuario = (e) =>{
             setName(e.target.value)
         }

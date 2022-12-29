@@ -39,7 +39,7 @@ console.log({user});
                     
                 </div> 
                 <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                <button onClick={logBtn}>Log In</button>
+                <button  className='login' onClick={logBtn}>Log In</button>
                 <h3>{user}</h3>
             </div>
            
