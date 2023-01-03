@@ -675,7 +675,7 @@ color: rgb(27, 27, 27);
 .nav-container .checkbox {
   /* position: absolute; */
   display: block;
- 
+  height: 32px;
   width: 32px;
   top: 20px;
   left: 20px;
