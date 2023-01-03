@@ -265,6 +265,8 @@ span {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -783,6 +785,7 @@ justify-content: space-evenly;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 200;
 }
 .login__container{
   margin-top: 30vh;
