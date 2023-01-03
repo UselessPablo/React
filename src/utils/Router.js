@@ -7,6 +7,7 @@ import Compra from '../components/Compra'
 import QuienesSomos from "../pages/QuienesSomos";
 import Login from "../components/Login";
 import Registration from "../components/Registration";
+import Reset from "../components/Reset";
 
 const Router = () => (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -20,6 +21,7 @@ const Router = () => (
                 <Route path='/pages/QuienesSomos' element={<QuienesSomos />} />
                 <Route path='/Registration' element={<Registration/>} />
                 <Route path='/Login' element={<Login />} />
+                <Route path='/Reset' element={<Reset />} />
             </Route>
         </Routes>
     </BrowserRouter>
