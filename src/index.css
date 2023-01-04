@@ -353,8 +353,9 @@ span {
 .formulario {
   margin-top: 50px;
   display: flex;
-  width: 90%;
+  width: 80%;
   justify-content: center;
+  margin-right: 10%;
 }
 input {
   width: 250px;
@@ -792,4 +793,22 @@ justify-content: space-evenly;
 }
 .register{
   margin-top: 30vh;
+}
+.cartCard{
+  margin-top: 20vh;
+}
+.notification-container {
+    font-size: 14px;
+    box-sizing: border-box;
+    position: fixed;
+}
+.top-right {
+    top: 12px;
+    right: 12px;
+    transition: transform .6s ease-in-out;
+    animation: toast-in-right .7s;
+}
+.toaster{
+  position: absolute;
+
 }

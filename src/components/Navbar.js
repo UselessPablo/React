@@ -7,7 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect, useState } from 'react';
 import { auth, db, logout } from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
-
+import React from 'react';
 
 
 
@@ -15,6 +15,8 @@ const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const [name, setName] = useState("");
     const navigate = useNavigate();
+  
+    
     const fetchUserName = async () => {
         try {
             const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -47,7 +49,8 @@ const cartBtn =()=>{
         <header>
             <h2 className='emailed'>Bienvenido <p className='nombre'>{name} {user?.email} </p></h2>
         <nav className='sticky'>
-          
+         
+
             <div className="navbar">
            <div className='container nav-container'>
 

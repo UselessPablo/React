@@ -19,6 +19,7 @@ const Item = ({ info }) => {
   const onAdd = (cantidad) => {
     setGoToCart(true);
     addProduct(info, cantidad)
+    
   }
   const getBigImage = () => {
     setClicked(!clicked);

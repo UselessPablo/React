@@ -52,11 +52,11 @@ const Cart = () => {
 
   return (
     <>
-
+  <div className='cartCard'>
       {
         cart.map(product => <ItemCart key={product.id} product={product} cantidad={product.cantidad} />)
       }
-
+      </div>
       <div className='center2'><Link to='/'>Seguir Comprando</Link></div>
       <h2 className='center2'> Total: $ {totalPrice()}</h2>
       <h3> Ingrese sus datos para el envio</h3>
