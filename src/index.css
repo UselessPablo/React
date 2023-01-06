@@ -61,7 +61,7 @@ nav {
   border-radius: 1rem;
   margin: 20px;
   /* box-shadow: 10px 10px 10px 10px rgb(109, 101, 139); */
-  filter: grayscale(40%);
+
 }
 button {
   cursor: pointer;
@@ -153,6 +153,7 @@ p {
   box-shadow: 2px 4px rgb(85, 201, 85);
 }
 .imagenes2 {
+  margin-top: 8rem;
   width: 290px;
   border-radius: 20rem 1rem 1rem 20rem;
 }
@@ -259,7 +260,8 @@ span {
 }
 .slideInLeft {
    margin-top: 5rem;
-  -webkit-animation-name: slideInLeft;
+  margin-left: 1rem;
+   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -552,8 +554,8 @@ display: none;
     justify-content: center;
   }
   .big{
-    width: 200%;
-    transform: translate(0px);
+    width: 170%;
+    transform: translate(-100px);
     transition: 1s;
     border-radius: 1rem;
     position: absolute;
