@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.8d881e4f.css",
-    "main.js": "/React/static/js/main.be099ef8.js",
+    "main.css": "/React/static/css/main.04dc56eb.css",
+    "main.js": "/React/static/js/main.b7f7424b.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
     "static/media/whatsapp.png": "/React/static/media/whatsapp.fdd4b7007148bcf6ce48.png",
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
     "static/media/dark.svg": "/React/static/media/dark.b792a463fa58eda8eeea721ba837ac08.svg",
-    "main.8d881e4f.css.map": "/React/static/css/main.8d881e4f.css.map",
-    "main.be099ef8.js.map": "/React/static/js/main.be099ef8.js.map",
+    "main.04dc56eb.css.map": "/React/static/css/main.04dc56eb.css.map",
+    "main.b7f7424b.js.map": "/React/static/js/main.b7f7424b.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d881e4f.css",
-    "static/js/main.be099ef8.js"
+    "static/css/main.04dc56eb.css",
+    "static/js/main.b7f7424b.js"
   ]
 }
