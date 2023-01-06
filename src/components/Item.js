@@ -33,20 +33,8 @@ const Item = ({ info }) => {
 
   return (
      <>
-      <div  >
-            <ToastContainer
-          position="top-center"
-              autoClose={2000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={true}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
-            />
- </div>
+     
+    
     <div className="cards slideInLeft">
       <img className="offer" src={info.offer} alt='' /> 
       <h2 className="oferta"> {info.destacado}</h2>
@@ -73,6 +61,23 @@ const Item = ({ info }) => {
         <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
     </div>
+      
+         <div  >
+            <ToastContainer
+          position="top-center"
+              autoClose={2000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={true}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
+ </div> 
+     
+
     </>
   );
 };
