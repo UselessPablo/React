@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
 
     return (
         <>
-            <h1 className="slideInLeft listado">Productos</h1>
+        
             {
                 loading ? <Loader />
                     :

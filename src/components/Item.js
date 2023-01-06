@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { UseCartContex } from './CartContext';
 import Counter from './Counter';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Item = ({ info }) => {
 
   const { addProduct, isInCart } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
   const [clicked, setClicked] = useState('')
+
+  
   const getStock = () => {
     const item = isInCart(info.id)
     if (item)
@@ -19,23 +23,36 @@ const Item = ({ info }) => {
   const onAdd = (cantidad) => {
     setGoToCart(true);
     addProduct(info, cantidad)
-    
   }
   const getBigImage = () => {
     setClicked(!clicked);
 //  makeBlur1();
-
+    
   }
-
+  
 
   return (
+     <>
+      <div  >
+            <ToastContainer
+          position="top-center"
+              autoClose={2000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={true}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
+ </div>
     <div className="cards slideInLeft">
       <img className="offer" src={info.offer} alt='' /> 
       <h2 className="oferta"> {info.destacado}</h2>
       
-   
       <button className="btnNone" onClick={getBigImage}>
-       
+
         <img src={info.img} alt="xx" className={clicked ? 'big ' : 'imagenes'}>
         </img>
       </button>
@@ -56,6 +73,7 @@ const Item = ({ info }) => {
         <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
     </div>
+    </>
   );
 };
 

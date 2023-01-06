@@ -1,6 +1,7 @@
 
 import { UseCartContex } from './CartContext'
 
+
 const ItemCart = ({product, cantidad}) => {
 const { removeProduct, addProduct } = UseCartContex(); 
 

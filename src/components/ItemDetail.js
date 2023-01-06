@@ -3,12 +3,12 @@ import Counter from './Counter'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { UseCartContex } from './CartContext';
-
+import { toast } from 'react-toastify';
 
 const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
   const { addProduct, isInCart } = UseCartContex();
-
+  const notify = () => toast('Agregado al Carrito!');
   const getStock = () => {
     const item = isInCart(data.id)
     if (item)
@@ -20,9 +20,13 @@ const ItemDetail = ({ data }) => {
   const onAdd = (cantidad) => {
     setGoToCart(true);
     addProduct(data, cantidad)
+    notify()
   }
 
   return (
+    <>
+     
+    
     <div className='center2 '>
       
       <img className="imagenes2" src={data.img} alt='xx'></img>
@@ -40,6 +44,7 @@ const ItemDetail = ({ data }) => {
           : <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       }
     </div>
+    </>
   )
 }
 
