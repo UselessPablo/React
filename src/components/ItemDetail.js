@@ -9,6 +9,7 @@ const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
   const { addProduct, isInCart } = UseCartContex();
   const notify = () => toast('Agregado al Carrito!');
+  
   const getStock = () => {
     const item = isInCart(data.id)
     if (item)
@@ -36,12 +37,17 @@ const ItemDetail = ({ data }) => {
       <h3> {data.destacado}</h3>
       <h2 className='center'>${data.precio}</h2>
       <h2 className='center'>{data.detalle}</h2>
+    
 
-       <Link to='/' id='seguir'>Seguir Comprando</Link>
+          <Link to='/' id='seguir'>Seguir Comprando</Link>
+      
+    
+       
+     
       {
         goToCart
           ? <Link to='/cart' className='finish'><h2>Finalizar compra</h2> </Link>
-          : <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
+          : <Counter stock={getStock()} onAdd={onAdd}  initial={-0} /> 
       }
     </div>
     </>

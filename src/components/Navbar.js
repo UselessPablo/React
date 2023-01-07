@@ -11,6 +11,7 @@ import React from 'react';
 
 
 
+
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const [name, setName] = useState("");
@@ -62,10 +63,10 @@ const cartBtn =()=>{
                         </div>
                 
                     <div className='logo'>
-                            <h1 className='pulse'><Link to='/'>Huma</Link></h1>
-                            <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
+                            <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1>
+                            
                             <div className='dropdown'>
-                                <button className='prods'>Productos</button>
+                                <button className='prods'>Buscar</button>
                                 <div className='dropdowncontent'>
                                     <li><NavLink className='menuu' to='/category/mate'>Mates</NavLink></li>
                                     <li><NavLink className='menuu1' to='/category/maceta'>Macetas</NavLink></li>
@@ -73,7 +74,7 @@ const cartBtn =()=>{
                                     <li><NavLink className='menuu3' to='/category/destacado'>Oferta</NavLink></li>
                                 </div>
                             </div>
-
+                            <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                             <Theme />
                     </div>
                   
