@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { UseCartContex } from './CartContext';
 import Counter from './Counter';
-import {ToastContainer} from 'react-toastify';
+import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Item = ({ info }) => {
@@ -10,7 +10,7 @@ const Item = ({ info }) => {
   const { addProduct, isInCart } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
   const [clicked, setClicked] = useState('')
-
+  const notify = () => toast('Agregado al Carrito!');
   
   const getStock = () => {
     const item = isInCart(info.id)
@@ -23,6 +23,7 @@ const Item = ({ info }) => {
   const onAdd = (cantidad) => {
     setGoToCart(true);
     addProduct(info, cantidad)
+    notify()
   }
   const getBigImage = () => {
     setClicked(!clicked);

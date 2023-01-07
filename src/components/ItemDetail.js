@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
   const { addProduct, isInCart } = UseCartContex();
-  const notify = () => toast('Agregado al Carrito!');
+
   
   const getStock = () => {
     const item = isInCart(data.id)
@@ -21,7 +21,7 @@ const ItemDetail = ({ data }) => {
   const onAdd = (cantidad) => {
     setGoToCart(true);
     addProduct(data, cantidad)
-    notify()
+   
   }
 
   return (
@@ -41,11 +41,9 @@ const ItemDetail = ({ data }) => {
 
           <Link to='/' id='seguir'>Seguir Comprando</Link>
       
-    
-       
      
       {
-        goToCart
+        goToCart 
           ? <Link to='/cart' className='finish'><h2>Finalizar compra</h2> </Link>
           : <Counter stock={getStock()} onAdd={onAdd}  initial={-0} /> 
       }
