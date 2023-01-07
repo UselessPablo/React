@@ -33,7 +33,20 @@ const Item = ({ info }) => {
 
   return (
      <>
-     
+      <div  >
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={true}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </div> 
     
     <div className="cards slideInLeft">
       <img className="offer" src={info.offer} alt='' /> 
@@ -62,20 +75,7 @@ const Item = ({ info }) => {
       </div>
     </div>
       
-         <div  >
-            <ToastContainer
-          position="top-center"
-              autoClose={2000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={true}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
-            />
- </div> 
+
      
 
     </>

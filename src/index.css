@@ -382,9 +382,10 @@ form {
 .prods {
   background-color: transparent;
   color: rgb(0, 0, 0);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   margin-right: 40px;
+  margin-top: 0.5px;
 }
 
 .dropdown {
