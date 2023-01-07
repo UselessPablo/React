@@ -14,7 +14,7 @@ const Counter = ({ stock, onAdd, initial }) => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "colored",
+    theme: "light",
   });;
 
    const onAdds = () => {

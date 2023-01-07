@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { UseCartContex } from './CartContext';
 import Counter from './Counter';
 import {ToastContainer, toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const Item = ({ info }) => {
 
@@ -40,13 +40,13 @@ const Item = ({ info }) => {
           position="top-center"
           autoClose={500}
           hideProgressBar={true}
-          newestOnTop={false}
+          newestOnTop={true}
           closeOnClick
           rtl={true}
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="colored"
+          theme="light"
         />
       </div> 
     
