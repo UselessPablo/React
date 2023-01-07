@@ -15,15 +15,16 @@ const Item = ({ info }) => {
   const getStock = () => {
     const item = isInCart(info.id)
     if (item)
-      return info.cantidad - item.cantidad
+      return info.cantidad - item.cantidad 
     else
       return info.cantidad
-  }
+    
+    }
 
   const onAdd = (cantidad) => {
     setGoToCart(true);
-    addProduct(info, cantidad)
-    notify()
+    addProduct(info, cantidad) 
+    
   }
   const getBigImage = () => {
     setClicked(!clicked);

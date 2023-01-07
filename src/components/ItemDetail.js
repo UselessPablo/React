@@ -3,7 +3,7 @@ import Counter from './Counter'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { UseCartContex } from './CartContext';
-import { toast } from 'react-toastify';
+
 
 const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
