@@ -35,10 +35,10 @@ const Item = ({ info }) => {
 
   return (
      <>
-      <div  >
+      <div className="sticky" >
         <ToastContainer
           position="top-center"
-          autoClose={1000}
+          autoClose={500}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
@@ -46,7 +46,7 @@ const Item = ({ info }) => {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="dark"
+          theme="colored"
         />
       </div> 
     

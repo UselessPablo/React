@@ -6,7 +6,16 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Counter = ({ stock, onAdd, initial }) => {
   const [Valor, setValor] = useState(initial);
-  const notify = () => toast("Agregado al Carrito");
+  const notify = () => toast.success("Agregado al Carrito", {
+    // position: "top-center",
+    // autoClose: 750,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  });;
 
    const onAdds = () => {
      if (Valor < stock) {
