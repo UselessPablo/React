@@ -47,7 +47,9 @@ const Navbar = () => {
     }
 
     return (
-        <header className='sticky'>
+       <>
+      
+       <header className='sticky'>
             {/* <p className='nombre'>{name} {user?.email} </p> */}
             <nav className='sticky'>
                 
@@ -85,6 +87,8 @@ const Navbar = () => {
             </div>
            
         </header>
+       <h1 className='space'>Huma Cerámica</h1>
+        </>
     );
 };
 

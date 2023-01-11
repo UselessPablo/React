@@ -35,6 +35,7 @@ const Item = ({ info }) => {
 
   return (
      <>
+     
       <div className="sticky" >
         <ToastContainer
           position="top-center"
@@ -49,7 +50,7 @@ const Item = ({ info }) => {
           theme="light"
         />
       </div> 
-  <div className="space"></div>
+  
     <div className=" slideInLeft">
       <div className="cards">
       <div className="slide">

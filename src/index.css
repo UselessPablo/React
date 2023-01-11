@@ -267,7 +267,7 @@ span {
   text-align: center;
 }
 .slideInLeft {
-   margin-top: 8rem;
+   margin-top: 2rem;
    -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
   -webkit-animation-duration: 1s;
@@ -457,8 +457,7 @@ form {
 .oferta{
     position: fixed;
     color: rgb(255, 115, 0);
-    margin-left: 75%;
-    margin-top: 48%;
+   top:-70px
 
   }
 .info{
@@ -914,7 +913,9 @@ form{
   margin-left: 7px;
  }
  .space{
-  margin-top: 10vh;
+  margin-top: 30vh;
+  text-align: center;
+ 
  }
  .slide{
   width: 280px;
