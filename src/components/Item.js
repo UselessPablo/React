@@ -49,7 +49,7 @@ const Item = ({ info }) => {
           theme="light"
         />
       </div> 
-    
+  <div className="space"></div>
     <div className=" slideInLeft">
       <div className="cards">
       <div className="slide">
@@ -59,11 +59,13 @@ const Item = ({ info }) => {
       <button className="btnNone" onClick={getBigImage}>
 
         <img src={info.img} alt="xx" className={clicked ? 'big ' : 'imagenes'}>
+               
         </img>
+              <h4 className="detalleInfo"> {info.detalle}</h4>  
       </button>
       
       <div className="detalleInfo">
-      <p> {info.detalle}</p>
+      
       </div>
       <div className="cards2">
       
@@ -72,9 +74,10 @@ const Item = ({ info }) => {
         {" "}
         <button className="info">I n f o </button>
       </NavLink>
+              <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
       <div className="contadorCard">
-        <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
+      
       </div>
     </div>
       </div>

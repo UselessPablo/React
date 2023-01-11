@@ -308,11 +308,12 @@ span {
   width: 90px;
   /* color: rgb(255, 238, 0); */
   background-color: rgb(55, 202, 10);
-  margin-left: 40px;
+  margin-left: 35%;
 }
 .precio {
   font-size: 1rem;
   font-weight: 600;
+  text-align: center;
 }
 .pulse {
   font-size: 1.8rem;
@@ -444,6 +445,15 @@ form {
   .logoTheme{
     margin-top: 27%;
   }
+  p{
+    display: none;
+  }
+  .slideInLeft{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    width: 98%;
+  }
 .oferta{
     position: fixed;
     color: rgb(255, 115, 0);
@@ -451,8 +461,18 @@ form {
     margin-top: 48%;
 
   }
-  .cards{
+.info{
+  margin-left: 15%;
+}
+  .detalleInfo{
+    position: fixed;
+    top: 100px;
+
+  }
+  .slide{
     display: flex;
+    flex-direction: row;
+    width: 10px;
   }
   .listado{
     display: none;
@@ -498,15 +518,11 @@ form {
     height: 55px;
   
   }
-  .cards {
-    display: flex;
-    width: 95%;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin-top: 50px;
-    align-items: center;
-    border: solid;
-    border-style: groove;
+  .AddCart{
+    display: none;
+  }
+  .cards2 {
+
     padding: 5px;
   }
   .imagenes {
@@ -581,14 +597,12 @@ display: none;
     top:-4%;
   }
    .cards2{
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
+    align-items: center;
    }
    .detalleInfo{
-    width: 200px;
-   text-align: center;
-   font-size: 0.8rem;
-   height: 90px;
+ display: none;
    }
 .busqueda{
   position: absolute;
@@ -802,6 +816,7 @@ justify-content: space-between;
   display: flex;
     margin-top: 150px;
     padding: 5px;
+    margin-right: 20px;
     
  
     /* flex-wrap: wrap; */
@@ -897,4 +912,10 @@ form{
   justify-content: center;
   align-items: center;
   margin-left: 7px;
+ }
+ .space{
+  margin-top: 10vh;
+ }
+ .slide{
+  width: 280px;
  }

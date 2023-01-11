@@ -29,8 +29,8 @@ const AddCart = ({ stock, onAdd, initial }) => {
 
                 <div className='AddCart'>
                     {/* <button className="add" onClick={onAdds}>+</button> */}
-                    DobleClick to Add
-                    <button className="agregar" onClick={() => onAdd(Valor, setValor(0))} onDoubleClick={onAdds} onClickCapture={Valor ? notify : null} >Add Cart</button>
+                  
+                    <button className="agregar" onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >Add Cart</button>
                      
                 </div>
 
