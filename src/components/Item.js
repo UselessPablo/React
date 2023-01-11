@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { UseCartContex } from './CartContext';
 import Counter from './Counter';
 import {ToastContainer, toast} from 'react-toastify';
+import AddCart from "./AddCart";
 // import 'react-toastify/dist/ReactToastify.css';
 
 const Item = ({ info }) => {
@@ -23,8 +24,7 @@ const Item = ({ info }) => {
 
   const onAdd = (cantidad) => {
     setGoToCart(true);
-    addProduct(info, cantidad) 
-    
+    addProduct(info, cantidad++) 
   }
   const getBigImage = () => {
     setClicked(!clicked);
@@ -67,7 +67,6 @@ const Item = ({ info }) => {
       </div>
       <div className="cards2">
       
-       
       <p className="precio">Precio $ {info.precio}</p>
       <NavLink to={`/detalle/${info.id}`}>
         {" "}
@@ -75,7 +74,7 @@ const Item = ({ info }) => {
       </NavLink>
       </div>
       <div className="contadorCard">
-        <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
+        <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
     </div>
       </div>

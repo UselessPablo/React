@@ -305,9 +305,10 @@ span {
 }
 .info {
   /* box-shadow: 10px 10px 10px rgb(82, 75, 99); */
-  width: 85px;
+  width: 90px;
   /* color: rgb(255, 238, 0); */
   background-color: rgb(55, 202, 10);
+  margin-left: 40px;
 }
 .precio {
   font-size: 1rem;
@@ -608,6 +609,7 @@ ul{
 }
 .agregar{
   background-color: rgb(255, 123, 0);
+  width: 90px;
 }
 .dark {
 background: #222222;
@@ -890,4 +892,9 @@ form{
   align-items: center;
   margin-top: 80px; 
 }
- 
+ .AddCart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7px;
+ }
