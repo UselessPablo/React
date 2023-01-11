@@ -53,8 +53,11 @@ const Navbar = () => {
                 
                   
                         <div className='logo'>
+                      <div className='logoTheme'>
                             {/* <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1> */}
                     <Link className='huma' to='/'>    <img className='huma' src={huma} alt='logo' /></Link>
+                    <Theme />
+                    </div>
                             <div className='dropdown'>
                                 <button className='prods'>Buscar</button>
                                 <div className='dropdowncontent'>
@@ -66,7 +69,7 @@ const Navbar = () => {
                        
                             </div>
                     <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                    <Theme />
+                    
                     
                         </div> 
                 
@@ -74,6 +77,7 @@ const Navbar = () => {
                
 
             </nav>
+          
             <div className='logged'>
                 <h2 className='emailed'>Bienvenido <p className='nombre'> {user?.email} </p></h2>
                 <button className='login' onClick={logBtn}>Log In</button>

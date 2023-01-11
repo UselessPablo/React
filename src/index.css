@@ -12,7 +12,7 @@ z-index: 0;
 }
 header{
  /* height: 28vh; */
- background-color: rgba(255, 148, 242, 0.192);
+ /* background-color: rgba(255, 148, 242, 0.192); */
  margin-top: 1rem;
 max-width: 98%;
  /* border:0.3px solid; */
@@ -440,12 +440,18 @@ form {
     /* background-size: inherit;
     background-position-x: -250px; */
   }
+  .logoTheme{
+    margin-top: 27%;
+  }
 .oferta{
     position: fixed;
     color: rgb(255, 115, 0);
     margin-left: 75%;
     margin-top: 48%;
 
+  }
+  .cards{
+    display: flex;
   }
   .listado{
     display: none;
@@ -792,7 +798,7 @@ justify-content: space-between;
 }
 .logged{
   display: flex;
-    margin-top: 80px;
+    margin-top: 150px;
     padding: 5px;
     
  
@@ -869,6 +875,7 @@ width: 200px;
 .huma{
   width: 45px;
   margin-top: 6%;
+  margin-left: 5px;
 }
 .login2{
   background-color: transparent;
@@ -876,5 +883,11 @@ width: 200px;
 }
 form{
   margin-left: 30%;
+}
+.logoTheme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px; 
 }
  
