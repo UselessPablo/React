@@ -1,5 +1,5 @@
 
-import { NavLink, Link, useNavigate} from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
 import Theme from './Theme';
@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { auth, db, logout } from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
-
+import huma from '../assets/img/logohuma.png'
 
 
 
@@ -16,8 +16,8 @@ const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const [name, setName] = useState("");
     const navigate = useNavigate();
-  
-    
+
+
     const fetchUserName = async () => {
         try {
             const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -35,36 +35,26 @@ const Navbar = () => {
         if (!user) return navigate("./");
         fetchUserName();
     }, []);
-   
-const cartBtn =()=>{
-    let path = `Cart`;
-    navigate(path);
-}
-    const logBtn = ()=>{
-    let path = `Registration`;
-    navigate(path);
 
-}
+    const cartBtn = () => {
+        let path = `Cart`;
+        navigate(path);
+    }
+    const logBtn = () => {
+        let path = `Registration`;
+        navigate(path);
+
+    }
 
     return (
-        <header>
-            <h2 className='emailed'>Bienvenido <p className='nombre'>{name} {user?.email} </p></h2>
-        <nav className='sticky'>
-         
-
-            <div className="navbar">
-           <div className='container nav-container'>
-
-                        <input className="checkbox" type="checkbox" name="" id="" />
-                        <div className="hamburger-lines">
-                            <span class="line line1"></span>
-                            <span className="line line2"></span>
-                            <span className="line line3"></span>
-                        </div>
+        <header className='sticky'>
+            {/* <p className='nombre'>{name} {user?.email} </p> */}
+            <nav className='sticky'>
                 
-                    <div className='logo'>
-                            <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1>
-                            
+                  
+                        <div className='logo'>
+                            {/* <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1> */}
+                    <Link className='huma' to='/'>    <img className='huma' src={huma} alt='logo' /></Link>
                             <div className='dropdown'>
                                 <button className='prods'>Buscar</button>
                                 <div className='dropdowncontent'>
@@ -73,34 +63,23 @@ const cartBtn =()=>{
                                     <li><NavLink className='menuu2' to='/category/taza'>Tazas</NavLink></li>
                                     <li><NavLink className='menuu3' to='/category/destacado'>Oferta</NavLink></li>
                                 </div>
+                       
                             </div>
-                            <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                            <Theme />
-                    </div>
-                  
-              
-                {/* <li><NavLink to='/'>Home</NavLink></li>  */}
-                <div className='menu-items' >
-                               <div className='logged'>
-                                <button className='login' onClick={logBtn}>Log In</button>
-                                <h2 className='emailed'>Bienvenido <p className='nombre'>{name} {user?.email} </p></h2>
-                                {/* <h2 className='nombre'>{name}</h2> */}
-                                {/* <p className='emailed'>{user?.email}</p> */}
-                                <button className="login" onClick={logout}>Logout </button>
-                            </div>
-
-                           <div/>
-                           
-                  
-                </div> 
-               
+                    <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
+                    <Theme />
+                    
+                        </div> 
                 
-            
-           </div>
-                </div>
-     
-     
-        </nav>
+                            <div />
+               
+
+            </nav>
+            <div className='logged'>
+                <h2 className='emailed'>Bienvenido <p className='nombre'> {user?.email} </p></h2>
+                <button className='login' onClick={logBtn}>Log In</button>
+                <button className="login" onClick={logout}>Logout </button>
+            </div>
+           
         </header>
     );
 };

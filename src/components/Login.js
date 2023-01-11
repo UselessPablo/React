@@ -19,7 +19,7 @@ function Login() {
     if (user) navigate("./");
   }, [user, loading]);
   return (
-    <div className="login">
+    <div className="login2">
       <div className="login__container">
         <input
           type="text"

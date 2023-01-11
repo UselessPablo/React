@@ -50,7 +50,9 @@ const Item = ({ info }) => {
         />
       </div> 
     
-    <div className="cards slideInLeft">
+    <div className=" slideInLeft">
+      <div className="cards">
+      <div className="slide">
       <img className="offer" src={info.offer} alt='' /> 
       <h2 className="oferta"> {info.destacado}</h2>
       
@@ -76,9 +78,9 @@ const Item = ({ info }) => {
         <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
     </div>
-      
+      </div>
 
-     
+      </div>
 
     </>
   );
