@@ -80,11 +80,7 @@ const Navbar = () => {
 
             </nav>
           
-            <div className='logged'>
-                <h2 className='emailed'> <p className='nombre'> {user?.email} </p></h2>
-                <button className='login' onClick={logBtn}>Log In</button>
-                <button className="login" onClick={logout}>Logout </button>
-            </div>
+           
            
         </header>
        <h1 className='space'>Huma Cerámica</h1>

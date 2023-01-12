@@ -650,7 +650,7 @@ color: rgb(27, 27, 27);
   width: 45px;
 }
 .rest, .add, .agregar, .info, .btnTheme,  #seguir, .finish, .borrar, 
-.compra, input, .imagenes, .imagenes2 {
+.compra, input, .imagenes, .imagenes2, textarea {
   box-shadow: 3px 3px 10px rgb(105, 112, 119);
 }
  .borrar, .compra, input{
@@ -919,3 +919,24 @@ form{
  .slide{
   width: 280px;
  }
+ .contacto{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  justify-content: center;
+  margin-top: 10vh;
+  align-items: center;
+  width: 50%;
+  padding-bottom: 10px;
+
+ }
+ textarea{
+   margin-top: 20px;
+  height: 200px;
+  border-radius: 1rem;
+
+
+ }
+.formContact{
+  
+}
