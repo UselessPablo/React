@@ -1,14 +1,33 @@
 
-import React, { useState } from "react";
+import  { useState } from "react";
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
+ 
+const QuienesSomos = () => {
+ 
+  // const mensajes = {
+  //   email: mensaje,
+  //   mensaje: mensaje,
+  // }
 
 
-export const QuienesSomos = () => {
- const [clean, setClean] = useState (false);
+  const [mensaje, setMensaje] = useState();
+const inputMessage = (e)=>{
 
-const cleanText = ()=>{
-
-
+ 
+  const {name, value} = e.target
+setMensaje({...mensaje, [name]: value})
 }
+ 
+
+
+const handleClick = () => {
+
+    const db = getFirestore();
+    const mensajesCollection = collection(db, 'mensajes');
+    addDoc(mensajesCollection, mensaje)
+      .then(({ id }) => console.log(id));
+   
+  }
 
   return (
    <>
@@ -19,14 +38,14 @@ const cleanText = ()=>{
  <div className="contacto">
  <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
  <form className="formContact">
- <input type='text' placeholder="Email" />
+ <input type='text' placeholder="Email" onChange={inputMessage} name='email' />
  
- <textarea></textarea>
- <button type='submit'>Enviar</button>
+ <textarea onChange={inputMessage} name='mensaje'></textarea>
+ <button type='submit' onClick={handleClick }>Enviar</button>
         </form>
  
  </div>
     </>
  )
-}
+  }
 export default  QuienesSomos;
