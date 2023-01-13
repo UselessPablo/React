@@ -11,9 +11,9 @@ import 'react-toastify/dist/ReactToastify.css';
   //   email: mensaje,
   //   mensaje: mensaje,
   // }
-   const notify = () => toast.success("Mensaje enviado", {
+   const notify = () => toast.success("Mensaje enviado, te responderemos a la brevedad", {
      // position: "top-center",
-     // autoClose: 750,
+    autoClose: 1750,
      hideProgressBar: true,
      closeOnClick: true,
      pauseOnHover: true,
