@@ -1,14 +1,26 @@
 
 import  { useState } from "react";
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
- 
-const QuienesSomos = () => {
- 
+ import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+ const QuienesSomos = () => {
+   const navigate = useNavigate();
   // const mensajes = {
   //   email: mensaje,
   //   mensaje: mensaje,
   // }
-
+   const notify = () => toast.success("Mensaje enviado", {
+     // position: "top-center",
+     // autoClose: 750,
+     hideProgressBar: true,
+     closeOnClick: true,
+     pauseOnHover: true,
+     draggable: true,
+     progress: undefined,
+     theme: "dark",
+   });;
 
   const [mensaje, setMensaje] = useState();
 const inputMessage = (e)=>{
@@ -26,10 +38,17 @@ const handleClick = () => {
     const mensajesCollection = collection(db, 'mensajes');
     addDoc(mensajesCollection, mensaje)
       .then(({ id }) => console.log(id));
-   
+   confirmation();
   }
+const [confirm, setConfirm]= useState(false)
 
-  return (
+const confirmation = () =>{
+notify();
+navigate('/');
+}
+ 
+
+return (
    <>
    <div>
       
@@ -41,8 +60,9 @@ const handleClick = () => {
  <input type='text' placeholder="Email" onChange={inputMessage} name='email' />
  
  <textarea onChange={inputMessage} name='mensaje'></textarea>
- <button type='submit' onClick={handleClick }>Enviar</button>
-        </form>
+ <button type='button' onClick={handleClick} >Enviar</button>
+      </form>
+     
  
  </div>
     </>
