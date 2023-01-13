@@ -120,7 +120,7 @@ button {
   border-style: groove; */
   margin: 7px;
   border-radius: 0.5rem;
-  background-color: rgba(226, 188, 188, 0.493);
+  background-color: rgba(208, 255, 239, 0.493);
   /* background: #e0e0e0; */
   /* box-shadow: 0px 10px 10px  #73567a,
                0px 0px 20px  rgba(144, 147, 151, 0.527); */
@@ -451,7 +451,8 @@ form {
     display: flex;
     flex-direction: row;
     margin: 5px;
-    width: 98%;
+    width: 130%;
+  
   }
 .oferta{
     position: fixed;
@@ -477,7 +478,7 @@ form {
   }
   h1 {
     font-size: 1.3rem;
-    margin-left: 20px;
+    margin-left: 40%;
   }
   .offer2{
  display: none;
@@ -912,7 +913,7 @@ form{
   margin-left: 7px;
  }
  .space{
-  margin-top: 30vh;
+  margin-top: 38vh;
   text-align: center;
  
  }
