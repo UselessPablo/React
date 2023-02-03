@@ -120,7 +120,7 @@ button {
   border-style: groove; */
   margin: 7px;
   border-radius: 0.5rem;
-  background-color: rgba(208, 255, 239, 0.493);
+  /* background-color: rgba(208, 255, 239, 0.493); */
   /* background: #e0e0e0; */
   /* box-shadow: 0px 10px 10px  #73567a,
                0px 0px 20px  rgba(144, 147, 151, 0.527); */
@@ -915,7 +915,7 @@ form{
  .space{
   margin-top: 38vh;
   text-align: center;
- 
+ height: 10vh;
  }
  .slide{
   width: 280px;
@@ -939,6 +939,3 @@ form{
 
 
  }
-.formContact{
-  
-}

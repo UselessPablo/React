@@ -9,6 +9,7 @@ import { auth, db, logout } from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
 import huma from '../assets/img/logohuma.png'
+import QuienesSomos from '../pages/QuienesSomos';
 
 
 
@@ -68,10 +69,11 @@ const Navbar = () => {
                                     <li><NavLink className='menuu2' to='/category/taza'>Tazas</NavLink></li>
                                     <li><NavLink className='menuu3' to='/category/destacado'>Oferta</NavLink></li>
                                 </div>
-                       
+                           
                             </div>
+                        <NavLink to="/pages/QuienesSomos">Contacto</NavLink>
                     <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                    
+                        
                     
                         </div> 
                 

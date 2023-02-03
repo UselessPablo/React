@@ -50,14 +50,14 @@ navigate('/');
 
 return (
    <>
-   <div>
+   <div className="nosotros">
       
       <h2 className="parrafo"> Huma es un emprendimiento que nace por la pasión y gusto de transformar el barro en un producto único</h2>
     </div>
  <div className="contacto">
  <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
  <form className="formContact">
- <input type='text' placeholder="Email" onChange={inputMessage} name='email' require='email' />
+ <input  placeholder="Email" onChange={inputMessage} name='email' type='email' />
  
  <textarea onChange={inputMessage} name='mensaje'></textarea>
  <button type='button' onClick={handleClick} >Enviar</button>
