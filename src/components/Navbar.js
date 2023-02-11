@@ -71,7 +71,7 @@ const Navbar = () => {
                                 </div>
                            
                             </div>
-                        <NavLink to="/pages/QuienesSomos">Contacto</NavLink>
+                        <NavLink className='quienes' to="/pages/QuienesSomos">Contacto</NavLink>
                     <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                         
                     
