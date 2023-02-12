@@ -68,7 +68,9 @@ nav {
   width: 220px;
   border-radius: 0.5rem;
   margin: 5px;
-  /* box-shadow: 10px 10px 10px 10px rgb(109, 101, 139); */
+  box-shadow:  1px 1px 18px 12px rgb(140, 139, 145),
+   inset 5px 5px 4px 4px  rgb(109, 101, 139);
+
 
 }
 button {
@@ -401,6 +403,7 @@ form {
   /* position: absolute; */
   display: inline-block;
   /* margin-right: 15%; */
+  border-radius: 2.8rem;
 }
 
 .dropdowncontent  {
@@ -665,8 +668,11 @@ color: rgb(27, 27, 27);
   width: 45px;
 }
 .rest, .add, .agregar, .info, .btnTheme,  #seguir, .finish, .borrar, 
-.compra, input, .imagenes, .imagenes2, textarea, .info, .agregar, .send {
-  box-shadow: 3px 3px 10px 2px  rgb(105, 112, 119);
+.compra, input, textarea, .info, .agregar, .send, .dropdown, .quienes  {
+  box-shadow:inset 5px 5px 13px #a19f9f, 
+  inset -5px -5px 5px #c7c7c7 ; 
+  /* background: #e0e0e0; */
+
 }
  .borrar, .compra, input{
   background-color: transparent;
@@ -957,4 +963,6 @@ form{
 .quienes{
   font-size: 1.3rem;
   color: black;
+  padding: 21px;
+  border-radius: 2.8rem;
 }
