@@ -164,7 +164,7 @@ p {
 .imagenes2 {
   margin-top: 8rem;
   width: 290px;
-  border-radius: 20rem 1rem 1rem 20rem;
+  border-radius: 1rem;
 }
 .active {
   color: rgba(255, 237, 78, 0.884);
@@ -200,10 +200,10 @@ span {
 }
 .imagenes3 {
   width: 180px;
-  border-radius: 15rem 1rem 1rem 15rem;
+  border-radius: 1rem;
 }
 .popup {
-  background-color: rgb(233, 105, 45);
+  background-color: rgb(248, 119, 14);
   border-radius: 100rem 100rem 100rem 100rem;
   color: white;
   font-size: 0.8rem;
@@ -255,7 +255,7 @@ span {
   height: 30px;
   border-radius: 1.2rem;
   margin: 30px;
-  background-color: rgba(172, 30, 207, 0.315);
+  background-color: rgb(255, 255, 255);
   padding-top: 9px;
 
   
@@ -307,7 +307,7 @@ span {
   /* box-shadow: 10px 10px 10px rgb(82, 75, 99); */
   width: 90px;
   /* color: rgb(255, 238, 0); */
-  background-color: rgb(55, 202, 10);
+  background-color: rgb(245, 255, 242);
   margin-left: 35%;
 }
 .precio {
@@ -442,6 +442,16 @@ form {
     /* background-size: inherit;
     background-position-x: -250px; */
   }
+  .big{
+    width: 100%;
+    transform: translate(100px);
+    transition: 0.3s;
+    border-radius: 1rem;
+    position: fixed;
+    z-index: 10;
+    opacity: 1;
+    top:-8%;
+  }
   .logoTheme{
     margin-top: 27%;
   }
@@ -547,7 +557,8 @@ form {
 
   }
   label{
-    margin: 10px;
+    margin: 4px;
+    color: black;
    
   }
   .pTop{
@@ -587,14 +598,16 @@ display: none;
     justify-content: center;
   }
   .big{
-    width: 170%;
-    transform: translate(-100px);
-    transition: 1s;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    transform: translate(0px);
+    transition: 0.3s;
     border-radius: 1rem;
     position: absolute;
     z-index: 10;
     opacity: 1;
-    top:-4%;
+    top:-8%;
   }
    .cards2{
     /* display: flex;
@@ -622,7 +635,7 @@ ul{
   flex-direction: row;
 }
 .agregar{
-  background-color: rgb(255, 123, 0);
+  background-color: rgb(255, 255, 255);
   width: 90px;
 }
 .dark {
@@ -644,19 +657,22 @@ color: rgb(27, 27, 27);
   width: 35px;
 }
 .add {
-  background-color: rgb(237, 145, 240);
+  background-color: rgb(255, 255, 255);
   width: 45px;
 }
 .rest {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
   width: 45px;
 }
 .rest, .add, .agregar, .info, .btnTheme,  #seguir, .finish, .borrar, 
-.compra, input, .imagenes, .imagenes2, textarea {
-  box-shadow: 3px 3px 10px rgb(105, 112, 119);
+.compra, input, .imagenes, .imagenes2, textarea, .info, .agregar, .send {
+  box-shadow: 3px 3px 10px 2px  rgb(105, 112, 119);
 }
  .borrar, .compra, input{
   background-color: transparent;
+}
+.send{
+  background-color: white;
 }
 .cartWidget:hover{
    box-shadow: 3px 3px 10px rgb(105, 112, 119);
@@ -936,7 +952,7 @@ form{
    margin-top: 20px;
   height: 200px;
   border-radius: 0.2rem;
-  background-color: rgba(197, 140, 75, 0.219);
+  background-color: rgba(255, 255, 255, 0.219);
  }
 .quienes{
   font-size: 1.3rem;

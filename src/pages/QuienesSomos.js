@@ -60,7 +60,7 @@ return (
  <input  placeholder="Email" onChange={inputMessage} name='email' type='email' />
  
  <textarea onChange={inputMessage} name='mensaje'></textarea>
- <button type='button' onClick={handleClick} >Enviar</button>
+ <button className='send' type='button' onClick={handleClick} >Enviar</button>
       </form>
      
  
