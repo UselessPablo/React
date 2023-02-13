@@ -58,6 +58,7 @@ const Navbar = () => {
                         <div className='logo'>
                       <div className='logoTheme'>
                             {/* <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1> */}
+                            <h1 className='space'>Huma Cerámica</h1>
                     <Link className='huma' to='/'>    <img className='huma' src={huma} alt='logo' /></Link>
                     <Theme />
                     </div>
@@ -73,19 +74,19 @@ const Navbar = () => {
                             </div>
                         <NavLink className='quienes' to="/pages/QuienesSomos">Contacto</NavLink>
                     <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                        
+                       
                     
                         </div> 
-                
+                    
                             <div />
-               
+                    
 
             </nav>
           
            
-           
+               
         </header>
-       <h1 className='space'>Huma Cerámica</h1>
+      
         </>
     );
 };

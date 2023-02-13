@@ -7,6 +7,7 @@ html,
 /* background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%); */
   width: 100vw;
 z-index: 0;
+ overflow-x: hidden;
 
 
 }
@@ -31,7 +32,7 @@ a {
 }
 h1 {
   font-family: "maven pro";
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-align: center;
   margin-right: 10px;
 
@@ -63,6 +64,8 @@ nav {
   height: 130px;
   position: sticky;
   align-items: center;
+  margin-bottom: 50px;
+  
 }
 .imagenes {
   width: 220px;
@@ -280,8 +283,9 @@ span {
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  margin-top: 60px;
 }
 @-webkit-keyframes slideInLeft {
   0% {
@@ -535,7 +539,7 @@ form {
     display: none;
   }
   .cards2 {
-
+    margin-top: 10px;
     padding: 5px;
   }
   .imagenes {
@@ -651,6 +655,7 @@ color: rgb(27, 27, 27);
 }
 .btnTheme{
   background-color: rgb(255, 255, 255);
+  margin-right: 13%;
 
 }
 .btnTheme:hover{
@@ -668,7 +673,7 @@ color: rgb(27, 27, 27);
   width: 45px;
 }
 .rest, .add, .agregar, .info, .btnTheme,  #seguir, .finish, .borrar, 
-.compra, input, textarea, .info, .agregar, .send, .dropdown, .quienes  {
+.compra, input, textarea, .info, .agregar, .send  {
   box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 
   /* background: #e0e0e0; */
@@ -914,7 +919,7 @@ width: 200px;
 .huma{
   width: 45px;
   margin-top: 6%;
-  margin-left: 5px;
+ 
 }
 .login2{
   background-color: transparent;
@@ -936,9 +941,9 @@ form{
   margin-left: 7px;
  }
  .space{
-  margin-top: 38vh;
+  margin-top: 20vh;
   text-align: center;
- height: 10vh;
+
  }
  .slide{
   width: 280px;
