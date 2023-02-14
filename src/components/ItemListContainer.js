@@ -34,9 +34,10 @@ export const ItemListContainer = () => {
             {
                 loading ? <Loader />
                     :
+                  <div className="main">
                     <div className="slideInLeft" >
                         <ItemList data={data} />
-
+                        </div>
                     </div>
             }
         </>

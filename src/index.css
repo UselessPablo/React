@@ -34,9 +34,8 @@ h1 {
   font-family: "maven pro";
   font-size: 1.8rem;
   text-align: center;
-  margin-right: 10px;
-
-  margin-bottom: 30px;
+  margin-left: 6px;
+  margin-right: 35px;
 }
 h2,
 h3 {
@@ -283,9 +282,9 @@ span {
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  
 }
 @-webkit-keyframes slideInLeft {
   0% {
@@ -468,7 +467,7 @@ form {
   .slideInLeft{
     display: flex;
     flex-direction: row;
-    margin: 5px;
+   
     width: 100%;
   
   }
@@ -497,6 +496,7 @@ form {
   h1 {
     font-size: 1.3rem;
     margin-left: 20px;
+    display: none;
   }
   .offer2{
  display: none;
@@ -655,7 +655,7 @@ color: rgb(27, 27, 27);
 }
 .btnTheme{
   background-color: rgb(255, 255, 255);
-  margin-right: 13%;
+  margin-right: 33%;
 
 }
 .btnTheme:hover{
@@ -684,6 +684,7 @@ color: rgb(27, 27, 27);
 }
 .send{
   background-color: white;
+  margin-left: 77%;
 }
 .cartWidget:hover{
    box-shadow: 3px 3px 10px rgb(105, 112, 119);
@@ -925,14 +926,13 @@ width: 200px;
   background-color: transparent;
   margin-top: 36vh;
 }
-form{
-  margin-left: 30%;
-}
+
 .logoTheme{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 80px; 
+  justify-content: space-evenly;
 }
  .AddCart{
   display: flex;
@@ -941,21 +941,19 @@ form{
   margin-left: 7px;
  }
  .space{
-  margin-top: 20vh;
   text-align: center;
 
  }
- .slide{
-  width: 280px;
- }
+.main{
+  margin-top: 35vh;
+}
+
  .contacto{
   display: flex;
   flex-direction: column;
-  margin-left: 20%;
   justify-content: center;
   margin-top: 10vh;
   align-items: center;
-  width: 50%;
   padding-bottom: 10px;
 
  }
@@ -970,4 +968,7 @@ form{
   color: black;
   padding: 21px;
   border-radius: 2.8rem;
+}
+.nosotros{
+  margin-top: 35vh;
 }
