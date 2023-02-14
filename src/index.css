@@ -372,6 +372,7 @@ span {
   width: 80%;
   justify-content: center;
   margin-right: 10%;
+  margin-left: 9%;
 }
 input {
   width: 250px;
@@ -674,10 +675,12 @@ color: rgb(27, 27, 27);
 }
 .rest, .add, .agregar, .info, .btnTheme,  #seguir, .finish, .borrar, 
 .compra, input, textarea, .info, .agregar, .send  {
-  box-shadow:inset 5px 5px 13px #a19f9f, 
+  /* box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 
-  /* background: #e0e0e0; */
+  background: #e0e0e0; */
+background: linear-gradient(145deg, #CACCCF, #FFFFFF);
 
+box-shadow: 20.42px 20.42px 15px #D9DADE, -20.42px -20.42px 15px #FFFFFF;
 }
  .borrar, .compra, input{
   background-color: transparent;
@@ -708,7 +711,9 @@ color: rgb(27, 27, 27);
   justify-content: space-between;
 
 } 
-
+input{
+  width: 200px;
+}
 .nav-container {
   display: flex;
   justify-content: space-between;
