@@ -50,42 +50,60 @@ const Navbar = () => {
     return (
        <>
       
-       <header className='sticky'>
+      
             {/* <p className='nombre'>{name} {user?.email} </p> */}
             <nav className='sticky'>
                 
-                  
-                        <div className='logo'>
-                      <div className='logoTheme'>
+                  <div className='navbar'>
+                    <div className='container nav-container'>
+                    <input className='checkbox ' type='checkbox' />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                            
+                    </div>  
+                       
+                        
+                           
                             {/* <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1> */}
-                            <h1 className='space'>Huma Cerámica</h1>
-                    <Link className='huma' to='/'>    <img className='huma' src={huma} alt='logo' /></Link>
-                    <Theme />
-                    </div>
-                            <div className='dropdown'>
-                                <button className='prods'>Buscar</button>
-                                <div className='dropdowncontent'>
+                              <div className='logo'>
+                            
+                                <Link className='huma' to='/'>      <h1 className=''>HumaBrc Cerámica</h1></Link>
+                      {/* <img className='huma' src={huma} alt='logo' /> */}
+                            <div className='catw'>
+                            <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
+                           
+                            <Theme />
+                            </div>
+                        </div>
+                         
+                        
+                            <div className=' menu-items'>
+                                {/* <button className='prods'>Buscar</button> */}
+                                {/* <div className='dropdowncontent'> */}
+                            <NavLink className='quienes' to="/pages/QuienesSomos">Contacto</NavLink>
                                     <li><NavLink className='menuu' to='/category/mate'>Mates</NavLink></li>
                                     <li><NavLink className='menuu1' to='/category/maceta'>Macetas</NavLink></li>
                                     <li><NavLink className='menuu2' to='/category/taza'>Tazas</NavLink></li>
                                     <li><NavLink className='menuu3' to='/category/destacado'>Oferta</NavLink></li>
-                                </div>
+                                {/* </div> */}
                            
-                            </div>
-                        <NavLink className='quienes' to="/pages/QuienesSomos">Contacto</NavLink>
-                    <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                       
+                           
+                        
                     
+                        
+                      
                         </div> 
-                    
-                            <div />
-                    
+                        </div>
+                        
+                    </div>
 
             </nav>
           
            
                
-        </header>
+      
       
         </>
     );
