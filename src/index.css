@@ -8,7 +8,7 @@ html,
   width: 100vw;
 z-index: 0;
  overflow-x: hidden;
-
+background: white;
 
 }
 header{
@@ -656,7 +656,7 @@ color: rgb(27, 27, 27);
 }
 .btnTheme{
   background-color: rgb(255, 255, 255);
-  
+
 
 }
 .btnTheme:hover{
@@ -678,9 +678,13 @@ color: rgb(27, 27, 27);
   /* box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 
   background: #e0e0e0; */
-background: linear-gradient(145deg, #CACCCF, #FFFFFF);
+/* background: linear-gradient(145deg, #CACCCF, #FFFFFF); */
+/* box-shadow: 20.42px 20.42px 15px #D9DADE, -20.42px -20.42px 15px #FFFFFF; */
 
-box-shadow: 20.42px 20.42px 15px #D9DADE, -20.42px -20.42px 15px #FFFFFF;
+background: #ffffff;
+-webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+
 }
  .borrar, .compra, input{
   background-color: transparent;
@@ -716,13 +720,13 @@ display: flex;
 width: 98%;
 justify-content: space-between;
 height: 50px;
-margin-left: 10%;
+margin-left: 7%;
 } 
 .catw{
 display: flex;
 flex-direction: column;
 align-items: center;
-
+margin-right: 6px;
 
 }
 
