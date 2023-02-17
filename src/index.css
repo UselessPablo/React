@@ -548,7 +548,6 @@ form {
 }
 .cartWidget {
   background-color: transparent;
-  margin-top: 80px;
   width: auto;
   align-items: center;
   display: flex;
@@ -724,9 +723,9 @@ margin-left: 7%;
 } 
 .catw{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
-margin-right: 6px;
+
 
 }
 
@@ -756,7 +755,7 @@ margin-right: 6px;
   width: 98%;
   z-index: 200;
   margin-top: 10px;
-  height: 50px;
+  height: 60px;
 }
 .login__container{
   margin-top: 20vh;
@@ -834,7 +833,7 @@ width: 200px;
 
  }
 .main{
-  margin-top: 35vh;
+  margin-top: 12vh;
 }
 
  .contacto{
@@ -867,7 +866,7 @@ margin-bottom: 40px;
 .container {
   max-width: 1050px;
   width: 90%;
-  margin: auto;
+  margin: 5px;
 }
 
 /* .navbar {
@@ -879,7 +878,7 @@ margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: 60px;
 }
 
 .navbar .menu-items {
@@ -892,7 +891,7 @@ margin-bottom: 40px;
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: #6b6960;
+  color: #000000;
   font-weight: 800;
   
   font-size: 1.2rem;
@@ -996,7 +995,7 @@ margin-bottom: 40px;
   transform: rotate(-45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ #root{
-  /* display: none; */
-  filter: blur(2px);
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+
 }
