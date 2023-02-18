@@ -71,6 +71,8 @@ nav {
   margin: 5px;
   box-shadow:  1px 1px 18px 12px rgb(140, 139, 145),
    inset 5px 5px 4px 4px  rgb(109, 101, 139);
+  
+
 
 
 }
@@ -312,7 +314,7 @@ span {
   width: 90px;
   /* color: rgb(255, 238, 0); */
   background-color: rgb(255, 255, 255);
-  margin-left: 35%;
+  margin-left: 32%;
 }
 .precio {
   font-size: 1rem;
@@ -440,13 +442,7 @@ form {
   display: block;
 }
 @media only screen and (max-width: 480px) {
-  body,html, #root {
-    /* overflow-x: hidden; */
-   
-    width: 100vw;
-    /* background-size: inherit;
-    background-position-x: -250px; */
-  }
+  
  
   .big{
     width: 100%;
@@ -479,6 +475,8 @@ form {
   }
 .info{
   margin-left: 15%;
+  margin-bottom: -25px;
+  font-weight: 900;
 }
   .detalleInfo{
     position: fixed;
@@ -540,10 +538,12 @@ form {
   }
   .cards2 {
     margin-top: 10px;
-    padding: 5px;
+   
+    left: 200px;
   }
   .imagenes {
-    width: 220px;
+    width: 230px;
+  height: 110px;
   }
 }
 .cartWidget {
@@ -605,15 +605,15 @@ display: none;
     justify-content: center;
   }
   .big{
-    width: 120%;
+    width: 80%;
     height: 120%;
     object-fit: cover;
     transform: translate(0px);
     transition: 0.3s;
     border-radius: 1rem;
-    position: absolute;
     z-index: 10;
-    opacity: 1;
+   
+   
     top:-8%;
   }
    .cards2{
@@ -672,7 +672,7 @@ color: rgb(27, 27, 27);
   background-color: rgb(255, 255, 255);
   width: 45px;
 }
-.rest, .add, .agregar, .info, .btnTheme,  #seguir, .finish, .borrar,.menuu1, .menuu2, .menuu3, .menuu,
+.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,.menuu1, .menuu2, .menuu3, .menuu,
 .compra, input, textarea, .info, .agregar, .send  {
   /* box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 

@@ -29,7 +29,6 @@ const Item = ({ info }) => {
   const getBigImage = () => {
     setClicked(!clicked);
 //  makeBlur1();
-    
   }
   
 
@@ -57,13 +56,13 @@ const Item = ({ info }) => {
       <img className="offer" src={info.offer} alt='' /> 
       <h2 className="oferta"> {info.destacado}</h2>
       
-      <button className="btnNone" onClick={getBigImage}>
+      {/* <button className="btnNone" onClick={getBigImage}> */}
 
-        <img src={info.img} alt="xx" className={clicked ? 'big ' : 'imagenes'}>
+        <img src={info.img} alt="xx" onClick={getBigImage} className={clicked ? 'big ' : 'imagenes'}>
                
         </img>
               <h4 className="detalleInfo"> {info.detalle}</h4>  
-      </button>
+      {/* </button> */}
       
       <div className="detalleInfo">
       
