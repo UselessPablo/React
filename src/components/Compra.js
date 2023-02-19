@@ -4,7 +4,7 @@ const Compra = ({ comprador }) => {
   return (
     <>
       {
-        <div>
+        <div className='space2'>
           <h2> Gracias por tu compra: {comprador.Nombre}</h2>
           <h2> Dirección de envio: {comprador.dirección}</h2>
           <h2>Teléfono: {comprador.Teléfono}</h2>

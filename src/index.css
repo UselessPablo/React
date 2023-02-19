@@ -446,7 +446,7 @@ form {
  
   .big{
     width: 100%;
-    transform: translate(100px);
+    transform: translate(0px);
     transition: 0.3s;
     border-radius: 1rem;
     position: fixed;
@@ -673,7 +673,7 @@ color: rgb(27, 27, 27);
   width: 45px;
 }
 .rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,.menuu1, .menuu2, .menuu3, .menuu,
-.compra, input, textarea, .info, .agregar, .send  {
+.compra, input, textarea, .info, .agregar, .send,.Toastify__toast-body,.Toastify__toast,.Toastify__toast-theme--light,.Toastify__toast {
   /* box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 
   background: #e0e0e0; */
@@ -791,20 +791,13 @@ box-shadow: none;
   z-index: 200;
  
 }
-.Toastify__toast-container {
- position: fixed;
-  top: 0;
-  width: 200px;
-  z-index: 200;
-  border-radius: 2rem;
-  text-align: center;
-}
+
 #huma{
   font-size: 1.6rem;
 }
 
 .Toastify__toast-body {
-background-color: rgb(165, 255, 255);
+background-color: rgb(255, 255, 255);
 border-radius: 2rem;
 color: black;
 width: 200px;
@@ -830,9 +823,11 @@ width: 200px;
  }
  .space{
   text-align: center;
-
  }
-.main{
+.space2{
+  margin-top: 15vh;
+}
+ .main{
   margin-top: 12vh;
 }
 

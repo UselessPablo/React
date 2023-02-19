@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { UseCartContex } from './CartContext';
-import Counter from './Counter';
-import {ToastContainer, toast} from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
-// import 'react-toastify/dist/ReactToastify.css';
+
 
 const Item = ({ info }) => {
 
   const { addProduct, isInCart } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
   const [clicked, setClicked] = useState('')
-  const notify = () => toast('Agregado al Carrito!');
+  // const notify = () => toast('Agregado al Carrito!');
   
   const getStock = () => {
     const item = isInCart(info.id)
@@ -35,7 +34,7 @@ const Item = ({ info }) => {
   return (
      <>
      
-      <div className="sticky" >
+       <div className="sticky" >
         <ToastContainer
           position="top-center"
           autoClose={500}
