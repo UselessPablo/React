@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer sticky2">
       <a className='footImg' href='https://www.whatsapp.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Whatsapp} alt='whatsapp logo' /></a>
       <a className='footImg' href='https://www.instagram.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Instagram} alt='Instagram logo' /></a>
       <a className='footImg' href='https://www.facebook.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Facebook} alt='Facebook logo' /></a>

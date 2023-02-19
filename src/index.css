@@ -8,7 +8,9 @@ html,
   width: 96vw;
 z-index: 0;
  overflow-x: hidden;
-
+  background-image: url('./assets/img/fondo2.svg');
+ background-size: contain;
+ object-fit: cover;
 
 }
 header{
@@ -69,12 +71,6 @@ nav {
   width: 220px;
   border-radius: 0.5rem;
   margin: 5px;
-  box-shadow:  1px 1px 18px 12px rgb(140, 139, 145),
-   inset 5px 5px 4px 4px  rgb(109, 101, 139);
-  
-
-
-
 }
 button {
   cursor: pointer;
@@ -707,6 +703,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .navbar {
   width: 100%;
   display: flex;
+
 } 
 input{
   width: 200px;
@@ -755,6 +752,14 @@ align-items: center;
   width: 98%;
   z-index: 200;
   margin-top: 10px;
+  height: 60px;
+}
+.sticky2 {
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  z-index: 200;
+  margin-bottom: 10px;
   height: 60px;
 }
 .login__container{
