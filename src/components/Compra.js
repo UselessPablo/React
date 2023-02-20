@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "./Product";
 
 const Compra = ({ comprador }) => {
   return (
@@ -11,7 +12,7 @@ const Compra = ({ comprador }) => {
           <h2> Email de contacto: {comprador.email}</h2>
         </div>
       }
-
+      <Product/>
       <div className="center4">Tu pedido se esta procesando</div>
     </>
   );

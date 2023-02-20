@@ -8,6 +8,7 @@ import Compra from './Compra'
 import ItemListContainer from './ItemListContainer';
 
 
+
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();
   const [sell, setSell] = useState(false)
@@ -73,7 +74,9 @@ const Cart = () => {
           <button type='submit' value='Submit' className='compra' onClick={handleClick} >Confirmar Compra</button>
         </form>
         <h3 className='center2'> Total: $ {totalPrice()}</h3>
+     <div className='space3'></div>
       </div>
+   
     </>
   )
 }
