@@ -318,6 +318,9 @@ span {
   font-weight: 600;
   text-align: center;
   margin-right: 26%;
+  background-color: rgba(169, 169, 169, 0.329);
+  border-radius: 0.8rem;
+  padding: 4px;
 }
 .pulse {
   font-size: 1.8rem;
@@ -486,6 +489,9 @@ form {
   font-weight: 600;
   text-align: center;
   margin-right: 26%;
+  background-color: rgba(169, 169, 169, 0.329);
+  border-radius: 0.8rem;
+  padding: 4px;
 }
   .slide{
     display: flex;
