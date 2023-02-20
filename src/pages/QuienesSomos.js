@@ -57,10 +57,11 @@ return (
  <div className="contacto">
  <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
  <form className="formContact">
- <input  placeholder="Email" onChange={inputMessage} name='email' type='email' />
  
- <textarea onChange={inputMessage} name='mensaje'></textarea>
+        <input placeholder="Email" onChange={inputMessage} name='email' type='email' required='email' /><label>Email</label>
+ <textarea onChange={inputMessage} name='mensaje' placeholder="Mensaje..."></textarea>
  <button className='send' type='button' onClick={handleClick} >Enviar</button>
+      
       </form>
      
  
