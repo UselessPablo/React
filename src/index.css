@@ -715,7 +715,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .navbar {
   width: 100%;
   display: flex;
- background-color: rgb(179 181 76 / 62%);
+ background-color:rgba(167, 231, 177, 0.62);
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
 } 
