@@ -535,7 +535,9 @@ form {
     justify-content: center;
     align-items: center;
     height: 55px;
-  
+    background-color:rgb(150 184 219 / 62%);
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
   }
   .AddCart{
     display: none;
@@ -668,6 +670,7 @@ color: rgb(27, 27, 27);
 .footImg{
   width: 35px;
   margin-top: 5px;
+  margin-left: 5px;
 }
 .add {
   background-color: rgb(255, 255, 255);
