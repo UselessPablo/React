@@ -50,7 +50,9 @@ const Item = ({ info }) => {
       </div> 
   
     <div className=" slideInLeft">
+        <p className="precio">Precio $ {info.precio}</p>
       <div className="cards">
+          
       <div className="slide">
       <img className="offer" src={info.offer} alt='' /> 
       <h2 className="oferta"> {info.destacado}</h2>
@@ -60,15 +62,17 @@ const Item = ({ info }) => {
         <img src={info.img} alt="xx" onClick={getBigImage} className={clicked ? 'big ' : 'imagenes'}>
                
         </img>
+          
               <h4 className="detalleInfo"> {info.detalle}</h4>  
       {/* </button> */}
       
       <div className="detalleInfo">
       
       </div>
+            
       <div className="cards2">
       
-      <p className="precio">Precio $ {info.precio}</p>
+      
       <NavLink to={`/detalle/${info.id}`}>
         {" "}
         <button className="info">I n f o </button>
@@ -76,11 +80,13 @@ const Item = ({ info }) => {
               <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
       </div>
       <div className="contadorCard">
-      
+              
       </div>
+           
     </div>
+          
       </div>
-
+        
       </div>
 
     </>

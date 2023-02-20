@@ -130,7 +130,6 @@ button {
 
 p {
  font-size: 0.9rem;
-  padding: 5px;
   font-family: 'Roboto';
   font-weight: 600;
 }
@@ -313,9 +312,9 @@ span {
   margin-left: 32%;
 }
 .precio {
-  font-size: 1rem;
   font-weight: 600;
   text-align: center;
+  margin-right: 26%;
 }
 .pulse {
   font-size: 1.8rem;
@@ -453,9 +452,9 @@ form {
   .logoTheme{
     margin-top: 27%;
   }
-  p{
+  /* p{
     display: none;
-  }
+  } */
   .slideInLeft{
     display: flex;
     flex-direction: row;
@@ -479,6 +478,12 @@ form {
     top: 100px;
 
   }
+  .precio {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 26%;
+}
   .slide{
     display: flex;
     flex-direction: row;
