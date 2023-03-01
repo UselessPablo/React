@@ -16,9 +16,9 @@ const Item = ({ info }) => {
     const item = isInCart(info.id)
     if (item)
       return info.cantidad - item.cantidad 
-    else
+   ;
+      else
       return info.cantidad
-    
     }
 
   const onAdd = (cantidad) => {
