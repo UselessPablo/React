@@ -864,6 +864,7 @@ width: 200px;
   margin-top: 10vh;
   align-items: center;
   padding-bottom: 10px;
+  margin-bottom: 13vh;
 
  }
  textarea{
@@ -1020,5 +1021,19 @@ margin-bottom: 40px;
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
-
+}
+.breadC{
+  display: flex;
+  justify-content: start;
+  height: 0px;
+  margin-top: 80px;
+  margin-left: 2rem;
+}
+.breadText{
+  font-size: 0.8rem;
+  color: black;
+  margin: 3px;
+}
+.active{
+  color: rgb(6, 126, 86);
 }

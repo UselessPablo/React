@@ -8,8 +8,6 @@ import { useEffect, useState } from 'react';
 import { auth, db, logout } from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
-import huma from '../assets/img/logohuma.png'
-import QuienesSomos from '../pages/QuienesSomos';
 
 
 
@@ -19,7 +17,8 @@ const Navbar = () => {
     const navigate = useNavigate();
 
 
-    const fetchUserName = async () => {
+
+ const fetchUserName = async () => {
         try {
             const q = query(collection(db, "users"), where("uid", "==", user?.uid));
             const doc = await getDocs(q);
@@ -53,19 +52,16 @@ const Navbar = () => {
       
             {/* <p className='nombre'>{name} {user?.email} </p> */}
             <nav className='sticky'>
-                
+             
                   <div className='navbar'>
                     <div className='container nav-container'>
                     <input className='checkbox ' type='checkbox' />
                     <div class="hamburger-lines">
                         <span class="line line1"></span>
                         <span class="line line2"></span>
-                        <span class="line line3"></span>
-                            
+                        <span class="line line3"></span>     
                     </div>  
-                       
-                        
-                           
+                      
                             {/* <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1> */}
                               <div className='logo'>
                             
@@ -102,9 +98,13 @@ const Navbar = () => {
             </nav>
           
            
-               
-      
-      
+            <div className='breadC' >  
+            
+                    <NavLink  className='breadText' to='/'>Home </NavLink> |
+                <NavLink className='breadText' to='/pages/QuienesSomos'>Contact</NavLink> |
+                <NavLink className='breadText' to='/Cart'>Cart</NavLink>
+            
+            </div> 
         </>
     );
 };
