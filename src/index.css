@@ -757,7 +757,7 @@ align-items: center;
  
     /* flex-wrap: wrap; */
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .nombre{
   color: green;
@@ -992,7 +992,7 @@ margin-bottom: 40px;
   margin-left: -40px;
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
-  align-items: start;
+  align-items: flex-start;
   text-align: center;
 }
 
@@ -1024,7 +1024,7 @@ margin-bottom: 40px;
 }
 .breadC{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   height: 0px;
   margin-top: 80px;
   margin-left: 2rem;
