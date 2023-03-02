@@ -495,7 +495,8 @@ background-color:rgba(167, 231, 177, 0.62);
   .slide{
     display: flex;
     flex-direction: row;
-    width: 10px;
+    width: 95%;
+    background-color: rgba(167, 231, 177, 0.62);
   }
   .listado{
     display: none;
@@ -555,8 +556,15 @@ background-color:rgba(167, 231, 177, 0.62);
   .imagenes {
     width: 230px;
   height: 110px;
+
   }
 }
+  .slide{
+    padding: 10px;
+    color: #5996b9;
+    border-radius: 0.8rem;
+    background-color:rgba(167, 231, 177, 0.62); 
+  }
 .cartWidget {
   background-color: transparent;
   width: auto;
