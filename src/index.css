@@ -693,7 +693,7 @@ color: rgb(27, 27, 27);
   background-color: rgb(255, 255, 255);
   width: 45px;
 }
-.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,.menuu1, .menuu2, .menuu3, .menuu,
+.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,
 .compra, input, textarea, .info, .agregar, .send,.Toastify__toast-body,.Toastify__toast,.Toastify__toast-theme--light,.Toastify__toast {
   /* box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 
@@ -923,11 +923,9 @@ margin-bottom: 40px;
   text-decoration: none;
   color: #000000;
   font-weight: 800;
-  
   font-size: 1.2rem;
-  padding: 3px;
-  border-radius: 1.2rem;
-  
+  padding: 7px;
+  border-radius: 0.7rem;
 }
 
 .navbar .nav-container a:hover{
