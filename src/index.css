@@ -72,6 +72,11 @@ nav {
   border-radius: 0.5rem;
   margin: 5px;
 }
+img:hover{
+  transition: transform 400ms ease-in;
+  transform: scale(2.2) ;
+}
+
 button {
   cursor: pointer;
   text-align: center;
@@ -481,14 +486,17 @@ form {
   .detalleInfo{
     position: fixed;
     top: 100px;
-
   }
+  img:hover{
+  transition: transform 400ms ease-in;
+  transform: scale(1.0) ;
+}
   .precio {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
   margin-right: 26%;
-background-color:rgba(167, 231, 177, 0.62);
+background-color:rgba(0, 253, 38, 0.514);
   border-radius: 0.8rem;
   padding: 6px;
 }
@@ -603,7 +611,8 @@ background-color:rgba(167, 231, 177, 0.62);
   .oferta{
     position: absolute;
     color: rgb(255, 115, 0);
-    margin-bottom: 120%;
+    writing-mode: vertical-lr;
+    padding-top: 1.1rem;
 
   }
   .offer{
