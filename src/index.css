@@ -692,11 +692,11 @@ color: rgb(27, 27, 27);
   background-color: rgb(255, 255, 255);
   width: 45px;
 }
-.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,.precio,.slide,
+.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,.precio,.slide,.navbar,
 .compra, input, textarea, .info, .agregar, .send,.Toastify__toast-body,.Toastify__toast,.Toastify__toast-theme--light,.Toastify__toast {
-
+color: black;
 background: #ffffff;
--webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+-webkit-box-shadow: 2px 2px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 
 }
@@ -721,7 +721,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .navbar {
   width: 100%;
   display: flex;
- background-image: linear-gradient(to left,rgba(20, 122, 153, 0.377), rgb(242, 242, 255));
+ background-image: linear-gradient(to left,rgba(20, 122, 153, 0.212), rgb(242, 242, 255));
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
 } 
