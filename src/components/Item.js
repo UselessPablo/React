@@ -50,7 +50,7 @@ const Item = ({ info }) => {
       </div> 
   
     <div className=" slideInLeft">
-        <p className="precio">Precio $ {info.precio}</p>
+       
       <div className="cards">
           
       <div className="slide">
@@ -78,6 +78,7 @@ const Item = ({ info }) => {
         <button className="info">I n f o </button>
       </NavLink>
               <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
+              <p className="precio">$ {info.precio}</p>
       </div>
       <div className="contadorCard">
               
@@ -90,6 +91,7 @@ const Item = ({ info }) => {
       </div>
 
     </>
+
   );
 };
 

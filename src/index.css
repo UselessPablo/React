@@ -4,13 +4,12 @@ html,
 #root {
   font-family: "maven pro";
  /* background: rgb(0, 0, 0);  */
-/* background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%); */
+ /* background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%);  */
   width: 96vw;
 z-index: 0;
  overflow-x: hidden;
-  background-image: url('./assets/img/fondo2.svg');
- background-size: contain;
- object-fit: cover;
+ scrollbar-color: none;
+ 
 
 }
 header{
@@ -181,7 +180,7 @@ p {
   justify-content: space-evenly;
   align-items: center;
   height: 55px;
-  background-image: linear-gradient(to left,rgba(167, 231, 177, 0.62), rgb(242, 242, 255));
+  background-image: linear-gradient(to left, rgba(20, 122, 153, 0.363), rgb(242, 242, 255));
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
 }
@@ -275,10 +274,11 @@ span {
   text-align: center;
 }
 .slideInLeft {
-   margin-top: 2rem;
+   margin-top: 0.5rem;
    -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
   -webkit-animation-duration: 1s;
+  height: 300px;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
@@ -317,15 +317,17 @@ span {
   width: 90px;
   /* color: rgb(255, 238, 0); */
   background-color: rgb(255, 255, 255);
-  margin-left: 32%;
+  margin-left: 18%;
 }
 .precio {
   font-weight: 600;
   text-align: center;
-  margin-right: 26%;
-  background-color:rgba(0, 253, 38, 0.384);
-  border-radius: 0.8rem;
-  padding: 6px;
+  border-radius: 0.4rem;
+  padding: 4px;
+  color: #000000;
+  width: 120px;
+  justify-content: center;
+  display: flex;
 }
 .pulse {
   font-size: 1.8rem;
@@ -450,7 +452,9 @@ form {
 }
 @media only screen and (max-width: 480px) {
   
- 
+ .slideInLeft {
+  height: auto;
+ }
   .big{
     width: 100%;
     transform: translate(0px);
@@ -470,9 +474,7 @@ form {
   .slideInLeft{
     display: flex;
     flex-direction: row;
-   
     width: 100%;
-  
   }
 .oferta{
     position: fixed;
@@ -495,16 +497,18 @@ form {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
-  margin-right: 26%;
-background-color:rgba(0, 253, 38, 0.411);
-  border-radius: 0.8rem;
-  padding: 6px;
+  border-radius: 0.4rem;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  margin-left: 12px;
 }
   .slide{
     display: flex;
     flex-direction: row;
-    width: 95%;
-    background-image: linear-gradient(to right,rgba(167, 231, 177, 0.62), rgb(242, 242, 255));
+    width: 85%;
+    background-image: linear-gradient(rgba(20, 122, 153, 0.349), rgb(242, 242, 255));
   }
   .listado{
     display: none;
@@ -549,17 +553,18 @@ background-color:rgba(0, 253, 38, 0.411);
     justify-content: center;
     align-items: center;
     height: 55px;
- background-image: linear-gradient(to left,rgba(167, 231, 177, 0.62), rgb(242, 242, 255));
-  border-top-right-radius: 2rem;
+ background-image: linear-gradient(to left,rgba(20, 122, 153, 0.315), rgb(242, 242, 255));
+ border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   }
   .AddCart{
     display: none;
   }
   .cards2 {
-    margin-top: 10px;
-   
-    left: 200px;
+    margin-top: 6px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
   }
   .imagenes {
     width: 230px;
@@ -568,11 +573,12 @@ background-color:rgba(0, 253, 38, 0.411);
   }
 }
   .slide{
-    padding: 10px;
+    padding: 4px;
     color: #5996b9;
     border-radius: 0.8rem;
-     background-image: linear-gradient(to right,rgba(167, 231, 177, 0.62), rgb(242, 242, 255));
-  }
+     background-image: linear-gradient(rgba(20, 122, 153, 0.342), rgb(242, 242, 255));
+  
+    }
 .cartWidget {
   background-color: transparent;
   width: auto;
@@ -645,8 +651,8 @@ display: none;
     top:-8%;
   }
    .cards2{
-    /* display: flex;
-    flex-direction: row; */
+   display: flex;
+   flex-direction: column;
     align-items: center;
    }
    .detalleInfo{
@@ -702,7 +708,7 @@ color: rgb(27, 27, 27);
   background-color: rgb(255, 255, 255);
   width: 45px;
 }
-.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,
+.rest, .add, .agregar,  .btnTheme,  #seguir, .finish, .borrar,.precio,
 .compra, input, textarea, .info, .agregar, .send,.Toastify__toast-body,.Toastify__toast,.Toastify__toast-theme--light,.Toastify__toast {
   /* box-shadow:inset 5px 5px 13px #a19f9f, 
   inset -5px -5px 5px #c7c7c7 ; 
@@ -737,7 +743,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .navbar {
   width: 100%;
   display: flex;
- background-image: linear-gradient(to left,rgba(167, 231, 177, 0.62), rgb(242, 242, 255));
+ background-image: linear-gradient(to left,rgba(20, 122, 153, 0.377), rgb(242, 242, 255));
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
 } 
@@ -867,6 +873,9 @@ width: 200px;
  }
 .space2{
   margin-top: 15vh;
+}
+.space3{
+  margin-bottom: 10vh;
 }
  .main{
   margin-top: 12vh;
