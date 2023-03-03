@@ -142,8 +142,7 @@ p {
 }
 .date {
   text-align: center;
-  display: flex;
-  justify-content: center;
+  width: 100px;
   font-size: 0.7rem;
   font-weight: 600;
 }
@@ -856,7 +855,7 @@ width: 200px;
   margin-bottom: 10vh;
 }
  .main{
-  margin-top: 12vh;
+  margin-top: 7vh;
 }
 
  .contacto{

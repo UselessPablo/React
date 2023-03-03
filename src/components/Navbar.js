@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { auth, db, logout } from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
-
+import Date from './Date'
 
 
 const Navbar = () => {
@@ -71,6 +71,7 @@ const Navbar = () => {
                             <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                            
                             <Theme />
+                          
                             </div>
                         </div>
                          
@@ -103,7 +104,7 @@ const Navbar = () => {
                     <NavLink  className='breadText' to='/'>Home </NavLink> |
                 <NavLink className='breadText' to='/pages/QuienesSomos'>Contact</NavLink> |
                 <NavLink className='breadText' to='/Cart'>Cart</NavLink>
-            
+              
             </div> 
         </>
     );
