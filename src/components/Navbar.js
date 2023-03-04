@@ -8,14 +8,15 @@ import { useEffect, useState } from 'react';
 import { auth, db, logout } from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
-import Date from './Date'
+import styled from '@emotion/styled';
+
 
 
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const [name, setName] = useState("");
     const navigate = useNavigate();
-
+  
 
 
  const fetchUserName = async () => {
@@ -40,19 +41,15 @@ const Navbar = () => {
         let path = `Cart`;
         navigate(path);
     }
-    const logBtn = () => {
-        let path = `Registration`;
-        navigate(path);
 
-    }
-
+    
     return (
        <>
       
       
             {/* <p className='nombre'>{name} {user?.email} </p> */}
             <nav className='sticky'>
-             
+               
                   <div className='navbar'>
                     <div className='container nav-container'>
                     <input className='checkbox ' type='checkbox' />
@@ -76,21 +73,14 @@ const Navbar = () => {
                         </div>
                          
                         
-                            <div className=' menu-items'>
-                                {/* <button className='prods'>Buscar</button> */}
-                                {/* <div className='dropdowncontent'> */}
+                        <div className='menu-items'>
+                            
                             <NavLink className='quienes' to="/pages/QuienesSomos">Contacto</NavLink>
-                                    <li><NavLink className='menuu' to='/category/mate'>Mates</NavLink></li>
+                                    <li  ><NavLink className='menuu' to='/category/mate'>Mates</NavLink></li>
                                     <li><NavLink className='menuu1' to='/category/maceta'>Macetas</NavLink></li>
                                     <li><NavLink className='menuu2' to='/category/taza'>Tazas</NavLink></li>
                                     <li><NavLink className='menuu3' to='/category/destacado'>Oferta</NavLink></li>
-                                {/* </div> */}
-                           
-                           
-                        
-                    
-                        
-                      
+                                
                         </div> 
                         </div>
                         
