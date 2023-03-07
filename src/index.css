@@ -35,7 +35,7 @@ a {
 h1 {
   font-family: "maven pro";
   font-size: 1.8rem;
-  text-align: center;
+  text-align: flex-start;
  width: 100%;
 }
 h2,
@@ -750,8 +750,8 @@ input{
 display: flex;
 width: 98%;
 justify-content: space-between;
-height: 50px;
-margin-left: 12%;
+height: 65px;
+margin-left: 5%;
 } 
 .catw{
 display: flex;
@@ -1035,13 +1035,14 @@ margin-bottom: 40px;
 }
 .breadC{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   height: 0px;
-  margin-top: 80px;
+  margin-top: 100px;
   margin-left: 2rem;
+  flex-wrap: wrap;
 }
 .breadText{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: black;
   margin: 3px;
 }

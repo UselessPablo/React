@@ -46,46 +46,24 @@ const Navbar = () => {
        <>
             <nav className='sticky'>
                   <div className='navbar'>
-                    <div className='container nav-container'>
-                    <input className='checkbox ' type='checkbox' />
-                    <div className="hamburger-lines">
-                        <span className="line line1"></span>
-                        <span className="line line2"></span>
-                        <span className="line line3"></span>     
-                    </div>  
+                 
                               <div className='logo'>
-                                <Link className='huma' to='/'>      <h1 className=''>HumaBrc Cerámica</h1></Link>
+                                   <h1 className=''>HumaBrc Cerámica</h1>
                             <div className='catw'>
                             <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
-                           
-                            {/* <Theme /> */}
-                          
-                            </div>
                         </div>
-                         
-                        
-                        <div className='menu-items'>
-                            
-                            <NavLink className='quienes' to="/pages/QuienesSomos">Contacto</NavLink>
-                                    <li  ><NavLink className='menuu' to='/category/mate'>Mates</NavLink></li>
-                                    <li><NavLink className='menuu1' to='/category/maceta'>Macetas</NavLink></li>
-                                    <li><NavLink className='menuu2' to='/category/taza'>Tazas</NavLink></li>
-                                    <li><NavLink className='menuu3' to='/category/destacado'>Oferta</NavLink></li>
-                                
-                        </div> 
-                        </div>
-                        
+                        </div>  
                     </div>
-
             </nav>
-          
-           
             <div className='breadC' >  
-            
                     <NavLink  className='breadText' to='/'>Home </NavLink> |
+                <NavLink className='breadText' to='/category/mate'>Mates</NavLink> |
+                <NavLink className='breadText' to='/category/maceta'>Macetas</NavLink> |
+                <NavLink className='breadText' to='/category/taza'>Tazas</NavLink> | 
+                <NavLink className='breadText' to='/category/destacado'>Oferta</NavLink> |
+                <NavLink className='breadText' to='/category/galeria'>Varios</NavLink> |
                 <NavLink className='breadText' to='/pages/QuienesSomos'>Contact</NavLink> |
-                <NavLink className='breadText' to='/Cart'>Cart</NavLink>
-              
+                <NavLink className='breadText' to='/Cart'>Cart</NavLink> 
             </div> 
         </>
     );

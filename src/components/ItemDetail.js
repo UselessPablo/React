@@ -26,9 +26,7 @@ const ItemDetail = ({ data }) => {
 
   return (
     <>
-     
       
-     
     <div className='center2 '>
     
       <img className="imagenes2" src={data.img} alt='xx'></img>
