@@ -1,4 +1,7 @@
 const Now = () => {
+
+
+ 
   new Date();
   return (
     <div className="date">

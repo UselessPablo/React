@@ -11,7 +11,9 @@ import Reset from "../components/Reset";
 
 
 const Router = () => (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    // <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter basemane='/'>
+        
         <Routes>
             <Route element={<Layout />}>
                 <Route path='/detalle/:detalleid' element={<ItemDetailContainer />} />
@@ -25,6 +27,8 @@ const Router = () => (
                 <Route path='/Reset' element={<Reset />} />
             </Route>
         </Routes>
-    </BrowserRouter>
+           
+        </HashRouter>
+    // </BrowserRouter>
 )
 export default Router;

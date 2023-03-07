@@ -5,10 +5,10 @@ import Cart from './CartWidget';
 import Theme from './Theme';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect, useState } from 'react';
-import { auth, db, logout } from "../utils/Config";
+import { auth, db} from "../utils/Config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
-import styled from '@emotion/styled';
+
 
 
 
@@ -42,14 +42,13 @@ const Navbar = () => {
         navigate(path);
     }
 
-    
     return (
        <>
       
       
             {/* <p className='nombre'>{name} {user?.email} </p> */}
             <nav className='sticky'>
-               
+            
                   <div className='navbar'>
                     <div className='container nav-container'>
                     <input className='checkbox ' type='checkbox' />
