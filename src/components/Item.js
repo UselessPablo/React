@@ -34,7 +34,7 @@ const Item = ({ info }) => {
   return (
      <>
      
-       <div className="sticky" >
+       <div className="" >
         <ToastContainer
           position="top-center"
           autoClose={500}
@@ -59,20 +59,14 @@ const Item = ({ info }) => {
       
       {/* <button className="btnNone" onClick={getBigImage}> */}
 
-        <img src={info.img} alt="xx" onClick={getBigImage} className={clicked ? 'big ' : 'imagenes'}>
-               
-        </img>
+        <img src={info.img} alt="xx" onClick={getBigImage} className={clicked ? 'big ' : 'imagenes'}>      
+ </img>
           
               <h4 className="detalleInfo"> {info.detalle}</h4>  
-      {/* </button> */}
-      
+     
       <div className="detalleInfo">
-      
-      </div>
-            
+      </div>    
       <div className="cards2">
-      
-      
       <NavLink to={`/detalle/${info.id}`}>
         {" "}
         <button className="info">I n f o </button>

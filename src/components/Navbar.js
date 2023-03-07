@@ -44,11 +44,7 @@ const Navbar = () => {
 
     return (
        <>
-      
-      
-            {/* <p className='nombre'>{name} {user?.email} </p> */}
             <nav className='sticky'>
-            
                   <div className='navbar'>
                     <div className='container nav-container'>
                     <input className='checkbox ' type='checkbox' />
@@ -57,16 +53,12 @@ const Navbar = () => {
                         <span className="line line2"></span>
                         <span className="line line3"></span>     
                     </div>  
-                      
-                            {/* <h1 className='pulse' id='huma'><Link to='/'>Huma</Link></h1> */}
                               <div className='logo'>
-                            
                                 <Link className='huma' to='/'>      <h1 className=''>HumaBrc Cerámica</h1></Link>
-                      {/* <img className='huma' src={huma} alt='logo' /> */}
                             <div className='catw'>
                             <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                            
-                            <Theme />
+                            {/* <Theme /> */}
                           
                             </div>
                         </div>

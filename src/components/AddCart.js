@@ -26,19 +26,11 @@ const AddCart = ({ stock, onAdd, initial }) => {
         return (
 
             <>
-
                 <div className='AddCart'>
-                    {/* <button className="add" onClick={onAdds}>+</button> */}
-                  
-                    <button className="agregar" onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >Add Cart</button>
-                     
+                    <button className="agregar" onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >Agregar</button>   
                 </div>
-
             </>
         );
-
-
-
     };
  
 
