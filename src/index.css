@@ -66,10 +66,7 @@ nav {
 -webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 }
-img:hover{
-  transition: transform 400ms ease-in;
-  transform: scale(2.2) ;
-}
+
 
 .cartWidget {
   cursor: pointer;
@@ -221,8 +218,8 @@ span {
   font-size: 1rem;
   align-items: center;
   font-weight: 600;
-  margin-bottom: 60px;
 }
+
 .finish {
   padding: 5px 28px 30px;
   border-radius: 2rem;
@@ -462,41 +459,7 @@ form {
 }
 @media only screen and (max-width: 480px) {
   
- /* .slideInLeft {
-  height: auto;
-  width: 200px;
- } */
-  /* .big{
-    width: 100%;
-    transform: translate(0px);
-    transition: 0.3s;
-    border-radius: 1rem;
-    position: fixed;
-    z-index: 10;
-    opacity: 1;
-    top:-8%;
-  } */
-  .logoTheme{
-    margin-top: 27%;
-  }
-  /* p{
-    display: none;
-  } */
-  /* .slideInLeft{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  } */
-    /* }
-.oferta{
-    position: fixed;
-    color: rgb(255, 115, 0);
-  }
-.info{
-  margin-left: 15%;
-  margin-bottom: -25px;
-  font-weight: 900;
-} */
+
   .detalleInfo{
     position: fixed;
     top: 100px;
@@ -620,8 +583,8 @@ form {
     position: absolute;
     color: rgb(255, 115, 0);
     writing-mode: vertical-lr;
-    padding-top: 1.1rem;
-
+   margin-top: -6.6rem;
+    margin-left: -0.1rem;
   }
   .offer{
     width: 30px;
@@ -639,6 +602,9 @@ display: none;
     width: 220px;
     display: flex;
     justify-content: center;
+  }
+  .bold{
+    font-weight: 600;
   }
   .big{
     width: 80%;
@@ -725,11 +691,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   background-color: white;
   margin-left: 77%;
 }
-.cartWidget:hover{
-   box-shadow: 3px 3px 10px rgb(105, 112, 119);
-   width: 55px;
-   padding: 10px;
-}
+
 .login {
   margin-right: 2px;
   background-color: antiquewhite;

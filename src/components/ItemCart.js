@@ -8,8 +8,9 @@ if (cantidad===0){
   return null;
 }
   return (
-    <div className='center3'>
-      <Card sx={{ maxWidth: 345, padding:2 }}>
+  
+   <div className='center3'>
+      <Card sx={{ maxWidth: 300, padding:1}}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
            {product.name}
@@ -27,12 +28,13 @@ if (cantidad===0){
           title={product.name}
         />
         <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Button sx={{width:40, height:30, mt:1, mb:1}} variant='contained' color='error' onClick={() => removeProduct(product.id)}>Borrar</Button>  
+          <Button size='small' sx={{Minwidth:55, height:30, mt:1, mb:1}} variant='contained' color='error' onClick={() => removeProduct(product.id)}>eliminar</Button>  
         </CardActions>
       </Card>
  
      
     </div>
+  
   )
 }
 

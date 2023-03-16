@@ -62,8 +62,8 @@ const Navbar = () => {
                 <NavLink className='breadText' to='/category/taza'>Tazas</NavLink> | 
                 <NavLink className='breadText' to='/category/destacado'>Oferta</NavLink> |
                 <NavLink className='breadText' to='/category/galeria'>Varios</NavLink> |
-                <NavLink className='breadText' to='/pages/QuienesSomos'>Contact</NavLink> |
-                <NavLink className='breadText' to='/Cart'>Cart</NavLink> 
+                <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
+                <NavLink className='breadText' to='/Cart'>Carrito</NavLink> 
             </div> 
         </>
     );

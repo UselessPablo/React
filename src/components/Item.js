@@ -72,7 +72,12 @@ const goTo = () => {
       <CardMedia
      image={info.offer}
       title={info.destacado}
-        />
+      
+       />
+        <Typography>
+          <h3 className="oferta"> {info.destacado}</h3>
+        </Typography>
+
       {/* <img className="offer" src={info.offer} alt='' />  */}
       {/* <h2 className="oferta"> {info.destacado}</h2> */}
       

@@ -37,7 +37,7 @@ const Counter = ({ stock, onAdd, initial }) => {
       
     <div>
         <Button size="small" sx={{ mr: 1, height:20, width:40, minWidth:40 }} variant="contained" color='primary' className="rest" onClick={onRest} >-</Button>  
-      <span>{Valor}</span>
+      <span className="bold">{Valor}</span>
         <Button size="small" sx={{ ml: 1, mr: 2,height:20, width: 40, minWidth: 40 }} variant="contained" color='primary' className="add" onClick={onAdds}>+</Button>
         <Button size="small" sx={{ mr: 1 }} variant="contained" color='secondary' className="agregar" onClick={() => onAdd(Valor, setValor(0))} onClickCapture={Valor ? notify   : null} >Agregar</Button>
              </div>    

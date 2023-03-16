@@ -68,7 +68,7 @@ const Cart = () => {
       <Box sx={{ mt: 4 }}>
         <h3 > Ingrese sus datos para el envio</h3>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         
         <FormGroup sx={{ mt: 2, mb:2, mr:2 }} >
           <Input  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
@@ -76,14 +76,14 @@ const Cart = () => {
           <Input type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
           <Input type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           <h3 > Total: $ {totalPrice()}</h3>
-          <Button size='small'  variant="contained" color='success' sx={{ml:1, mt: 2, width:160, justifyContent:'center' }} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
+          <Button size='small'  variant="contained" color='success' sx={{ mt: 2, width:160, ml:2}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           
         </FormGroup>
       </Box>
      <div className='space3'></div>
-      
-   
     </>
+   
+    
   )
 }
 

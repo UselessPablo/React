@@ -11,7 +11,7 @@ const Footer = () => {
       <a className='footImg' href='https://www.whatsapp.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Whatsapp} alt='whatsapp logo' /></a>
       <a className='footImg' href='https://www.instagram.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Instagram} alt='Instagram logo' /></a>
       <a className='footImg' href='https://www.facebook.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Facebook} alt='Facebook logo' /></a>
-      <NavLink to="/pages/QuienesSomos">About Us</NavLink>
+      <NavLink to="/pages/QuienesSomos">Contacto</NavLink>
       <p>Copyright Pablo A.</p>
     </div>
   );
