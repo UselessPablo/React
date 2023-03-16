@@ -1,8 +1,9 @@
 import React from 'react'
-
+import { Button } from '@mui/material';
 import { useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined';
 
 const AddCart = ({ stock, onAdd, initial }) => {
         const [Valor, setValor] = useState(initial);
@@ -26,8 +27,8 @@ const AddCart = ({ stock, onAdd, initial }) => {
         return (
 
             <>
-                <div className='AddCart'>
-                    <button className="agregar" onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >Agregar</button>   
+                <div >
+                    <Button startIcon={< ShoppingCartCheckoutOutlinedIcon />} variant="contained" color='secondary' sx={{ mr: 2, height: 23 }} onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >+</Button>   
                 </div>
             </>
         );

@@ -2,7 +2,7 @@ import React from "react";
 import { useState} from "react";
 import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { Button } from "@mui/material";
 
 const Counter = ({ stock, onAdd, initial }) => {
   const [Valor, setValor] = useState(initial);
@@ -36,10 +36,10 @@ const Counter = ({ stock, onAdd, initial }) => {
     <>
       
     <div>
-      <button className="rest" onClick={onRest} >-</button>  
+        <Button size="small" sx={{ mr: 1, height:20, width:40, minWidth:40 }} variant="contained" color='primary' className="rest" onClick={onRest} >-</Button>  
       <span>{Valor}</span>
-      <button className="add" onClick={onAdds}>+</button>
-      <button className="agregar" onClick={() => onAdd(Valor, setValor(0))} onClickCapture={Valor ? notify   : null} >Agregar</button>
+        <Button size="small" sx={{ ml: 1, mr: 2,height:20, width: 40, minWidth: 40 }} variant="contained" color='primary' className="add" onClick={onAdds}>+</Button>
+        <Button size="small" sx={{ mr: 1 }} variant="contained" color='secondary' className="agregar" onClick={() => onAdd(Valor, setValor(0))} onClickCapture={Valor ? notify   : null} >Agregar</Button>
              </div>    
     
     </>

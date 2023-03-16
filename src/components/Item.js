@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate} from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
+import { Button, Card, CardContent, CardMedia, Box, CardActions,Typography } from "@mui/material";
 
 
 const Item = ({ info }) => {
-
+  const navigate = useNavigate();
   const { addProduct, isInCart } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
-  const [clicked, setClicked] = useState('')
+  // const [clicked, setClicked] = useState('')
   // const notify = () => toast('Agregado al Carrito!');
   
   const getStock = () => {
@@ -25,11 +26,9 @@ const Item = ({ info }) => {
     setGoToCart(true);
     addProduct(info, cantidad++) 
   }
-  const getBigImage = () => {
-    setClicked(!clicked);
-//  makeBlur1();
-  }
-  
+const goTo = () => {
+  navigate(`/detalle/${info.id}`)
+}
 
   return (
      <>
@@ -48,40 +47,43 @@ const Item = ({ info }) => {
           theme="light"
         />
       </div> 
-  
-    <div className=" slideInLeft">
-       
-      <div className="cards">
-          
-      <div className="slide">
-      <img className="offer" src={info.offer} alt='' /> 
-      <h2 className="oferta"> {info.destacado}</h2>
+      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280}} wrap-xs-nowrap >
+   
+        <CardMedia sx={{ height: 140 }}
+          image={info.img} onClick={goTo}
+            title="HUMABRC"
+           />
+      <CardMedia
+     image={info.offer}
+      title={info.destacado}
+        />
+      {/* <img className="offer" src={info.offer} alt='' />  */}
+      {/* <h2 className="oferta"> {info.destacado}</h2> */}
       
-        <img src={info.img} alt="xx" onClick={getBigImage} className={clicked ? 'big ' : 'imagenes'}>      
-            </img>
-       
-              <h4 className="detalleInfo"> {info.detalle}</h4>  
-     
-      <div className="detalleInfo">
-      </div>    
-      <div className="cards2">
-      <NavLink to={`/detalle/${info.id}`}>
+      {/* <NavLink to={`/detalle/${info.id}`}>
         {" "}
         <button className="info">I n f o </button>
-      </NavLink>
-              <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-              <p className="precio">$ {info.precio}</p>
-      </div>
-      <div className="contadorCard">
+      </NavLink> */}
+    {/* <CardContent>
+        <Typography variant="h6" color="text.primary"  component='div'>
+        ${info.precio}
+        </Typography>  
+              {/* <p className="precio">$ {info.precio}</p> */}
+        {/* </CardContent> */} 
+      {/* </div> */}
+      <div className="">
               
       </div>
-           
-    </div>
-          
-      </div>
-        
-      </div>
+        <CardActions>
+          <Box container xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
+          <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
+            <Button size="small" sx={{me:1}}  variant="contained" color='secondary' onClick={goTo}>Info</Button>
+          {/* <Link to={`/detalle/${info.id}`}>Detalles</Link>  */}
+          </Box>
+        </CardActions>
 
+      
+      </Card>
     </>
 
   );
