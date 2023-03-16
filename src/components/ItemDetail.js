@@ -35,9 +35,9 @@ const ItemDetail = ({ data }) => {
   return (
     <>
       <div className='center2 '>
-      <Card sx={{ width: 345, mt:7, borderRadius:2}}>
+      <Card sx={{ width:345, mt:7, borderRadius:2}}>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: 140,width:345 }}
           image={data.img}
           title={data.detalle}
         />

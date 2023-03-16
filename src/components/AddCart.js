@@ -28,7 +28,7 @@ const AddCart = ({ stock, onAdd, initial }) => {
 
             <>
                 <div >
-                    <Button startIcon={< ShoppingCartCheckoutOutlinedIcon />} variant="contained" color='secondary' sx={{ mr: 2, height: 23 }} onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >+</Button>   
+                    <Button startIcon={< ShoppingCartCheckoutOutlinedIcon />} variant="contained" color='success' sx={{ mr: 2, height: 23 }} onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} onClickCapture={Valor ? notify : null} >+</Button>   
                 </div>
             </>
         );

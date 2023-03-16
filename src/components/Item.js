@@ -4,6 +4,9 @@ import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
 import { Button, Card, CardContent, CardMedia, Box, CardActions,Typography } from "@mui/material";
+import { createTheme } from '@mui/material/styles';
+import { yellow } from '@mui/material/colors';;
+
 
 
 const Item = ({ info }) => {
@@ -29,7 +32,16 @@ const Item = ({ info }) => {
 const goTo = () => {
   navigate(`/detalle/${info.id}`)
 }
-
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: yellow[500],
+      },
+      secondary: {
+        main: '#f44336',
+      },
+    },
+  });
   return (
      <>
      
@@ -47,7 +59,11 @@ const goTo = () => {
           theme="light"
         />
       </div> 
-      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280}} wrap-xs-nowrap >
+
+
+      
+
+      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding:1}} wrap-xs-nowrap >
    
         <CardMedia sx={{ height: 140 }}
           image={info.img} onClick={goTo}
@@ -77,7 +93,7 @@ const goTo = () => {
         <CardActions>
           <Box container xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
           <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button size="small" sx={{me:1}}  variant="contained" color='secondary' onClick={goTo}>Info</Button>
+            <Button size="small" sx={{ me: 1, }} variant="contained" color={'info'} onClick={goTo}>Info</Button>
           {/* <Link to={`/detalle/${info.id}`}>Detalles</Link>  */}
           </Box>
         </CardActions>
