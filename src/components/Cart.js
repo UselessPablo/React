@@ -63,7 +63,7 @@ const Cart = () => {
       </div>
       <h2 sx={{mt:3}} className='center2'> Total: $ {totalPrice()}</h2>
       <Box sx={{display:'flex', justifyContent:'center'}}>
-      <Button style={{ width: '15%',  textAlign: 'center' }} variant="contained" color='success' onClick={goHome}>Seguir comprando</Button>
+      <Button style={{ width: '160',  textAlign: 'center' }} variant="contained" color='success' onClick={goHome}>Seguir comprando</Button>
       </Box>
       <Box sx={{ mt: 4 }}>
         <h3 > Ingrese sus datos para el envio</h3>
@@ -79,9 +79,9 @@ const Cart = () => {
           <Button size='small'  variant="contained" color='success' sx={{ml:1, mt: 2, width:160, justifyContent:'center' }} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           
         </FormGroup>
-        
-     <div className='space3'></div>
       </Box>
+     <div className='space3'></div>
+      
    
     </>
   )
