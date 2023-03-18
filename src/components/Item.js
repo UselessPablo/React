@@ -73,7 +73,7 @@ const goTo = () => {
               
       </div>
         <CardActions>
-          <Box container xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
+          <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
           <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button size="small" sx={{ me: 1, }} variant="contained" color={'info'} onClick={goTo}>Info</Button>
           </Box>
