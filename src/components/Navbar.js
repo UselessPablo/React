@@ -2,40 +2,19 @@
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import Theme from './Theme';
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useEffect, useState } from 'react';
-import { auth, db} from "../utils/Config";
-import { query, collection, getDocs, where } from "firebase/firestore";
 import React from 'react';
-
+import fondo from '../assets/img/fondoprod.webp'
+import { Box,Card, CardMedia } from '@mui/material';
+import Carrousel from '../components/Carrousel'
 
 
 
 const Navbar = () => {
-    const [user, loading] = useAuthState(auth);
-    const [name, setName] = useState("");
+
     const navigate = useNavigate();
-  
+   
 
-
- const fetchUserName = async () => {
-        try {
-            const q = query(collection(db, "users"), where("uid", "==", user?.uid));
-            const doc = await getDocs(q);
-            const data = doc.docs[0].data();
-            setName(data.name);
-            console.log(data.name);
-        } catch (error) {
-            console.error(error);
-            alert("An error occured while fetching user data");
-        }
-    };
-    useEffect(() => {
-        if (loading) return;
-        if (!user) return navigate("./");
-        fetchUserName();
-    }, []);
+    
 
     const cartBtn = () => {
         let path = `Cart`;
@@ -43,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-       <>
+        <>
             <nav className='sticky'>
                   <div className='navbar'>
                  
@@ -65,6 +44,13 @@ const Navbar = () => {
                 <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
                 <NavLink className='breadText' to='/Cart'>Carrito</NavLink> 
             </div> 
+       <header>
+        <Box sx={{width:'100vw', mt:5}}>
+                    <Carrousel />
+      {/* <img className='fondo' src={fondo} alt='fondo'></img>                    */}
+                </Box>        
+       </header>
+            <h2>Productos Únicos</h2>
         </>
     );
 };

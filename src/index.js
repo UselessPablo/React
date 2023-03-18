@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './utils/Config'
-
-
+import '../node_modules/swiper/swiper.css';
+import 'swiper/css/effect-fade';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

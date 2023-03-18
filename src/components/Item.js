@@ -5,7 +5,8 @@ import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
 import { Button, Card, CardContent, CardMedia, Box, CardActions,Typography } from "@mui/material";
 import { createTheme } from '@mui/material/styles';
-import { yellow } from '@mui/material/colors';;
+import { yellow } from '@mui/material/colors';import Carrousel from "./Carrousel";
+;
 
 
 
@@ -77,7 +78,7 @@ const goTo = () => {
         <Typography>
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
-
+    
       {/* <img className="offer" src={info.offer} alt='' />  */}
       {/* <h2 className="oferta"> {info.destacado}</h2> */}
       
