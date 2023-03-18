@@ -25,7 +25,7 @@ const Navbar = () => {
                               <div className='logo'>
                                    <h1 className=''>HumaBrc Cerámica</h1>
                             <div className='catw'>
-                            <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
+                            <button className='cartWidget' onClick={cartBtn}><Cart/> </button>
                         </div>
                         </div>  
                     </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
             </div> 
        <header>
         <Box sx={{width:'100vw', mt:5}}>
-                    <Carrousel />
+                    {/* <Carrousel /> */}
       {/* <img className='fondo' src={fondo} alt='fondo'></img>                    */}
                 </Box>        
        </header>

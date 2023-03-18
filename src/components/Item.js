@@ -54,9 +54,9 @@ const goTo = () => {
 
       
 
-      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding:1}} wrap-xs-nowrap >
+      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, }} wrap-xs-nowrap  >
    
-        <CardMedia sx={{ height: 140 }}
+        <CardMedia color={'info'} sx={{ height: 140 }}
           image={info.img} onClick={goTo}
             title="HUMABRC"
            />
