@@ -17,7 +17,6 @@ const Router = () => (
         <Routes>
             <Route element={<Layout />}>
                 <Route path='/detalle/:detalleid' element={<ItemDetailContainer />} />
-                
                 <Route index element={<ItemListContainer />} />
                 <Route path="/category/:name" element={<ItemListContainer />} />
                 <Route path='/Cart' element={<Cart />} />
