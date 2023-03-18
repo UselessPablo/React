@@ -42,7 +42,7 @@ const Navbar = () => {
             </div> 
        <header>
         <Box sx={{width:'100vw', mt:5}}>
-                    {/* <Carrousel /> */}
+                    <Carrousel />
       {/* <img className='fondo' src={fondo} alt='fondo'></img>                    */}
                 </Box>        
        </header>
