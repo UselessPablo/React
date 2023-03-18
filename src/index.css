@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro:wght@400;500&family=Roboto:wght@100;400&display=swap");
 body,
-html,
-#root {
+html
+{
   font-family: "maven pro";
  /* background: rgb(0, 0, 0);  */
  /* background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%);  */
-
+ margin: 3px;
 z-index: 0;
  overflow-x: hidden;
  scrollbar-color: none;
