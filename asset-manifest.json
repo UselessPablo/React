@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/React/static/css/main.cd3957dc.css",
-    "main.js": "/React/static/js/main.9bd27686.js",
+    "main.js": "/React/static/js/main.def4ae02.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
-    "static/media/fondo.jpg": "/React/static/media/fondo.41f2b0bf5435e6bb24b3.jpg",
-    "static/media/fondo1.jpg": "/React/static/media/fondo1.b5f9b78706dfc9518815.jpg",
+    "static/media/fondo.webp": "/React/static/media/fondo.a0844506196709f8d3ea.webp",
+    "static/media/fondo1.webp": "/React/static/media/fondo1.81ae327ca7f258fa4542.webp",
     "static/media/fondoprod.webp": "/React/static/media/fondoprod.bbfee94b42a2da4a29fb.webp",
     "static/media/whatsapp.png": "/React/static/media/whatsapp.fdd4b7007148bcf6ce48.png",
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
     "main.cd3957dc.css.map": "/React/static/css/main.cd3957dc.css.map",
-    "main.9bd27686.js.map": "/React/static/js/main.9bd27686.js.map",
+    "main.def4ae02.js.map": "/React/static/js/main.def4ae02.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd3957dc.css",
-    "static/js/main.9bd27686.js"
+    "static/js/main.def4ae02.js"
   ]
 }
