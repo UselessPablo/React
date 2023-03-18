@@ -11,6 +11,7 @@ import 'swiper/css'
 import { EffectFade } from 'swiper';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
 
 const Carrousel = () => {
     return (
