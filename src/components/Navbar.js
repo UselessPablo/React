@@ -1,10 +1,9 @@
 
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
 import React from 'react';
-import fondo from '../assets/img/fondoprod.webp'
-import { Box,Card, CardMedia } from '@mui/material';
+import { Box} from '@mui/material';
 import Carrousel from '../components/Carrousel'
 
 
@@ -13,9 +12,6 @@ const Navbar = () => {
 
     const navigate = useNavigate();
    
-
-    
-
     const cartBtn = () => {
         let path = `Cart`;
         navigate(path);

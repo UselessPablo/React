@@ -27,9 +27,7 @@ const Carrousel = () => {
             <SwiperSlide ><img className='fondo' src={fondo1} alt='fondo' />
 </SwiperSlide>
             <SwiperSlide ><img className='fondo' src={fondo2} alt='fondo' />
-</SwiperSlide>
-
-            
+</SwiperSlide>   
         </Swiper>
     );
 };

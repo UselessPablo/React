@@ -1,12 +1,12 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import React, { useState } from 'react'
-import { Link,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UseCartContex } from './CartContext'
 import ItemCart from './ItemCart';
 import Date from './Date'
 import Compra from './Compra'
 import ItemListContainer from './ItemListContainer';
-import { Divider, Input, TextField } from '@mui/material';
+import {  Input } from '@mui/material';
 import { FormGroup, Button, Box } from '@mui/material';
 
 const Cart = () => {

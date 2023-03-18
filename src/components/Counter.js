@@ -30,7 +30,6 @@ const Counter = ({ stock, onAdd, initial }) => {
      }
    }
 
-
   return (
       
     <>
