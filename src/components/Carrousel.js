@@ -32,5 +32,6 @@ const Carrousel = () => {
         </Swiper>
     );
 };
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 export default Carrousel;
 
