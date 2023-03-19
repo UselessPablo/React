@@ -513,7 +513,7 @@ form {
     
   }
   .popup {
-    background-color: rgb(233, 105, 45);
+    background-color: rgb(72, 21, 102);
     border-radius: 100rem 100rem 100rem 100rem;
     color: white;
     font-size: 0.8rem;
@@ -709,7 +709,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .navbar {
   width: 100%;
   display: flex;
- background-color: #9222b4;
+ background-color: #ae4fca;
 border-radius: 0.8rem;
 } 
 input{

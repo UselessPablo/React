@@ -70,7 +70,7 @@ const goTo = () => {
 
       
 
-        <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'grey.400' }}>
+        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'violet' }}>
    
         <CardMedia   sx={{ height: 140 }}
           image={info.img} onClick={goTo}
