@@ -3,12 +3,10 @@ import React from 'react';
 import fondo from '../assets/img/fondo.webp'
 import fondo1 from '../assets/img/fondo1.webp'
 import fondo2 from '../assets/img/fondoprod.webp'
-import '../../node_modules/swiper/swiper-element'
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide} from 'swiper/react';
 import { Autoplay } from 'swiper';
 import 'swiper/css'
 import { EffectFade } from 'swiper';
-import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
@@ -31,6 +29,6 @@ const Carrousel = () => {
         </Swiper>
     );
 };
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 export default Carrousel;
 
