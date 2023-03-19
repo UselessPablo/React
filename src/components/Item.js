@@ -4,8 +4,23 @@ import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
 import { Button, Card,  CardMedia, Box, CardActions,Typography } from "@mui/material";
+import { purple, deepPurple } from "@mui/material/colors";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-;
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: purple[300],
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: deepPurple[400],
+    },
+  },
+});
 
 
 
@@ -15,7 +30,7 @@ const Item = ({ info }) => {
   const [goToCart, setGoToCart] = useState(false);
   // const [clicked, setClicked] = useState('')
   // const notify = () => toast('Agregado al Carrito!');
-  
+ 
   const getStock = () => {
     const item = isInCart(info.id)
     if (item)
@@ -34,6 +49,7 @@ const goTo = () => {
 }
 
   return (
+     <ThemeProvider theme={theme}>
      <>
      
        <div className="" >
@@ -54,9 +70,9 @@ const goTo = () => {
 
       
 
-      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, bgcolor: 'grey.500' }} >
+        <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'grey.400' }}>
    
-        <CardMedia  sx={{ height: 140 }}
+        <CardMedia   sx={{ height: 140 }}
           image={info.img} onClick={goTo}
             title="HUMABRC"
            />
@@ -75,12 +91,12 @@ const goTo = () => {
         <CardActions>
           <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
           <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button size="small" sx={{ me: 1, }} variant="contained" color={'info'} onClick={goTo}>Info</Button>
+            <Button color={'primary'} size="small" sx={{ me: 1}} variant="contained"  onClick={goTo}>Info</Button>
           </Box>
         </CardActions>
       </Card>
     </>
-
+    </ThemeProvider>
   );
 };
 
