@@ -1,6 +1,6 @@
 import React from 'react'
 import Counter from './Counter'
-import { Link,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { UseCartContex } from './CartContext';
 import {Card, CardContent} from '@mui/material';

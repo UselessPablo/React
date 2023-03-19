@@ -3,7 +3,7 @@ import { UseCartContex } from './CartContext'
 import { Button,CardContent,Card,Typography,CardMedia,CardActions } from '@mui/material';
 
 const ItemCart = ({product, cantidad}) => {
-const { removeProduct, addProduct } = UseCartContex(); 
+const { removeProduct } = UseCartContex(); 
 if (cantidad===0){
   return null;
 }

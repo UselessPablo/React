@@ -1,6 +1,5 @@
 
 import React from 'react';
-
 import fondo from '../assets/img/fondo.webp'
 import fondo1 from '../assets/img/fondo1.webp'
 import fondo2 from '../assets/img/fondoprod.webp'

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import moon from '../assets/img/dark.svg'
+
 
 const Theme = () => {
   const[theme, setTheme]=useState('light');

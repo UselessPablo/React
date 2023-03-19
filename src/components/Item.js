@@ -3,7 +3,7 @@ import { useNavigate} from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
-import { Button, Card, CardContent, CardMedia, Box, CardActions,Typography } from "@mui/material";
+import { Button, Card,  CardMedia, Box, CardActions,Typography } from "@mui/material";
 
 ;
 
@@ -78,8 +78,6 @@ const goTo = () => {
             <Button size="small" sx={{ me: 1, }} variant="contained" color={'info'} onClick={goTo}>Info</Button>
           </Box>
         </CardActions>
-
-      
       </Card>
     </>
 
