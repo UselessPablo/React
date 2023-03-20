@@ -7,12 +7,14 @@ import Facebook from "../assets/img/logos/facebook.png";
 
 const Footer = () => {
   return (
-    <div className="footer sticky2">
+    <footer >
+    <div className="footer">
       <a className='footImg' href='https://www.whatsapp.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Whatsapp} alt='whatsapp logo' /></a>
       <a className='footImg' href='https://www.instagram.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Instagram} alt='Instagram logo' /></a>
       <a className='footImg' href='https://www.facebook.com/' target="_blank" rel="noreferrer" ><img className='footImg' src={Facebook} alt='Facebook logo' /></a>
       <p>Copyright Pablo A.</p>
     </div>
+    </footer>
   );
 };
 

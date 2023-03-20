@@ -64,8 +64,8 @@ const goTo = () => {
 
   return (
      <ThemeProvider theme={theme}>
+
      <Box >
-     
        <div className="" >
         <ToastContainer
           position="top-center"
@@ -79,13 +79,9 @@ const goTo = () => {
           pauseOnHover
           theme="light"
         />
-      </div> 
-
-
-      
-
+      </div>
+       
         <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280,  borderRadius: 3}}>
-   
         <CardMedia   sx={{ height: 140 }}
           image={info.img} onClick={goTo}
             title="HUMABRC"
@@ -93,27 +89,19 @@ const goTo = () => {
       <CardMedia
      image={info.offer}
       title={info.destacado}
-      
        />
         <Typography>
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
-    
-     
-        <CardActions>
-         
+        <CardActions> 
           <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 25 }} > 
-        
                 <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button color={'info'} size="small" sx={{ me: 1}} variant="contained"  onClick={goTo}>Info</Button>
-         
+            <Button color={'info'} size="small" sx={{ me: 1}} variant="contained"  onClick={goTo}>Info</Button> 
           </Box>
         </CardActions>
       </Card>
-        
     </Box>
-      <Box sx={{ pb: 4 }}>
-      </Box>  
+    <Box sx={{mb:5}}></Box>
     </ThemeProvider>
  
       );
