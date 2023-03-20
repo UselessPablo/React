@@ -17,8 +17,7 @@ const Carrousel = () => {
             data-swiper-autoplay="2000"
             loop={true}
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+           
         >
             <SwiperSlide><img className='fondo' src={fondo} alt='fondo' />
 </SwiperSlide>

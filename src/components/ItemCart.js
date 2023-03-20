@@ -10,6 +10,7 @@ if (cantidad===0){
   return (
   
    <div className='center3'>
+     
       <Card sx={{ maxWidth: 300,  borderRadius:2}}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
