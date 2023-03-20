@@ -83,8 +83,8 @@ const Item = ({ info }) => {
 
       <Box >
 
-        <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3 }}>
-          <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'></Badge>
+        <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3}}>
+          <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
           <CardMedia sx={{ height: 140 }}
             image={info.img} onClick={goTo}
             title="HUMABRC"
