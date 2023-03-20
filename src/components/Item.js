@@ -3,7 +3,7 @@ import { useNavigate} from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
-import { Button, Card,  CardMedia, Box, CardActions,Typography } from "@mui/material";
+import { Button, Card,  CardMedia, Box, CardActions,Typography, Divider } from "@mui/material";
 import { purple, deepPurple, teal, green } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -64,7 +64,7 @@ const goTo = () => {
 
   return (
      <ThemeProvider theme={theme}>
-     <>
+     <Box >
      
        <div className="" >
         <ToastContainer
@@ -84,7 +84,7 @@ const goTo = () => {
 
       
 
-        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'fondo.main'}}>
+        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280,  borderRadius: 3}}>
    
         <CardMedia   sx={{ height: 140 }}
           image={info.img} onClick={goTo}
@@ -99,19 +99,24 @@ const goTo = () => {
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
     
-      <div className="">
-              
-      </div>
+     
         <CardActions>
-          <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
-          <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
+         
+          <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 25 }} > 
+        
+                <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button color={'info'} size="small" sx={{ me: 1}} variant="contained"  onClick={goTo}>Info</Button>
+         
           </Box>
         </CardActions>
       </Card>
-    </>
+        
+    </Box>
+      <Box sx={{ pb: 4 }}>
+      </Box>  
     </ThemeProvider>
-  );
+ 
+      );
 };
 
 export default Item;
