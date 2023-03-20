@@ -4,7 +4,7 @@ import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
 import { Button, Card,  CardMedia, Box, CardActions,Typography } from "@mui/material";
-import { purple, deepPurple, green } from "@mui/material/colors";
+import { purple, deepPurple, teal, green } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -23,15 +23,25 @@ const Item = ({ info }) => {
     palette: {
       primary: {
         // Purple and green play nicely together.
-        main: purple[200],
+        main: purple[400],
       },
       secondary: {
         // This is green.A700 as hex.
-        main: deepPurple[400],
+        main: deepPurple[600],
       },
       success: {
-        main: purple[400],
+        main: deepPurple['A400'],
+      },
+      info:{
+        main:teal[500],
+      },
+      info2:{
+        main:teal[200],
+      },
+      fondo:{
+        main:green[400]
       }
+      
     },
   });
 
@@ -74,7 +84,7 @@ const goTo = () => {
 
       
 
-        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'success.main'}}>
+        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'fondo.main'}}>
    
         <CardMedia   sx={{ height: 140 }}
           image={info.img} onClick={goTo}
@@ -95,7 +105,7 @@ const goTo = () => {
         <CardActions>
           <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 23 }} > 
           <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button color={'primary'} size="small" sx={{ me: 1}} variant="contained"  onClick={goTo}>Info</Button>
+            <Button color={'info'} size="small" sx={{ me: 1}} variant="contained"  onClick={goTo}>Info</Button>
           </Box>
         </CardActions>
       </Card>

@@ -8,6 +8,7 @@ import Compra from './Compra'
 import ItemListContainer from './ItemListContainer';
 import {  Input } from '@mui/material';
 import { FormGroup, Button, Box } from '@mui/material';
+import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();
@@ -70,7 +71,7 @@ const Cart = () => {
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         
-        <FormGroup sx={{ mt: 2, mb:2, mr:2 }} >
+        <form sx={{ mt: 2, mb:2, mr:2 }}  >
           <Input  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
           <Input type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
           <Input type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
@@ -78,7 +79,7 @@ const Cart = () => {
           <h3 > Total: $ {totalPrice()}</h3>
           <Button size='small'  variant="contained" color='success' sx={{ mt: 2, width:160, ml:2}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           
-        </FormGroup>
+        </form>
       </Box>
      <div className='space3'></div>
     </>
