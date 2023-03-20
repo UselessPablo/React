@@ -4,23 +4,12 @@ import { UseCartContex } from './CartContext';
 import {ToastContainer} from 'react-toastify';
 import AddCart from "./AddCart";
 import { Button, Card,  CardMedia, Box, CardActions,Typography } from "@mui/material";
-import { purple, deepPurple } from "@mui/material/colors";
+import { purple, deepPurple, green } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      // Purple and green play nicely together.
-      main: purple[300],
-    },
-    secondary: {
-      // This is green.A700 as hex.
-      main: deepPurple[400],
-    },
-  },
-});
+
 
 
 
@@ -30,7 +19,22 @@ const Item = ({ info }) => {
   const [goToCart, setGoToCart] = useState(false);
   // const [clicked, setClicked] = useState('')
   // const notify = () => toast('Agregado al Carrito!');
- 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        // Purple and green play nicely together.
+        main: purple[200],
+      },
+      secondary: {
+        // This is green.A700 as hex.
+        main: deepPurple[400],
+      },
+      success: {
+        main: purple[400],
+      }
+    },
+  });
+
   const getStock = () => {
     const item = isInCart(info.id)
     if (item)
@@ -70,7 +74,7 @@ const goTo = () => {
 
       
 
-        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'violet' }}>
+        <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, padding: 1, borderRadius: 3, backgroundColor:'success.main'}}>
    
         <CardMedia   sx={{ height: 140 }}
           image={info.img} onClick={goTo}
