@@ -33,10 +33,10 @@ const Item = ({ info }) => {
         main: deepPurple['A400'],
       },
       info:{
-        main:teal[500],
+        main:teal[300],
       },
       info2:{
-        main:teal[200],
+        main:teal[900],
       },
       fondo:{
         main:green[400]
@@ -100,8 +100,9 @@ const goTo = () => {
           </Box>
         </CardActions>
       </Card>
+        <div className='space3'>.</div>
     </Box>
-    <Box sx={{mb:5}}></Box>
+    
     </ThemeProvider>
  
       );

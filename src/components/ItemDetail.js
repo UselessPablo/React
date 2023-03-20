@@ -72,7 +72,7 @@ const ItemDetail = ({ data }) => {
           : <Counter stock={getStock()} onAdd={onAdd}  initial={-0} /> 
       }
     </div>
-  
+     
        </>
   )
 }

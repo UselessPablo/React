@@ -37,6 +37,7 @@ export const ItemListContainer = () => {
                   <div className="main">
                     <div className="slideInLeft" >
                         <ItemList data={data} />
+                       <div className="space3"></div>
                         </div>
                     </div>
             }
