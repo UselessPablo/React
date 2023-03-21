@@ -9,6 +9,7 @@ body
 z-index: 0;
  overflow-x: hidden;
 height: 120vh;
+background-color: #ae7ac5d4;
 
 
 }
@@ -700,7 +701,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .navbar {
   width: 100%;
   display: flex;
- background-color: #2bac5f85;
+   background-color: #9c3cb96b;
 border-radius: 0.8rem;
 } 
 input{

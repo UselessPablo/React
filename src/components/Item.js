@@ -34,10 +34,10 @@ const Item = ({ info }) => {
         main: deepPurple['A400'],
       },
       info: {
-        main: teal[300],
+        main: purple[500],
       },
       info2: {
-        main: teal[900],
+        main: purple[200],
       },
       fondo: {
         main: green[400]
@@ -83,10 +83,10 @@ const Item = ({ info }) => {
 
       <Box >
 
-        <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3}}>
+        <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor:'info2.main'}}>
           <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
           <CardMedia sx={{ height: 140 }}
-            image={info.img} onClick={goTo}
+            image={info.img} onClick={goTo} 
             title="HUMABRC"
           />
           <CardMedia

@@ -2,16 +2,16 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box} from '@mui/material';
 import Carrousel from '../components/Carrousel'
-
 
 
 const Navbar = () => {
 
     const navigate = useNavigate();
-   
+
+
     const cartBtn = () => {
         let path = `Cart`;
         navigate(path);
@@ -19,6 +19,8 @@ const Navbar = () => {
 
     return (
         <>
+
+      
             <nav className='sticky'>
                   <div className='navbar'>
                  
