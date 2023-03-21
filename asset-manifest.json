@@ -1,8 +1,13 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.4f478a1c.css",
-    "main.js": "/React/static/js/main.d193c766.js",
+    "main.css": "/React/static/css/main.1d88a6c8.css",
+    "main.js": "/React/static/js/main.cee7655c.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
+    "static/media/budasmuchos.jpg": "/React/static/media/budasmuchos.d950b690a94ff8ab8337.jpg",
+    "static/media/artnieve.jpg": "/React/static/media/artnieve.7ce29695836177c5cca3.jpg",
+    "static/media/b&w.jpg": "/React/static/media/b&w.2183d34e875fbcc96a91.jpg",
+    "static/media/artmate.jpg": "/React/static/media/artmate.7f3e903c4419033afc27.jpg",
+    "static/media/platitolechu.jpg": "/React/static/media/platitolechu.fccf4fa7757f008f8113.jpg",
     "static/media/fondo.webp": "/React/static/media/fondo.a0844506196709f8d3ea.webp",
     "static/media/fondo1.webp": "/React/static/media/fondo1.81ae327ca7f258fa4542.webp",
     "static/media/fondoprod.webp": "/React/static/media/fondoprod.bbfee94b42a2da4a29fb.webp",
@@ -10,12 +15,12 @@
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
-    "main.4f478a1c.css.map": "/React/static/css/main.4f478a1c.css.map",
-    "main.d193c766.js.map": "/React/static/js/main.d193c766.js.map",
+    "main.1d88a6c8.css.map": "/React/static/css/main.1d88a6c8.css.map",
+    "main.cee7655c.js.map": "/React/static/js/main.cee7655c.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f478a1c.css",
-    "static/js/main.d193c766.js"
+    "static/css/main.1d88a6c8.css",
+    "static/js/main.cee7655c.js"
   ]
 }
