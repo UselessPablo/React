@@ -5,7 +5,7 @@ import Cart from './CartWidget';
 import React, { useState } from 'react';
 import { Box} from '@mui/material';
 import Carrousel from '../components/Carrousel'
-
+import Images from './Images';
 
 const Navbar = () => {
 
@@ -46,9 +46,12 @@ const Navbar = () => {
         <Box sx={{width:'100vw', mt:5}}>
                     <Carrousel />
       {/* <img className='fondo' src={fondo} alt='fondo'></img>                    */}
+                    <Images />
                 </Box>        
+            
        </header>
             <h2>Productos Únicos</h2>
+       
         </>
     );
 };

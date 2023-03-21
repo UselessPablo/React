@@ -3,14 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
 import { Button, Card, CardMedia, Box, CardActions, Typography } from "@mui/material";
-import { purple, deepPurple, teal, green } from "@mui/material/colors";
+import { purple, deepPurple, green } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 import { Badge } from '@mui/material'
-
-
-
-
 
 
 const Item = ({ info }) => {
@@ -104,11 +99,13 @@ const Item = ({ info }) => {
           </CardActions>
         </Card>
         <div className='space3'>.</div>
+       
       </Box>
 
     </ThemeProvider>
 
-  );
+  )
+
 };
 
 export default Item;
