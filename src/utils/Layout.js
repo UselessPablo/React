@@ -1,18 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-// import Images from "../components/Images";
+import Navbar, { ScrollToTop } from "../components/Navbar";
 import '../index.css'
 
 const Layout = () => {
+  console.log(ScrollToTop);
   return (
     <>
-      {/* <Home/> */}
+      
       <Navbar />
+      <ScrollToTop />
       <Outlet />
-      <Footer />
 
+      <Footer />
+      
     </>
   )
 }

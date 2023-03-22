@@ -1,12 +1,16 @@
-
+import { useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
 import React, { useState } from 'react';
 import { Box} from '@mui/material';
-import Carrousel from '../components/Carrousel'
-import Images from './Images';
 
+export const ScrollToTop = () => {
+  
+        window.scrollTo(-110, -100);
+    
+   
+}
 const Navbar = () => {
 
     const navigate = useNavigate();
@@ -16,11 +20,13 @@ const Navbar = () => {
         let path = `Cart`;
         navigate(path);
     }
-
+    ScrollToTop();
     return (
-        <>
-
-      
+        
+           
+        
+       
+      <Box>
             <nav className='sticky'>
                   <div className='navbar'>
                  
@@ -42,17 +48,9 @@ const Navbar = () => {
                 <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
                 <NavLink className='breadText' to='/Cart'>Carrito</NavLink> 
             </div> 
-       {/* <header>
-        <Box sx={{width:'100vw', mt:5}}>
-                    <Carrousel />
-      {/* <img className='fondo' src={fondo} alt='fondo'></img>                    */}
-                    {/* <Images /> */}
-                {/* </Box>         */}
-            
-       {/* </header> */} 
-            {/* <h2>Productos Únicos</h2> */}
-       
-        </>
+            </Box>
+        
+     
     );
 };
 

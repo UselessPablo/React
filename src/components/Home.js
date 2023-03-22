@@ -8,10 +8,8 @@ import ItemListContainer from './ItemListContainer'
 
 const Home = () => {
   return (
-    <Box>
-    
+    <Box >
           <Carrousel />
-
    <Images/> 
    <ItemListContainer/>
           
