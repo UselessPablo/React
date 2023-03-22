@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.1d88a6c8.css",
-    "main.js": "/React/static/js/main.6107e541.js",
+    "main.css": "/React/static/css/main.aa81d521.css",
+    "main.js": "/React/static/js/main.8375d5c9.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
     "static/media/budasmuchos.jpg": "/React/static/media/budasmuchos.d950b690a94ff8ab8337.jpg",
     "static/media/artnieve.jpg": "/React/static/media/artnieve.7ce29695836177c5cca3.jpg",
@@ -15,12 +15,12 @@
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
-    "main.1d88a6c8.css.map": "/React/static/css/main.1d88a6c8.css.map",
-    "main.6107e541.js.map": "/React/static/js/main.6107e541.js.map",
+    "main.aa81d521.css.map": "/React/static/css/main.aa81d521.css.map",
+    "main.8375d5c9.js.map": "/React/static/js/main.8375d5c9.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d88a6c8.css",
-    "static/js/main.6107e541.js"
+    "static/css/main.aa81d521.css",
+    "static/js/main.8375d5c9.js"
   ]
 }
