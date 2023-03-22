@@ -4,6 +4,7 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore';
  import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Button,Input } from "@mui/material";
 
  const QuienesSomos = () => {
    const navigate = useNavigate();
@@ -40,10 +41,10 @@ const handleClick = () => {
       .then(({ id }) => console.log(id));
    confirmation();
   }
-const [confirm, setConfirm]= useState(false)
+
 
 const confirmation = () =>{
-notify();
+
 navigate('/');
 }
  
@@ -57,10 +58,10 @@ return (
  <div className="contacto">
  <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
  <form className="formContact">
- 
-        <input placeholder="Email" onChange={inputMessage} name='email' type='email' required='email' /><label>Email</label>
+        <Input placeholder="Email" onChange={inputMessage} name='email' type='email' required='email' />
  <textarea onChange={inputMessage} name='mensaje' placeholder="Mensaje..."></textarea>
- <button className='send' type='button' onClick={handleClick} >Enviar</button>
+ 
+ <Button variant='contained' size='small' color='success' type='button'sx={{mb:3, ml:1}} onClick={handleClick} >Enviar</Button>
       
       </form>
      

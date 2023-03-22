@@ -3,44 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
 import { Button, Card, CardMedia, Box, CardActions, Typography } from "@mui/material";
-import { purple, deepPurple, green } from "@mui/material/colors";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Badge } from '@mui/material'
-import { Grid} from '@mui/material'
-import Images from "./Images";
 
 const Item = ({ info }) => {
   const navigate = useNavigate();
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
 
-  // const [clicked, setClicked] = useState('')
-  // const notify = () => toast('Agregado al Carrito!');
-  const theme = createTheme({
-    palette: {
-      primary: {
-        // Purple and green play nicely together.
-        main: purple[400],
-      },
-      secondary: {
-        // This is green.A700 as hex.
-        main: deepPurple[600],
-      },
-      success: {
-        main: deepPurple['A400'],
-      },
-      info: {
-        main: purple[500],
-      },
-      info2: {
-        main: purple[100],
-      },
-      fondo: {
-        main: green[400]
-      }
-
-    },
-  });
 
   const getStock = () => {
     const item = isInCart(info.id)
@@ -75,7 +44,7 @@ const Item = ({ info }) => {
   }
 
   return (
-    <ThemeProvider theme={theme}>
+  
 
       <Box >
 
@@ -102,9 +71,7 @@ const Item = ({ info }) => {
         <div className='space3'>.</div>
        
       </Box>
-     
-
-    </ThemeProvider>
+    
 
   )
 

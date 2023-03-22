@@ -35,7 +35,7 @@ const ItemDetail = ({ data }) => {
   return (
     <>
       <div className='center2 '>
-      <Card sx={{ width:345, mt:7, borderRadius:2}}>
+      <Card sx={{ width:345, mt:7, borderRadius:2, backgroundColor:'info2.main'}}>
         <CardMedia
           sx={{ height: 140,width:345 }}
           image={data.img}
@@ -64,11 +64,11 @@ const ItemDetail = ({ data }) => {
       <h2 className='center'>${data.precio}</h2>
       <h2 className='center'>{data.detalle}</h2>
      */}
-        <Button onClick={goTo} variant="contained" color='success' sx={{ mt: 3, mb: 2}}>Seguir Comprando</Button>
+        <Button onClick={goTo} variant="contained" color='fondo' sx={{ mt: 3, mb: 2}}>Seguir Comprando</Button>
       
       {
         goToCart 
-            ? <Button onClick={goToCarrito} variant="contained" color='warning' >Ir al Carrito </Button>
+            ? <Button onClick={goToCarrito} variant="contained" color='success' >Ir al Carrito </Button>
           : <Counter stock={getStock()} onAdd={onAdd}  initial={-0} /> 
       }
     </div>

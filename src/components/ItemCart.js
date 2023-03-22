@@ -11,7 +11,7 @@ if (cantidad===0){
   
    <div className='center3'>
      
-      <Card sx={{ maxWidth: 300,  borderRadius:2}}>
+      <Card sx={{ maxWidth: 300,  borderRadius:2, backgroundColor:'info2.main'}}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
            {product.name}
@@ -29,7 +29,7 @@ if (cantidad===0){
           title={product.name}
         />
         <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Button size='small' sx={{Minwidth:55, height:30, mt:1, mb:1}} variant='contained' color='error' onClick={() => removeProduct(product.id)}>eliminar</Button>  
+          <Button size='small' sx={{Minwidth:55, height:30, mt:1, mb:1}} variant='contained' color='eliminar' onClick={() => removeProduct(product.id)}>eliminar</Button>  
         </CardActions>
       </Card>
  
