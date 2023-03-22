@@ -19,14 +19,18 @@ const Images = () => {
   
     return (
   
-    <Box>
+    <Box >
             <h2>Art..</h2>
-            <ImageList variant="masonry" cols={3} gap={8}>
+            <ImageList
+                sx={{ width: '98%', height: '300' }}
+                variant="quilted"
+                cols={4}
+                rowHeight={121}
+            >
                 {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                         <img
-                            src={`${item.img}?w=248&fit=crop&auto=format`}
-                            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                            {...srcset(item.img, 121, item.rows, item.cols)}
                             alt={item.title}
                             loading="lazy"
                         />
@@ -48,20 +52,23 @@ const itemData = [
   {
     img:mate ,
     title: 'Art. Hogar ',
+    rows:2
   },
   {
     img: nieve ,
     title: 'Bowl Rústico',
+    rows:2,
   },
   {
     img: budas ,
     title: 'Budas',
-    cols: 2,
+    cols: 4,
   },
   {
     img: platos ,
     title: 'Platos',
-    cols: 2,
+    cols: 4,
+    rows:3,
   },
  
 ];

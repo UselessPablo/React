@@ -9,7 +9,7 @@ import ItemListContainer from './ItemListContainer'
 const Home = () => {
   return (
     <Box>
-    <Navbar/> 
+    
           <Carrousel />
 
    <Images/> 

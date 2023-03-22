@@ -6,7 +6,8 @@ import { Button, Card, CardMedia, Box, CardActions, Typography } from "@mui/mate
 import { purple, deepPurple, green } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Badge } from '@mui/material'
-
+import { Grid} from '@mui/material'
+import Images from "./Images";
 
 const Item = ({ info }) => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Item = ({ info }) => {
         main: purple[500],
       },
       info2: {
-        main: purple[200],
+        main: purple[100],
       },
       fondo: {
         main: green[400]
@@ -101,6 +102,7 @@ const Item = ({ info }) => {
         <div className='space3'>.</div>
        
       </Box>
+     
 
     </ThemeProvider>
 
