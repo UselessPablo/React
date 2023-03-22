@@ -20,6 +20,7 @@ const Images = () => {
     return (
   
     <Box>
+            <h2>Art..</h2>
             <ImageList variant="masonry" cols={3} gap={8}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
@@ -32,6 +33,7 @@ const Images = () => {
                     </ImageListItem>
                 ))}
             </ImageList>
+    <h2>Cerámicas</h2>
     </Box>
   
   )

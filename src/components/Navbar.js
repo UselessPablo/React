@@ -42,15 +42,15 @@ const Navbar = () => {
                 <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
                 <NavLink className='breadText' to='/Cart'>Carrito</NavLink> 
             </div> 
-       <header>
+       {/* <header>
         <Box sx={{width:'100vw', mt:5}}>
                     <Carrousel />
       {/* <img className='fondo' src={fondo} alt='fondo'></img>                    */}
-                    <Images />
-                </Box>        
+                    {/* <Images /> */}
+                {/* </Box>         */}
             
-       </header>
-            <h2>Productos Únicos</h2>
+       {/* </header> */} 
+            {/* <h2>Productos Únicos</h2> */}
        
         </>
     );
