@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
-import Home from "../components/Home";
+// import Images from "../components/Images";
 import '../index.css'
 
 const Layout = () => {
@@ -9,6 +9,7 @@ const Layout = () => {
     <>
       {/* <Home/> */}
       <Outlet />
+  
       <Footer />
 
     </>
