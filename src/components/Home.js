@@ -8,9 +8,9 @@ import ItemListContainer from './ItemListContainer'
 const Home = () => {
   return (
     <Box >
-          <Carrousel />
-   <Images/> 
-   <ItemListContainer/>
+      <Carrousel />
+      <Images />
+      <ItemListContainer />
 
     </Box>
   )

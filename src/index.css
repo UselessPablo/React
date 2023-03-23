@@ -339,6 +339,20 @@ span {
   background-color: rgb(255, 255, 255);
   margin-left: 18%;
 }
+.vertical{
+  writing-mode: vertical-lr;
+  margin-bottom: 1rem;
+  margin-left: 85%;
+  margin-top: -44px;
+}
+.conocenos{
+  text-align: start;
+      margin-left: 15%;
+    margin-top: -50px;
+    margin-bottom: 40px;
+}
+ 
+
 .precio {
   font-weight: 600;
   text-align: center;
@@ -354,7 +368,7 @@ span {
   -webkit-animation-name: pulse;
   animation-name: pulse;
   -webkit-animation-duration: 1s;
-  animation-duration: 3s;
+  animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
