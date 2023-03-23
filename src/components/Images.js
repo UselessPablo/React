@@ -40,8 +40,8 @@ const Images = () => {
         ))}
       </ImageList>
       <h2 className='pulse'>Cerámicas</h2>
-      <h3 className='vertical'> Arte en Barro</h3>
-          <h3 className='conocenos'>Conocé nuestros Productos</h3>
+      <h2 className='vertical'> Arte en Barro</h2>
+          <h2 className='conocenos'>Conocé nuestros Productos</h2>
     </Box>
 
   )
