@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.d3b25e5d.css",
-    "main.js": "/React/static/js/main.ec175910.js",
+    "main.css": "/React/static/css/main.4f8cbcc1.css",
+    "main.js": "/React/static/js/main.2c2b224c.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
-    "static/media/humavid2.mp4": "/React/static/media/humavid2.17cd74a8bce69ba84a7b.mp4",
     "static/media/budasmuchos.jpg": "/React/static/media/budasmuchos.d950b690a94ff8ab8337.jpg",
     "static/media/artnieve.jpg": "/React/static/media/artnieve.7ce29695836177c5cca3.jpg",
     "static/media/b&w.jpg": "/React/static/media/b&w.2183d34e875fbcc96a91.jpg",
@@ -16,12 +15,12 @@
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
-    "main.d3b25e5d.css.map": "/React/static/css/main.d3b25e5d.css.map",
-    "main.ec175910.js.map": "/React/static/js/main.ec175910.js.map",
+    "main.4f8cbcc1.css.map": "/React/static/css/main.4f8cbcc1.css.map",
+    "main.2c2b224c.js.map": "/React/static/js/main.2c2b224c.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3b25e5d.css",
-    "static/js/main.ec175910.js"
+    "static/css/main.4f8cbcc1.css",
+    "static/js/main.2c2b224c.js"
   ]
 }
