@@ -6,7 +6,7 @@ import ItemListContainer from "../components/ItemListContainer";
 import Compra from '../components/Compra'
 import QuienesSomos from "../pages/QuienesSomos";
 import Home from '../components/Home'
-import Item from '../components/Item'
+
 
 const Router = () => (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>

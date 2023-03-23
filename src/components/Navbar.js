@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import React, { useState } from 'react';
 import { Box} from '@mui/material';
 
 export const ScrollToTop = () => {
@@ -14,7 +13,6 @@ export const ScrollToTop = () => {
 const Navbar = () => {
 
     const navigate = useNavigate();
-
 
     const cartBtn = () => {
         let path = `Cart`;
@@ -48,9 +46,10 @@ const Navbar = () => {
                 <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
                 <NavLink className='breadText' to='/Cart'>Carrito</NavLink> 
             </div> 
-            </Box>
         
-     
+            </Box>
+
+   
     );
 };
 

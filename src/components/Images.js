@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box} from '@mui/material';
+import { Grid} from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import wandb from '../assets/img/b&w.jpg';
@@ -7,6 +7,7 @@ import mate from '../assets/img/artmate.jpg';
 import nieve from '../assets/img/artnieve.jpg';
 import budas from '../assets/img/budasmuchos.jpg';
 import platos from '../assets/img/platitolechu.jpg';
+import Media from './Media';
 
 const Images = () => {
     function srcset(image, size, rows = 1, cols = 1) {
@@ -18,8 +19,10 @@ const Images = () => {
     }
   
     return (
-  
-    <Box >
+         
+ <Grid container sparcing={0}>
+  <Grid item xs={6}>
+           
             <h2>Art..</h2>
             <ImageList
                 sx={{ width: '98%', height: '300' }}
@@ -36,10 +39,19 @@ const Images = () => {
                         />
                     </ImageListItem>
                 ))}
-            </ImageList>
-    <h2>Cerámicas</h2>
-    </Box>
-  
+       
+           </ImageList>
+ 
+     </Grid>
+               
+            <Grid item xs={6}>
+    <Media/> 
+        </Grid>
+        <Grid item xs={12}>
+          <h2>Cerámicas</h2>
+        </Grid>
+      </Grid>
+       
   )
 }
 const itemData = [

@@ -1,8 +1,8 @@
 import React from "react";
 import { useState} from "react";
-import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Button, Popover, Typography } from "@mui/material";
+import { Button, Popover, Typography} from "@mui/material";
+
 
 const Counter = ({ stock, onAdd, initial }) => {
   const [Valor, setValor] = useState(initial);

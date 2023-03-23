@@ -3,11 +3,10 @@ import Counter from './Counter'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { UseCartContex } from './CartContext';
-import {Card, CardContent,Box} from '@mui/material';
-
+import {Card, CardContent,Box, Typography} from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+
 
 const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);

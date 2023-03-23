@@ -2,8 +2,6 @@
 import  { useState } from "react";
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
  import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { Button,Input } from "@mui/material";
 
  const QuienesSomos = () => {
@@ -12,16 +10,6 @@ import { Button,Input } from "@mui/material";
   //   email: mensaje,
   //   mensaje: mensaje,
   // }
-   const notify = () => toast.success("Mensaje enviado, te responderemos a la brevedad", {
-     // position: "top-center",
-    autoClose: 1750,
-     hideProgressBar: true,
-     closeOnClick: true,
-     pauseOnHover: true,
-     draggable: true,
-     progress: undefined,
-     theme: "dark",
-   });;
 
   const [mensaje, setMensaje] = useState();
 const inputMessage = (e)=>{

@@ -5,6 +5,7 @@ import AddCart from "./AddCart";
 import { Button, Card, CardMedia, Box, CardActions, Typography } from "@mui/material";
 import { Badge } from '@mui/material'
 
+
 const Item = ({ info }) => {
   const navigate = useNavigate();
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
