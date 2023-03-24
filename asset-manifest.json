@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.b5623fc8.css",
-    "main.js": "/React/static/js/main.fcb6d00f.js",
+    "main.css": "/React/static/css/main.36bd5a2b.css",
+    "main.js": "/React/static/js/main.9ac1dccb.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
+    "static/media/1.jpg": "/React/static/media/1.2f64f89d7b72b11bf36c.jpg",
+    "static/media/3.jpg": "/React/static/media/3.d3be0ef8cfe04853b91a.jpg",
     "static/media/budasmuchos.jpg": "/React/static/media/budasmuchos.d950b690a94ff8ab8337.jpg",
+    "static/media/9.jpg": "/React/static/media/9.4329055cf5e681bad92a.jpg",
     "static/media/artnieve.jpg": "/React/static/media/artnieve.7ce29695836177c5cca3.jpg",
     "static/media/b&w.jpg": "/React/static/media/b&w.2183d34e875fbcc96a91.jpg",
     "static/media/artmate.jpg": "/React/static/media/artmate.7f3e903c4419033afc27.jpg",
+    "static/media/2.jpg": "/React/static/media/2.c39f351b786083c293bf.jpg",
     "static/media/platitolechu.jpg": "/React/static/media/platitolechu.fccf4fa7757f008f8113.jpg",
+    "static/media/7.jpg": "/React/static/media/7.bed6494be47500adb197.jpg",
+    "static/media/5.jpg": "/React/static/media/5.b59ed08c1595b25de2f9.jpg",
+    "static/media/4.jpg": "/React/static/media/4.b15ced463c40199ec473.jpg",
+    "static/media/8.jpg": "/React/static/media/8.0b2c9fc30b7d9527ccb2.jpg",
+    "static/media/6.jpg": "/React/static/media/6.bd8ca87498bf7113da79.jpg",
+    "static/media/10.jpg": "/React/static/media/10.9b60330d5935f3275d83.jpg",
     "static/media/fondo.webp": "/React/static/media/fondo.a0844506196709f8d3ea.webp",
     "static/media/fondo1.webp": "/React/static/media/fondo1.81ae327ca7f258fa4542.webp",
     "static/media/fondoprod.webp": "/React/static/media/fondoprod.bbfee94b42a2da4a29fb.webp",
@@ -15,12 +25,12 @@
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
-    "main.b5623fc8.css.map": "/React/static/css/main.b5623fc8.css.map",
-    "main.fcb6d00f.js.map": "/React/static/js/main.fcb6d00f.js.map",
+    "main.36bd5a2b.css.map": "/React/static/css/main.36bd5a2b.css.map",
+    "main.9ac1dccb.js.map": "/React/static/js/main.9ac1dccb.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5623fc8.css",
-    "static/js/main.fcb6d00f.js"
+    "static/css/main.36bd5a2b.css",
+    "static/js/main.9ac1dccb.js"
   ]
 }
