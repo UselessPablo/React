@@ -344,14 +344,14 @@ span {
   margin-bottom: 1rem;
   color:blueviolet;
   margin-left: 85%;
-  margin-top: -44px;
+  margin-top: -50px;
   
 }
 .conocenos{
   text-align: start;
       margin-left: 5%;
       color:forestgreen;
-    margin-top: -50px;
+
     margin-bottom: 40px;
 }
  
@@ -717,10 +717,11 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 }
 
 .navbar {
-  width: 100%;
+  width: 98%;
   display: flex;
    background-color: #9c3cb96b;
 border-radius: 0.8rem;
+justify-content: flex-end;
 } 
 input{
   width: 200px;
@@ -733,15 +734,17 @@ display: flex;
 width: 98%;
 justify-content: space-between;
 height: 65px;
-margin-left: 5%;
 } 
 .catw{
 display: flex;
 flex-direction: row;
 align-items: center;
-
-
 }
+element.style {
+    transform: none;
+    transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+ 
+  }
 
 
 .logged{
