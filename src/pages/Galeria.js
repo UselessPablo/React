@@ -15,7 +15,7 @@ import j from '../assets/img/galeria/10.jpg'
 
 const Galeria = () => {
  return(
-  <ImageList sx={{ width: '100%', minHeight: '950px', mt:4 }}>
+  <ImageList sx={{ width: '100%', minHeight: '950px', mt:3, mb:4, pb:6 }}>
     <ImageListItem key="Subheader" cols={2}>
     
     </ImageListItem>

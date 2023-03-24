@@ -36,6 +36,9 @@ const goContact = () =>{
     const goGaleria = () => {
         navigate('/pages/Galeria/')
     }
+    const goWorkshop = () => {
+        navigate('/pages/Workshops/')
+    }
     return (
 
         
@@ -61,7 +64,7 @@ const goContact = () =>{
                                         <ListItemButton onClick={goGaleria} sx={{ backgroundColor: 'fondo.main', borderRadius:3, mt:10, mr:4, ml:1 }}>
                                             <ListItemText primary="Galería" />
                                         </ListItemButton>
-                                        <ListItemButton sx={{ backgroundColor: 'success.main', borderRadius: 3,mt:2, ml:4, mr:1 }}>
+                                        <ListItemButton onClick={goWorkshop} sx={{ backgroundColor: 'success.main', borderRadius: 3,mt:2, ml:4, mr:1 }}>
                                             <ListItemText primary="WorkShops y Taller" />
                                         </ListItemButton>
                                         <ListItemButton onClick={goContact} sx={{ backgroundColor: 'eliminar.main', borderRadius: 3, mt: 2, mb: 16, mr: 4, ml: 1}}>

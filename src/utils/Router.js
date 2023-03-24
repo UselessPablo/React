@@ -7,7 +7,7 @@ import Compra from '../components/Compra'
 import QuienesSomos from "../pages/QuienesSomos";
 import Home from '../components/Home'
 import Galeria from "../pages/Galeria";
-
+import WorkShops from "../pages/WorkShops";
 const Router = () => (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
         <HashRouter basemane='/'>
@@ -17,6 +17,7 @@ const Router = () => (
                 <Route path='/detalle/:detalleid' element={<ItemDetailContainer />} />
                 <Route index element={<Home/>} />
                 <Route path='/pages/Galeria' element={<Galeria/>}/>
+                <Route path='/pages/Workshops' element={<WorkShops/>} />
                 <Route path="/category/:name" element={<ItemListContainer />} />
                 <Route path='/Cart' element={<Cart />} />
                 <Route path='/page2/Compra' element={<Compra />} />
