@@ -342,16 +342,10 @@ span {
 .vertical{
   writing-mode: vertical-lr;
   margin-bottom: 1rem;
-  color:blueviolet;
-  margin-left: 85%;
-  margin-top: -50px;
-  
+  margin-left: 85%; 
 }
 .conocenos{
-  text-align: start;
-      margin-left: 5%;
-      color:forestgreen;
-
+  text-align: center;
     margin-bottom: 40px;
 }
  

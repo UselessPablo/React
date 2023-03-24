@@ -30,7 +30,12 @@ const Navbar = () => {
     const toggleDrawer = () => {
         setOpen(!open);
     };
-
+const goContact = () =>{
+    navigate('/pages/QuienesSomos/')
+}
+    const goGaleria = () => {
+        navigate('/pages/Galeria/')
+    }
     return (
 
         
@@ -53,13 +58,13 @@ const Navbar = () => {
                                 <Drawer anchor="left" open={open} onClose={toggleDrawer} >
                                  
                                     <List sx={{ backgroundColor: 'info2.main' }}>
-                                        <ListItemButton sx={{ backgroundColor: 'fondo.main', borderRadius:3, mt:10, mr:6, ml:1 }}>
+                                        <ListItemButton onClick={goGaleria} sx={{ backgroundColor: 'fondo.main', borderRadius:3, mt:10, mr:4, ml:1 }}>
                                             <ListItemText primary="Galería" />
                                         </ListItemButton>
-                                        <ListItemButton sx={{ backgroundColor: 'success.main', borderRadius: 3,mt:2, ml:6, mr:1 }}>
+                                        <ListItemButton sx={{ backgroundColor: 'success.main', borderRadius: 3,mt:2, ml:4, mr:1 }}>
                                             <ListItemText primary="WorkShops y Taller" />
                                         </ListItemButton>
-                                        <ListItemButton sx={{ backgroundColor: 'eliminar.main', borderRadius: 3, mt: 2, mb: 16, mr: 6, ml: 1 }}>
+                                        <ListItemButton onClick={goContact} sx={{ backgroundColor: 'eliminar.main', borderRadius: 3, mt: 2, mb: 16, mr: 4, ml: 1}}>
                                             <ListItemText primary="Contactame" />
                                         </ListItemButton>
                                     </List>

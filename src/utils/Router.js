@@ -6,7 +6,7 @@ import ItemListContainer from "../components/ItemListContainer";
 import Compra from '../components/Compra'
 import QuienesSomos from "../pages/QuienesSomos";
 import Home from '../components/Home'
-
+import Galeria from "../pages/Galeria";
 
 const Router = () => (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -16,6 +16,7 @@ const Router = () => (
             <Route element={<Layout />}>
                 <Route path='/detalle/:detalleid' element={<ItemDetailContainer />} />
                 <Route index element={<Home/>} />
+                <Route path='/pages/Galeria' element={<Galeria/>}/>
                 <Route path="/category/:name" element={<ItemListContainer />} />
                 <Route path='/Cart' element={<Cart />} />
                 <Route path='/page2/Compra' element={<Compra />} />

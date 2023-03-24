@@ -41,7 +41,7 @@ const Images = () => {
       </ImageList>
       <h2 className='pulse'>Cerámicas</h2>
       <h2 className='vertical'> Arte en Barro</h2>
-          <h2 className='conocenos'>Conocé nuestros Productos</h2>
+          <h2 className='conocenos'>Nuestros Productos</h2>
     </Box>
 
   )
