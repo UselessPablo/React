@@ -44,7 +44,7 @@ const goContact = () =>{
         
         <>
             <div>
-                <AppBar position="static">  
+                <AppBar>  
                 </AppBar>
             
                 <nav className='sticky'>

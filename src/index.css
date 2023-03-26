@@ -1,34 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro:wght@400;500&family=Roboto:wght@100;400&display=swap");
 body
-
 {
   font-family: "maven pro";
- /* background: rgb(0, 0, 0);  */
- /* background: linear-gradient(354deg, rgba(175, 165, 143, 0.521) 59%, rgba(46, 0, 63, 0.421) 100%);  */
  margin: 3px;
 z-index: 0;
  overflow-x: hidden;
 height: 120vh;
 background-color: #c89adb77;
 
-
 }
-header{
+/* .bgBody, body{
+object-fit: cover;
+background-image: url('../src/assets/img/fondoVioleta.png');
+background-size: contain;
+background-repeat: round;
 
- margin-top: 1rem;
-width: 100%;
- margin-bottom: 5px;
-
+/* opacity: 0.9;
+  filter: blur(8px);
+  -webkit-filter: blur(8px); */
+ 
+.parrafoMain{
+  margin-left: 16%;
+  margin-top: -97px;
+  font-family: 'maven pro';
 }
-
 .fondo{
-  width: 98%;
+  width: 97%;
   position: relative;
-  height: 130px;
+  max-height: 130px;
   border-radius: 2rem;
-  margin-top: 20px;
+  margin-top: 10%;
   object-fit: cover;
-margin-left: 1%;
+margin-right: 10%;
 }
 a {
   text-decoration: none;
@@ -59,11 +62,11 @@ li {
 }
 
 nav {
-   width: 98%; 
+ 
   display: flex;
-  justify-content: space-around;
+  width: 98%;
   height: 130px;
-  position: sticky;
+  /* position: sticky; */
   align-items: center;
   margin-bottom: 50px;
   
@@ -184,9 +187,10 @@ p {
   height: 55px;
   background-color: #9c3cb96b;
   border-radius: 0.8rem;
-  width: 98%;
+  width: 97%;
   bottom: 0;
   position: fixed;
+  margin-left: 1%;
   
 }
 .center2 {
@@ -341,8 +345,7 @@ span {
 }
 .vertical{
   writing-mode: vertical-lr;
-  margin-bottom: 1rem;
-  margin-left: 85%; 
+
 }
 .conocenos{
   text-align: center;
@@ -711,11 +714,12 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 }
 
 .navbar {
-  width: 98%;
+ width: 98%;
   display: flex;
    background-color: #9c3cb96b;
 border-radius: 0.8rem;
-justify-content: flex-end;
+margin-left: 1%;
+
 } 
 input{
   width: 200px;
@@ -728,6 +732,7 @@ display: flex;
 width: 98%;
 justify-content: space-between;
 height: 65px;
+margin-left: 1%;
 } 
 .catw{
 display: flex;
@@ -765,6 +770,7 @@ element.style {
   top: 0;
   width: 98%;
   z-index: 200;
+  margin-left: 1%;
   margin-top: 10px;
   height: 60px;
 }

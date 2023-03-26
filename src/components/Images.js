@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import wandb from '../assets/img/b&w.jpg';
@@ -7,6 +7,7 @@ import mate from '../assets/img/artmate.jpg';
 import nieve from '../assets/img/artnieve.jpg';
 import budas from '../assets/img/budasmuchos.jpg';
 import platos from '../assets/img/platitolechu.jpg';
+import Carrousel from './Carrousel';
 
 
 const Images = () => {
@@ -40,8 +41,18 @@ const Images = () => {
         ))}
       </ImageList>
       <h2 className='pulse'>Cerámicas</h2>
-      <h2 className='vertical'> Arte en Barro</h2>
-          <h2 className='conocenos'>Nuestros Productos</h2>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <h2 className='vertical'> Arte en Barro</h2>
+          <p className='parrafoMain'>Productos personalizados, buscanos en la sección Contacto</p>
+        </Grid>
+        <Grid item xs={6}>
+          <Carrousel />
+        </Grid>
+
+      </Grid>
+      <h2 className='conocenos'>Nuestros Productos</h2>
+
     </Box>
 
   )
