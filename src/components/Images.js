@@ -23,7 +23,7 @@ const Images = () => {
 
     <Box>
 
-      <h2>Arte..</h2>
+      <h2 className='marginTop'>Arte..</h2>
       <ImageList
         sx={{ width: '98%', height: '300' }}
         variant="quilted"
@@ -40,6 +40,7 @@ const Images = () => {
           </ImageListItem>
         ))}
       </ImageList>
+   <Box>
       <div className='bgImage'>
       <h2 className='pulse'>Cerámicas</h2>
       <Grid container spacing={2}>
@@ -55,7 +56,7 @@ const Images = () => {
       <h2 className='conocenos'>Nuestros Productos</h2>
       </div>
     </Box>
-
+    </Box>
   )
 }
 const itemData = [

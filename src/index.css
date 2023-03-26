@@ -16,6 +16,7 @@ background-image: url('../src/assets/img/fondoVioleta.png');
 background-size: cover;
 padding: 1px;
 border-radius: 1rem;
+width: 98%;
 
 }
 .parrafoMain{
@@ -48,9 +49,10 @@ h1 {
 h2{
   text-align: center;
   font-size: 1.6rem;
-  margin-top: 47px;
 }
-
+.marginTop{
+  margin-top: 5rem;
+}
 h3 {
   text-align: center;
   font-size: 1rem;
@@ -350,7 +352,7 @@ span {
     margin-bottom: 40px;
 }
 .verticalRight{
-  margin-left: 90%;
+  margin-left: 80%;
 }
 
 .precio {
@@ -484,7 +486,9 @@ form {
   display: block;
 }
 @media only screen and (max-width: 480px) {
-  
+  .parrafoMain{
+display: none;
+}
 
   .detalleInfo{
     position: fixed;
