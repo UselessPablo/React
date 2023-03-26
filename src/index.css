@@ -5,32 +5,31 @@ body
  margin: 3px;
 z-index: 0;
  overflow-x: hidden;
+ overflow-y: scroll;
 height: 120vh;
 background-color: #c89adb77;
 
 }
-/* .bgBody, body{
+.bgImage{
 object-fit: cover;
 background-image: url('../src/assets/img/fondoVioleta.png');
-background-size: contain;
-background-repeat: round;
+background-size: cover;
+padding: 1px;
+border-radius: 1rem;
 
-/* opacity: 0.9;
-  filter: blur(8px);
-  -webkit-filter: blur(8px); */
- 
+}
 .parrafoMain{
   margin-left: 16%;
   margin-top: -97px;
   font-family: 'maven pro';
+  position: absolute;
 }
 .fondo{
-  width: 97%;
+  width: 200px;
   position: relative;
   max-height: 130px;
   border-radius: 2rem;
   margin-top: 10%;
-  object-fit: cover;
 margin-right: 10%;
 }
 a {
@@ -345,13 +344,14 @@ span {
 }
 .vertical{
   writing-mode: vertical-lr;
-
 }
 .conocenos{
   text-align: center;
     margin-bottom: 40px;
 }
- 
+.verticalRight{
+  margin-left: 90%;
+}
 
 .precio {
   font-weight: 600;

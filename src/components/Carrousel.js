@@ -3,16 +3,16 @@ import React from 'react';
 import fondo from '../assets/img/fondo.webp'
 import fondo1 from '../assets/img/fondo1.webp'
 import fondo2 from '../assets/img/fondoprod.webp'
+import fondovio from '../assets/img/fondoVioleta.png'
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Autoplay } from 'swiper';
 import 'swiper/css'
-import { EffectFade } from 'swiper';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
 const Carrousel = () => {
     return (
-        <Swiper modules={[EffectFade, Autoplay]} effect="fade"
+        <Swiper modules={[ Autoplay]} effect="fade"
             autoplay={{delay: 1800}}
             data-swiper-autoplay="2000"
             loop={true}

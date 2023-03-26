@@ -40,6 +40,7 @@ const Images = () => {
           </ImageListItem>
         ))}
       </ImageList>
+      <div className='bgImage'>
       <h2 className='pulse'>Cerámicas</h2>
       <Grid container spacing={2}>
         <Grid item xs={6}>
@@ -47,12 +48,12 @@ const Images = () => {
           <p className='parrafoMain'>Productos personalizados, buscanos en la sección Contacto</p>
         </Grid>
         <Grid item xs={6}>
-          <Carrousel />
+          <h2 className='vertical verticalRight'>Únicos</h2>
         </Grid>
 
       </Grid>
       <h2 className='conocenos'>Nuestros Productos</h2>
-
+      </div>
     </Box>
 
   )
