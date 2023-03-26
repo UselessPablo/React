@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.36bd5a2b.css",
-    "main.js": "/React/static/js/main.331d477b.js",
+    "main.css": "/React/static/css/main.7f13e2ff.css",
+    "main.js": "/React/static/js/main.470ddfa1.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
+    "static/media/fondoVioleta.png": "/React/static/media/fondoVioleta.f2ef45698e81c93e15a6.png",
     "static/media/1.jpg": "/React/static/media/1.2f64f89d7b72b11bf36c.jpg",
     "static/media/3.jpg": "/React/static/media/3.d3be0ef8cfe04853b91a.jpg",
     "static/media/budasmuchos.jpg": "/React/static/media/budasmuchos.d950b690a94ff8ab8337.jpg",
@@ -25,12 +26,12 @@
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
-    "main.36bd5a2b.css.map": "/React/static/css/main.36bd5a2b.css.map",
-    "main.331d477b.js.map": "/React/static/js/main.331d477b.js.map",
+    "main.7f13e2ff.css.map": "/React/static/css/main.7f13e2ff.css.map",
+    "main.470ddfa1.js.map": "/React/static/js/main.470ddfa1.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36bd5a2b.css",
-    "static/js/main.331d477b.js"
+    "static/css/main.7f13e2ff.css",
+    "static/js/main.470ddfa1.js"
   ]
 }
