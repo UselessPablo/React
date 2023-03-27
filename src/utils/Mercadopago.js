@@ -1,5 +1,7 @@
 const mercadopago = require('mercadopago');
-mercadopago.configurations.setAccessToken(config.access_token);
+mercadopago.configure({
+    access_token: "APP_USR-1800286423148403-030709-d8f6deb4f3f88da27aa5acea2601671e-39040546",
+});
 
 const payment_data = {
     transaction_amount: 100,

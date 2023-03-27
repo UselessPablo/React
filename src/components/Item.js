@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
@@ -6,12 +6,13 @@ import { Button, Card, CardMedia, Box, CardActions, Typography } from "@mui/mate
 import { Badge } from '@mui/material'
 
 
-const Item = ({ info }) => {
+const Item = ({ info  }) => {
   const navigate = useNavigate();
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
-
+  const [ultimoPulsado, setUltimoPulsado] = useState(null);
   
+ 
   const getStock = () => {
     const item = isInCart(info.id)
 
@@ -22,7 +23,11 @@ const Item = ({ info }) => {
       return info.cantidad
     }
   }
+  const manejarClickProducto = (infoid) => {
+    setUltimoPulsado(info.id);
 
+  };
+  console.log(ultimoPulsado);
 
   const getBadgetQuantity = () => {
     const item = getCartProduct(info.id)
@@ -42,12 +47,20 @@ const Item = ({ info }) => {
   const goTo = () => {
     navigate(`/detalle/${info.id}`)
   }
-
+  useEffect(() => {
+    if (ultimoPulsado !== null) {
+      const elementoProducto = document.getElementById(`producto-${ultimoPulsado}`);
+      if (elementoProducto) {
+        elementoProducto.scrollIntoView({ behavior: 'smooth' });
+        console.log(ultimoPulsado);
+      }
+    }
+  }, [ultimoPulsado]);
   return (
 
     <Box >
 
-      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor: 'info2.main' }}>
+      <Card id='ultimoPulsado' sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor: 'info2.main' }}>
         <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
         <CardMedia sx={{ height: 140 }}
           image={info.img} onClick={goTo}
@@ -65,6 +78,7 @@ const Item = ({ info }) => {
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button color={'info'} size="small" sx={{ me: 1 }} variant="contained"
               onClick={goTo}
+              onClickCapture={() => manejarClickProducto(info.id)}
             >Info</Button>
           </Box>
         </CardActions>

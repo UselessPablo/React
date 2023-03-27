@@ -32,9 +32,12 @@ const ItemDetail = ({ data }) => {
     addProduct(data, cantidad)
   }
 
+   
+     
   return (
     <Box>
       <div className='center2 '>
+       
         <Card sx={{ width: 345, mt: 7, borderRadius: 2, backgroundColor: 'info2.main' }}>
           <CardMedia
             sx={{ height: 140, width: 345 }}
@@ -58,7 +61,7 @@ const ItemDetail = ({ data }) => {
             : <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
         }
       </div>
-
+      <div id={`producto-${data.id}`}></div>
     </Box>
   )
 }
