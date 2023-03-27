@@ -72,6 +72,11 @@ nav {
   margin-bottom: 50px;
   
 }
+.selected{
+   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 .imagenes {
   width: 220px;
   border-radius: 0.5rem;

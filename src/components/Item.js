@@ -11,6 +11,7 @@ const Item = ({ info }) => {
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
 
+  
   const getStock = () => {
     const item = isInCart(info.id)
 
@@ -21,6 +22,7 @@ const Item = ({ info }) => {
       return info.cantidad
     }
   }
+
 
   const getBadgetQuantity = () => {
     const item = getCartProduct(info.id)
@@ -61,7 +63,9 @@ const Item = ({ info }) => {
         <CardActions>
           <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 25 }} >
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button color={'info'} size="small" sx={{ me: 1 }} variant="contained" onClick={goTo}>Info</Button>
+            <Button color={'info'} size="small" sx={{ me: 1 }} variant="contained"
+              onClick={goTo}
+            >Info</Button>
           </Box>
         </CardActions>
       </Card>
