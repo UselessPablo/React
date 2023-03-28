@@ -2,7 +2,7 @@
 body
 {
   font-family: "maven pro";
- margin: 3px;
+ /* margin: 3px; */
 z-index: 0;
  overflow-x: hidden;
  overflow-y: scroll;
@@ -26,11 +26,14 @@ width: 98%;
   position: absolute;
 }
 .fondo{
-  width: 200px;
+  width: 96%;
   position: relative;
+  z-index: 400;
   max-height: 130px;
   border-radius: 2rem;
+  object-fit: cover;
   margin-top: 10%;
+  margin-left: 2%;
 margin-right: 10%;
 }
 a {
@@ -44,7 +47,7 @@ h1 {
   font-family: "maven pro";
   font-size: 1.8rem;
   text-align: flex-start;
- width: 100%;
+ width: 96%;
 }
 h2{
   text-align: center;
@@ -85,8 +88,6 @@ nav {
 -webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 }
-
-
 .cartWidget {
   cursor: pointer;
   text-align: center;
@@ -97,7 +98,6 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   color: rgb(0, 0, 0);
   border-radius: 1.2rem;
   border-style: none;
-  margin: 15px;
   background-color: rgba(131, 56, 202, 0.726);
 } 
 .small {
@@ -250,37 +250,7 @@ span {
   background-color: rgba(166, 14, 226, 0.315);
   height: 15px;
 }
-.menuu, .menuu1, .menuu2, .menuu3{
-  font-size: 0.6rem;
-}
-  .menuu:hover{
-  background-color: rgb(183, 125, 223);
- box-shadow: 3px 3px 10px rgb(105, 112, 119)
-}
-  .menuu1:hover{
-  background-color: rgb(218, 158, 69);
- box-shadow: 3px 3px 10px rgb(105, 112, 119)
-}
-.menuu2:hover{
-  background-color: rgb(127, 180, 40);
- box-shadow: 3px 3px 10px rgb(105, 112, 119)
-}
- .menuu3:hover{
-  background-color: rgb(118, 195, 214);
-   box-shadow: 3px 3px 10px rgb(105, 112, 119)
-}
-.menuClose{
 
-  position: absolute;
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  top: 10px;
-  left: 10px;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
-}
 
 
 #seguir {
@@ -965,49 +935,6 @@ margin-bottom: 40px;
   justify-content: space-between;
 }
 
-.nav-container .hamburger-lines .line {
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 10px;
-  background: #0e2431;
-}
-
-.nav-container .hamburger-lines .line1 {
-  transform-origin: 0% 0%;
-  transition: transform 0.4s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line2 {
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line3 {
-  transform-origin: 0% 100%;
-  transition: transform 0.4s ease-in-out;
-}
-
-.navbar .menu-items {
-  padding-top: 120px;
-  box-shadow: inset 0 0 2000px rgba(217, 95, 221, 0.5);
-  
-  width: 40%;
-  transform: translate(-150%);
-  display: flex;
-  flex-direction: column;
-  margin-left: -40px;
-  padding-left: 50px;
-  height: 280px;
-  transition: transform 0.5s ease-in-out;
-  align-items: flex-start;
-  text-align: center;
-}
-
-.navbar .menu-items li {
-  margin-bottom: 1.2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
 
 
 .breadC{

@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef} from "react";
+import {useNavigate} from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
-import { Button, Card, CardMedia, Box, CardActions, Typography } from "@mui/material";
+import { Button, Card, CardMedia, Box, CardActions, Typography, Grid } from "@mui/material";
 import { Badge } from '@mui/material'
 
 
-const Item = ({ info  }) => {
+
+
+const Item = ({ info }) => {
   const navigate = useNavigate();
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
   const [ultimoPulsado, setUltimoPulsado] = useState(null);
-  
- 
+  const productsContainerRef = useRef(null);
+  const [current, setCurrent] = useState()
   const getStock = () => {
     const item = isInCart(info.id)
 
@@ -23,13 +25,27 @@ const Item = ({ info  }) => {
       return info.cantidad
     }
   }
-  const manejarClickProducto = (infoid) => {
+  const manejarClickProducto = (e) => {
     setUltimoPulsado(info.id);
+    setCurrent(productsContainerRef)
 
   };
-  console.log(ultimoPulsado);
+  console.log(info.id);
+  console.log(productsContainerRef);
+useEffect(()=>{
+  localStorage.setItem('producto', ultimoPulsado);
+},[ultimoPulsado])
 
-  const getBadgetQuantity = () => {
+ const ultimo = localStorage.getItem('producto', ultimoPulsado)
+
+  useEffect(() => {
+    if (ultimoPulsado  === ultimo.current) {
+      productsContainerRef.scrollTop = current ; // Ajustar la altura de cada elemento a tu caso de uso
+    }
+  }, [ultimoPulsado]);
+console.log(ultimo);
+
+const getBadgetQuantity = () => {
     const item = getCartProduct(info.id)
 
     if (item)
@@ -47,25 +63,18 @@ const Item = ({ info  }) => {
   const goTo = () => {
     navigate(`/detalle/${info.id}`)
   }
-  useEffect(() => {
-    if (ultimoPulsado !== null) {
-      const elementoProducto = document.getElementById(`producto-${ultimoPulsado}`);
-      if (elementoProducto) {
-        elementoProducto.scrollIntoView({ behavior: 'smooth' });
-        console.log(ultimoPulsado);
-      }
-    }
-  }, [ultimoPulsado]);
+
   return (
 
-    <Box >
+    <Box>
 
-      <Card id='ultimoPulsado' sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor: 'info2.main' }}>
+      <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor: 'info2.main' }}>
         <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
-        <CardMedia sx={{ height: 140 }}
+        <CardMedia  sx={{ height: 140 }}
           image={info.img} onClick={goTo}
           title="HUMABRC"
         />
+       
         <CardMedia
           image={info.offer}
           title={info.destacado}
@@ -74,17 +83,19 @@ const Item = ({ info  }) => {
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
         <CardActions>
+            
           <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 25 }} >
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button color={'info'} size="small" sx={{ me: 1 }} variant="contained"
+            <Button ref={productsContainerRef}  color={'info'} size="small" sx={{ me: 1 }} variant="contained"
               onClick={goTo}
-              onClickCapture={() => manejarClickProducto(info.id)}
+              onClickCapture={(e) => manejarClickProducto(e)}
             >Info</Button>
           </Box>
         </CardActions>
       </Card>
+       
       <div className='space3'>.</div>
-
+         
     </Box>
 
   )

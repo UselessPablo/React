@@ -13,18 +13,19 @@ import 'swiper/css/effect-fade';
 const Carrousel = () => {
     return (
         <Swiper modules={[ Autoplay]} effect="fade"
-            autoplay={{delay: 1800}}
+            autoplay={{delay: 1200}}
             data-swiper-autoplay="2000"
-            loop={true}
+            loop={false}
             slidesPerView={1}
            
         >
-            <SwiperSlide><img className='fondo' src={fondo} alt='fondo' />
+            <SwiperSlide><img className='fondo' src={fondo} alt='' />
 </SwiperSlide>
-            <SwiperSlide ><img className='fondo' src={fondo1} alt='fondo' />
+            <SwiperSlide ><img className='fondo' src={fondo1} alt='' />
 </SwiperSlide>
-            <SwiperSlide ><img className='fondo' src={fondo2} alt='fondo' />
-</SwiperSlide>   
+            <SwiperSlide ><img className='fondo' src={fondo2} alt='' />
+</SwiperSlide>  
+            
         </Swiper>
     );
 };
