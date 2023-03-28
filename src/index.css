@@ -29,12 +29,13 @@ width: 98%;
   width: 96%;
   position: relative;
   z-index: 400;
-  max-height: 130px;
+  max-height: 230px;
   border-radius: 2rem;
   object-fit: cover;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   margin-left: 2%;
-margin-right: 10%;
+
 }
 a {
   text-decoration: none;

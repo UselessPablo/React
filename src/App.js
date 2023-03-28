@@ -1,7 +1,7 @@
 import Router from './utils/Router';
 import CartProvider from './components/CartContext';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
-import {purple, deepPurple, green, orange} from '@mui/material/colors';
+import {purple, deepPurple, green, orange, yellow} from '@mui/material/colors';
 import './index.css'
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
         main: purple[400],
       },
       secondary: {
-        main: deepPurple[600],
+        main: yellow[100],
       },
       success: {
         main: deepPurple[400],

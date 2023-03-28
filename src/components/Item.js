@@ -4,6 +4,7 @@ import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
 import { Button, Card, CardMedia, Box, CardActions, Typography, Grid } from "@mui/material";
 import { Badge } from '@mui/material'
+import { wrap } from "framer-motion";
 
 
 
