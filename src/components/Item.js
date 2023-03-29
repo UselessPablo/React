@@ -87,7 +87,7 @@ const getBadgetQuantity = () => {
             
           <Box xs={{ width: 200 }} sx={{  height: 25, display:'flex'}} >
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button ref={productsContainerRef}  color={'info'} size="small" sx={{ ml:11 }} variant="contained"
+            <Button ref={productsContainerRef}  color={'info'} size="small" sx={{ ml:7 }} variant="contained"
               onClick={goTo}
               onClickCapture={(e) => manejarClickProducto(e)}
             >Info</Button>
@@ -95,7 +95,7 @@ const getBadgetQuantity = () => {
         </CardActions>
       </Card>
        
-      <div className='space3'>.</div>
+      <div className='space3'> </div>
          
     </Box>
 

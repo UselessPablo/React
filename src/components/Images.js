@@ -25,22 +25,23 @@ const Images = () => {
 
       <h2 className='marginTop'>Arte..</h2>
       <ImageList
-        sx={{ width: '98%', height: '300' }}
+        sx={{ width: '97%', height: '300', borderRadius:5, ml:2.5 }}
         variant="quilted"
         cols={4}
         rowHeight={121}
       >
         {itemData.map((item) => (
-          <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+          <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
             <img
               {...srcset(item.img, 121, item.rows, item.cols)}
               alt={item.title}
               loading="lazy"
+              
             />
           </ImageListItem>
         ))}
       </ImageList>
-   <Box>
+      <Box sx={{ width: '94%', ml:6 }}>
       <div className='bgImage'>
       <h2 className='pulse'>Cerámicas</h2>
       <Grid container spacing={2}>
