@@ -69,7 +69,7 @@ const getBadgetQuantity = () => {
 
     <Box>
 
-      <Card  sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor: 'info2.main' }}>
+      <Card  sx={{ width: 280, mr: 2, mt: 3, maxHeight: 280, borderRadius: 3, backgroundColor: 'info2.main' }}>
         <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
         <CardMedia  sx={{ height: 140 }}
           image={info.img} onClick={goTo}
@@ -85,9 +85,9 @@ const getBadgetQuantity = () => {
         </Typography>
         <CardActions>
             
-          <Box xs={{ width: 200 }} sx={{ display: 'inline-flex', height: 25 }} >
+          <Box xs={{ width: 200 }} sx={{  height: 25, display:'flex'}} >
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button ref={productsContainerRef}  color={'info'} size="small" sx={{ me: 1 }} variant="contained"
+            <Button ref={productsContainerRef}  color={'info'} size="small" sx={{ ml:11 }} variant="contained"
               onClick={goTo}
               onClickCapture={(e) => manejarClickProducto(e)}
             >Info</Button>
