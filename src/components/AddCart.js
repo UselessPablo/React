@@ -19,7 +19,7 @@ const AddCart = ({ stock, onAdd, initial }) => {
 
             <>
                 <div >
-                    <Button startIcon={< ShoppingCartCheckoutOutlinedIcon />} variant="contained" textColor='white'  sx={{ ml:3, mr:2 ,height: 23, bgcolor:'fondo.main',pt:1 }} onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} >+</Button>   
+                    <Button startIcon={< ShoppingCartCheckoutOutlinedIcon />} variant="contained" textColor='white'  sx={{ height: 23, bgcolor:'fondo.main',pt:1 }} onClick={() => onAdd(Valor, setValor(0))} onMouseUp={onAdds} >+</Button>   
                 </div>
 
             </>
