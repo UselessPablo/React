@@ -16,7 +16,7 @@ background-image: url('../src/assets/img/fondoVioleta.png');
 background-size: cover;
 padding: 1px;
 border-radius: 1rem;
-width: 98%;
+width: auto;
 
 }
 .parrafoMain{
@@ -496,8 +496,8 @@ display: none;
   }
   h1{
     font-size: 1.3rem;
-    margin-left: 20%;
-    padding-top: 3px;
+   padding-bottom: 3px;
+   
   }
   .offer2{
  display: none;

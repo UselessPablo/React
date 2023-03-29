@@ -25,7 +25,7 @@ const Images = () => {
 
       <h2 className='marginTop'>Arte..</h2>
       <ImageList
-        sx={{ width: '97%', height: '300', borderRadius:5, ml:2.5 }}
+        sx={{ width: '97%', height: '200', borderRadius:5,ml:1 }}
         variant="quilted"
         cols={4}
         rowHeight={121}
@@ -41,7 +41,7 @@ const Images = () => {
           </ImageListItem>
         ))}
       </ImageList>
-      <Box sx={{ width: '94%', ml:6 }}>
+      <Box sx={{ width: '94%', ml:1 }}>
       <div className='bgImage'>
       <h2 className='pulse'>Cerámicas</h2>
       <Grid container spacing={2}>
