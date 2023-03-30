@@ -7,7 +7,7 @@ z-index: 0;
  overflow-x: hidden;
  overflow-y: scroll;
 height: 120vh;
-background-color: #c89adb77;
+background-color: #aa93c077;
 
 }
 .bgImage{
@@ -20,7 +20,7 @@ width: auto;
 
 }
 .parrafoMain{
-  margin-left: 16%;
+  margin-left: 30%;
   margin-top: -97px;
   font-family: 'maven pro';
   position: absolute;
@@ -74,7 +74,7 @@ nav {
   /* position: sticky; */
   align-items: center;
   margin-bottom: 50px;
-  
+
 }
 .selected{
    background-color: #f9f9f9;
@@ -196,9 +196,19 @@ p {
   border-radius: 0.8rem;
   width: 97%;
   bottom: 0;
-  position: fixed;
-  margin-left: 1%;
-  
+  position: fixed; 
+}
+footer{
+  display: flex;
+  justify-content: center;
+}
+.display{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 1.8rem;
+background-image: linear-gradient(to right top, #e3bfe99a, #c8a0cfb0, #8d5591a2, #be74c26c, #e4cde471);
 }
 .center2 {
   text-align: center;
@@ -329,6 +339,7 @@ span {
 }
 .verticalRight{
   margin-left: 80%;
+  margin-top: 30px;
 }
 
 .precio {
@@ -698,7 +709,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   display: flex;
    background-color: #9c3cb96b;
 border-radius: 0.8rem;
-margin-left: 1%;
+justify-content: center;
 
 } 
 input{
@@ -712,7 +723,7 @@ display: flex;
 width: 98%;
 justify-content: space-between;
 height: 65px;
-margin-left: 1%;
+
 } 
 .catw{
 display: flex;
@@ -750,7 +761,7 @@ element.style {
   top: 0;
   width: 98%;
   z-index: 200;
-  margin-left: 1%;
+  justify-content: center;
   margin-top: 10px;
   height: 60px;
 }
@@ -875,65 +886,6 @@ margin-bottom: 40px;
   max-width: 1050px;
   width: 90%;
   margin: 5px;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-}
-
-.navbar .menu-items {
-  display: flex;
-}
-
-.navbar .nav-container li {
-  list-style: none;
-}
-
-.navbar .nav-container a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 800;
-  font-size: 1.2rem;
-  padding: 7px;
-  border-radius: 0.7rem;
-}
-
-.navbar .nav-container a:hover{
-    font-weight: bolder;
-}
-
-.nav-container {
-  display: block;
-  position: relative;
-  height: 60px;
-}
-
-.nav-container .checkbox {
-  position: absolute;
-  display: block;
-  height: 32px;
-  width: 32px;
-  top: 10px;
-  left: 10px;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.nav-container .hamburger-lines {
-  display: block;
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 17px;
-  left: 20px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 

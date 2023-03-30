@@ -15,10 +15,7 @@ const Home = () => {
       {/* <Carrousel /> */}
       <Carrousel />
       <Images />
-      
       <ItemListContainer />
-   
-
     </Box>
   )
 }

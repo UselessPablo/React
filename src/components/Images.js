@@ -7,7 +7,7 @@ import mate from '../assets/img/artmate.jpg';
 import nieve from '../assets/img/artnieve.jpg';
 import budas from '../assets/img/budasmuchos.jpg';
 import platos from '../assets/img/platitolechu.jpg';
-import Carrousel from './Carrousel';
+
 
 
 const Images = () => {
@@ -25,7 +25,7 @@ const Images = () => {
 
       <h2 className='marginTop'>Arte..</h2>
       <ImageList
-        sx={{ width: '97%', height: '200', borderRadius:5,ml:1 }}
+        sx={{ width: '98%', height: '200', borderRadius:5,ml:1 }}
         variant="quilted"
         cols={4}
         rowHeight={121}
@@ -41,10 +41,10 @@ const Images = () => {
           </ImageListItem>
         ))}
       </ImageList>
-      <Box sx={{ width: '94%', ml:1 }}>
-      <div className='bgImage'>
-      <h2 className='pulse'>Cerámicas</h2>
-      <Grid container spacing={2}>
+      <Box sx={{ width: '98%', ml:1 }}>
+      <div className='display'>
+      <h2>Cerámicas</h2>
+      {/* <Grid container spacing={2}>
         <Grid item xs={6}>
           <h2 className='vertical'> Arte en Barro</h2>
           <p className='parrafoMain'>Productos personalizados, buscanos en la sección Contacto</p>
@@ -53,7 +53,7 @@ const Images = () => {
           <h2 className='vertical verticalRight'>Únicos</h2>
         </Grid>
 
-      </Grid>
+      </Grid> */}
       <h2 className='conocenos'>Nuestros Productos</h2>
       </div>
     </Box>

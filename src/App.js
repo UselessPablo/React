@@ -29,9 +29,11 @@ const App = () => {
         main: green[400],
       },
       eliminar:{
-        main:orange[600]
-      }
-
+        main:orange[600],
+      },
+ fondoDrawer: {
+         main: purple[200],
+       },
     },
   })
  return(

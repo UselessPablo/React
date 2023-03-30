@@ -58,7 +58,7 @@ const goContact = () =>{
                 <nav className='sticky'>
                     <div className='navbar'>
                         <div className='logo'>
-                            <Toolbar >
+                        <Toolbar>
 
                                 <ButtonBase sx={{ display: 'block' }} onClick={toggleDrawer}>
                                     <IconButton edge="start" color="inherit" aria-label="menu">
@@ -66,13 +66,13 @@ const goContact = () =>{
                                     </IconButton>
 
                                 </ButtonBase>
-                                <Drawer anchor="left" open={open} onClose={toggleDrawer}>
+                            <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                                  
-                                    <List sx={{ backgroundColor: 'info2.main' }}>
-                                    <ListItemButton  onClick={goHome} sx={{ backgroundColor: 'secondary.main', borderRadius: 3, mt: 10, mr: 1, ml: 6, textAlign:'center', width:'50%'}}>
+                                    <List sx={{ backgroundColor: 'fondoDrawer.main', height:'25vh' }}>
+                                    <ListItemButton  onClick={goHome} sx={{ backgroundColor: 'secondary.main', borderRadius: 3, mt: 6, mr: 1, ml: 6, textAlign:'center', width:'50%'}}>
                                         <ListItemText primary="Inicio" />
                                     </ListItemButton> 
-                                        <ListItemButton onClick={goGaleria} sx={{ backgroundColor: 'fondo.main', borderRadius:3, mt:10, mr:4, ml:1 }}>
+                                        <ListItemButton onClick={goGaleria} sx={{ backgroundColor: 'fondo.main', borderRadius:3, mt:12, mr:4, ml:1 }}>
                                             <ListItemText primary="Galería" />
                                         </ListItemButton>
                                         <ListItemButton onClick={goWorkshop} sx={{ backgroundColor: 'success.main', borderRadius: 3,mt:2, ml:4, mr:1 }}>
