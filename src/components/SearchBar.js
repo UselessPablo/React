@@ -59,7 +59,7 @@ function SearchBar() {
                         label="Buscar..."
                         value={searchTerm}
                         onChange={(event) => setSearchTerm(event.target.value)}
-                       
+                        placeholder='Ej: mate, maceta...'
                     />
                 )}
                 onChange={handleChange}
