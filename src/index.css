@@ -37,6 +37,12 @@ width: auto;
   margin-left: 2%;
 
 }
+.busqueda{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 40px;
+}
 a {
   text-decoration: none;
   color: rgb(74, 52, 94);
@@ -101,6 +107,10 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   border-style: none;
   background-color: rgba(131, 56, 202, 0.726);
 } 
+.mini{
+  width: 40px;
+  border-radius: 0.4rem;
+}
 .small {
   font-size: 0.5rem;
   font-family: "roboto";
@@ -894,7 +904,7 @@ margin-bottom: 40px;
   display: flex;
   justify-content: center;
   height: 0px;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 2rem;
   flex-wrap: wrap;
   margin-bottom: 2.5rem;

@@ -12,6 +12,7 @@ import '../index.css'
 import Cart from './CartWidget';
 import { Box, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import SearchBar from './SearchBar';
 
 
 export const ScrollToTop = () => {
@@ -84,11 +85,15 @@ const goContact = () =>{
                                     </List>
                                 </Drawer>
                             </Toolbar>
+                       
                             <h1 className=''>HumaBrc Cerámica</h1>
+                       
                             <div className='catw'>
                                 <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                             </div>
                     </div>
+                    
+
                 </div>
             </nav>
 
@@ -96,6 +101,10 @@ const goContact = () =>{
             <div/>
             
                 <Box >
+                <Box sx={{ display: 'flex', position: 'relative', mt:10, justifyContent:'center' }}>
+                    <SearchBar />
+                </Box>  
+
                 <div className='breadC' >
                     <NavLink className='breadText' to='/'>Home </NavLink> |
                     <NavLink className='breadText' to='/category/mate'>Mates</NavLink> |
@@ -105,8 +114,9 @@ const goContact = () =>{
                     <NavLink className='breadText' to='/category/galeria'>Varios</NavLink> |
                     <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
                     <NavLink className='breadText' to='/Cart'>Carrito</NavLink>
+                   
                 </div>
-
+                
             </Box>
       
         </>

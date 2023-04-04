@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Cart from "../components/Cart";
 import ItemListContainer from "../components/ItemListContainer";
 import Compra from '../components/Compra'
+import ItemDetailSearch from '../components/ItemDetailSearch'
 import QuienesSomos from "../pages/QuienesSomos";
 import Home from '../components/Home'
 import Galeria from "../pages/Galeria";
@@ -15,6 +16,7 @@ const Router = () => (
         <Routes>
             <Route element={<Layout />}>
                 <Route path='/detalle/:detalleid' element={<ItemDetailContainer />} />
+                <Route path='/detalle2/:itemId' element={<ItemDetailSearch/>} />
                 <Route index element={<Home/>} />
                 <Route path='/pages/Galeria' element={<Galeria/>}/>
                 <Route path='/pages/Workshops' element={<WorkShops/>} />

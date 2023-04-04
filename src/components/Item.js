@@ -13,9 +13,8 @@ const Item = ({ info }) => {
   const navigate = useNavigate();
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
   const [goToCart, setGoToCart] = useState(false);
-  const [ultimoPulsado, setUltimoPulsado] = useState(null);
   const productsContainerRef = useRef(null);
-  const [current, setCurrent] = useState()
+
   const getStock = () => {
     const item = isInCart(info.id)
 
@@ -26,25 +25,7 @@ const Item = ({ info }) => {
       return info.cantidad
     }
   }
-  const manejarClickProducto = (e) => {
-    setUltimoPulsado(info.id);
-    setCurrent(productsContainerRef)
-
-  };
-  console.log(info.id);
-  console.log(productsContainerRef);
-useEffect(()=>{
-  localStorage.setItem('producto', ultimoPulsado);
-},[ultimoPulsado])
-
- const ultimo = localStorage.getItem('producto', ultimoPulsado)
-
-  useEffect(() => {
-    if (ultimoPulsado  === ultimo.current) {
-      productsContainerRef.scrollTop = current ; // Ajustar la altura de cada elemento a tu caso de uso
-    }
-  }, [ultimoPulsado]);
-console.log(ultimo);
+  
 
 const getBadgetQuantity = () => {
     const item = getCartProduct(info.id)
@@ -89,7 +70,7 @@ const getBadgetQuantity = () => {
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button ref={productsContainerRef} color={'info'} size="small" sx={{ ml: 3,height: 23 }} variant="contained"
               onClick={goTo}
-              onClickCapture={(e) => manejarClickProducto(e)}
+
             >Info</Button>
           </Box>
         </CardActions>
