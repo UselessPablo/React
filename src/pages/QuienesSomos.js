@@ -3,6 +3,7 @@ import  { useState } from "react";
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
  import { useNavigate } from "react-router-dom";
 import { Button,Input } from "@mui/material";
+import Carrousel from '../components/Carrousel'
 
  const QuienesSomos = () => {
    const navigate = useNavigate();
@@ -39,6 +40,7 @@ navigate('/');
 
 return (
    <>
+   <Carrousel/>
    <div className="nosotros">
       
       <h2 className="parrafo"> Huma es un emprendimiento que nace por la pasión y gusto de transformar el barro en un producto único</h2>

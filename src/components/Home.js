@@ -5,7 +5,7 @@ import Images from './Images'
 // import Carrousel from './Carrousel'
 import ItemListContainer from './ItemListContainer'
 import {Grid} from '@mui/material';
-import Carrousel from './Carrousel';
+
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
      
 
       {/* <Carrousel /> */}
-      <Carrousel />
+    
       <Images />
       <ItemListContainer />
     </Box>
