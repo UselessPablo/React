@@ -108,8 +108,10 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   background-color: rgba(131, 56, 202, 0.726);
 } 
 .mini{
-  width: 40px;
+  width: 60px;
   border-radius: 0.4rem;
+ margin-left: 60px;
+ 
 }
 .small {
   font-size: 0.5rem;
