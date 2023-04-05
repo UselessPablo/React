@@ -32,7 +32,7 @@ const App = () => {
         main:orange[600],
       },
  fondoDrawer: {
-         main: purple[200],
+         main: deepPurple['A100'],
        },
     },
   })

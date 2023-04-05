@@ -8,8 +8,6 @@ import nieve from '../assets/img/artnieve.jpg';
 import budas from '../assets/img/budasmuchos.jpg';
 import platos from '../assets/img/platitolechu.jpg';
 
-
-
 const Images = () => {
   function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -25,7 +23,7 @@ const Images = () => {
 
       <h2 className='marginTop'>Arte..</h2>
       <ImageList
-        sx={{ width: '98%', height: '200', borderRadius:5,ml:1 }}
+        sx={{ width: '98%', height: '200', borderRadius: 5, ml: 1 }}
         variant="quilted"
         cols={4}
         rowHeight={121}
@@ -36,27 +34,17 @@ const Images = () => {
               {...srcset(item.img, 121, item.rows, item.cols)}
               alt={item.title}
               loading="lazy"
-              
+
             />
           </ImageListItem>
         ))}
       </ImageList>
-      <Box sx={{ width: '98%', ml:1 }}>
-      <div className='display'>
-      <h2>Cerámicas</h2>
-      {/* <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <h2 className='vertical'> Arte en Barro</h2>
-          <p className='parrafoMain'>Productos personalizados, buscanos en la sección Contacto</p>
-        </Grid>
-        <Grid item xs={6}>
-          <h2 className='vertical verticalRight'>Únicos</h2>
-        </Grid>
-
-      </Grid> */}
-      <h2 className='conocenos'>Nuestros Productos</h2>
-      </div>
-    </Box>
+      <Box sx={{ width: '98%', ml: 1 }}>
+        <div className='display'>
+          <h2>Cerámicas</h2>
+          <h2 className='conocenos'>Nuestros Productos</h2>
+        </div>
+      </Box>
     </Box>
   )
 }

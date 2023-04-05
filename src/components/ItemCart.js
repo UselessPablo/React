@@ -33,8 +33,6 @@ const ItemCart = ({ product, cantidad }) => {
           <Button size='small' sx={{ Minwidth: 55, height: 30, mt: 1, mb: 1 }} variant='contained' color='eliminar' onClick={() => removeProduct(product.id)}>eliminar</Button>
         </CardActions>
       </Card>
-
-
     </div>
 
   )

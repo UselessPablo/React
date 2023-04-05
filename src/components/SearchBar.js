@@ -15,7 +15,7 @@ function SearchBar() {
     const [selectedItemId, setSelectedItemId] = useState(null);
     const navigate = useNavigate();
     const [searchOpen, setSearchOpen] = useState(true);
-  
+
 
 
     useEffect(() => {
@@ -39,13 +39,11 @@ function SearchBar() {
             setSelectedItemId(null);
         }
     };
-    // const handleSelect = () => {
-    //     setSearchOpen(false);
-    // }
+
     return (
         <Box sx={{ width: 220 }}>
-            <Autocomplete 
-                
+            <Autocomplete
+
                 open={searchOpen}
                 // onSelect={handleSelect}
                 onOpen={() => {
@@ -64,19 +62,19 @@ function SearchBar() {
                         setSelectedItemId(option.id);
                         navigate(`/detalle2/${option.id}`);
                         setSearchOpen(false);
-                        
-                   }} >
+
+                    }} >
                         {option.nombre}
                         <img className='mini' src={option.img} alt='x'></img>
-                 
+
                     </li>
                 )}
                 renderInput={(params) => (
 
-                    <TextField 
-                       
+                    <TextField
+
                         {...params}
-                        label="Buscar..." sx={{pb:2,mt:2}}
+                        label="Buscar..." sx={{ pb: 2, mt: 2 }}
                         value={searchTerm}
                         variant='standard'
                         onChange={(event) => setSearchTerm(event.target.value)}
@@ -89,8 +87,8 @@ function SearchBar() {
                                 </InputAdornment>
                             ),
                         }}
-                  
-                  
+
+
                     />
                 )}
                 onChange={handleChange}

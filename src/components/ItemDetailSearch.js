@@ -7,7 +7,7 @@ import { getFirestore, doc, getDoc } from 'firebase/firestore'
 
 export const ItemDetailSearch = () => {
     const { itemId } = useParams();
- const [data, setData] = useState([])
+    const [data, setData] = useState([])
 
     useEffect(() => {
 

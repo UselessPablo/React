@@ -10,9 +10,10 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box, Typography } from '@mui/material';
+import { Box} from '@mui/material';
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
+import { Height } from '@mui/icons-material';
 
 
 export const ScrollToTop = () => {
@@ -69,7 +70,7 @@ const goContact = () =>{
                                 </ButtonBase>
                             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                                  
-                                    <List sx={{ backgroundColor: 'fondoDrawer.main', height:'4vh' }}>
+                                    <List sx={{ backgroundColor:'fondoDrawer.main', height:'100%'}}>
                                     <ListItemButton  onClick={goHome} sx={{ backgroundColor: 'secondary.main', borderRadius: 3, mt: 6, mr: 1, ml: 6, textAlign:'center', width:'50%'}}>
                                         <ListItemText primary="Inicio" />
                                     </ListItemButton> 

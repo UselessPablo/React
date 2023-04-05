@@ -2,18 +2,13 @@ import React from 'react'
 
 import { Box } from '@mui/system'
 import Images from './Images'
-// import Carrousel from './Carrousel'
 import ItemListContainer from './ItemListContainer'
-import {Grid} from '@mui/material';
+
 
 
 const Home = () => {
   return (
     <Box >
-     
-
-      {/* <Carrousel /> */}
-    
       <Images />
       <ItemListContainer />
     </Box>
