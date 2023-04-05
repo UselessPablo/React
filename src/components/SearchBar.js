@@ -57,19 +57,20 @@ function SearchBar() {
                 options={options}
                 getOptionLabel={(option) => option.nombre}
                 renderOption={(props, option) => (
-                    <li {...props} key={option.id} onClick={() => {
+                    <li  {...props} key={option.id} onClick={() => {
                         setSelectedItemId(option.id);
                         navigate(`/detalle2/${option.id}`);
                         setSearchOpen(false);
-                    }}>
+                        
+                   }} sx={{color:'info.main'}} >
                         {option.nombre}
                         <img className='mini' src={option.img} alt='x'></img>
-                     
+                 
                     </li>
                 )}
                 renderInput={(params) => (
 
-                    <TextField sx={{ color: 'info2', borderRadius: 4 }}
+                    <TextField 
                         {...params}
                         label="Buscar..."
                         value={searchTerm}
