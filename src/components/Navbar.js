@@ -69,7 +69,7 @@ const goContact = () =>{
                                 </ButtonBase>
                             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                                  
-                                    <List sx={{ backgroundColor: 'fondoDrawer.main', height:'20vh' }}>
+                                    <List sx={{ backgroundColor: 'fondoDrawer.main', height:'4vh' }}>
                                     <ListItemButton  onClick={goHome} sx={{ backgroundColor: 'secondary.main', borderRadius: 3, mt: 6, mr: 1, ml: 6, textAlign:'center', width:'50%'}}>
                                         <ListItemText primary="Inicio" />
                                     </ListItemButton> 

@@ -113,7 +113,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
  margin-left: 60px;
 
 }
-.css-6wwd73-MuiAutocomplete-noOptions {
+/* .css-6wwd73-MuiAutocomplete-noOptions {
   display: none;
 }
 .MuiAutocomplete-hasPopupIcon.css-1enl5gk-MuiAutocomplete-root .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1enl5gk-MuiAutocomplete-root .MuiOutlinedInput-root {
@@ -125,8 +125,10 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
     margin-bottom: 4px;
     padding-bottom: 0.8rem;
     color: rgb(96, 5, 124);
+} */
+.MuiAutocomplete-noOptions{
+  display: none;
 }
-
 .small {
   font-size: 0.5rem;
   font-family: "roboto";

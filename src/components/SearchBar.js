@@ -42,7 +42,7 @@ function SearchBar() {
     return (
         <Box sx={{ width: 220 }}>
             <Autocomplete
-                sx={{ borderRadius: 8, color: 'fondo.main', height: 30, mt: 1 }}
+                
                 open={searchOpen}
                 // onSelect={handleSelect}
                 onOpen={() => {
