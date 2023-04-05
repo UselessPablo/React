@@ -129,6 +129,10 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 .MuiAutocomplete-noOptions{
   display: none;
 }
+.busquedaLista{
+  background-color: #222222;
+  
+}
 .small {
   font-size: 0.5rem;
   font-family: "roboto";

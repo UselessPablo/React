@@ -8,12 +8,15 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
 
+
 function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('');
     const [options, setOptions] = useState([]);
     const [selectedItemId, setSelectedItemId] = useState(null);
     const navigate = useNavigate();
     const [searchOpen, setSearchOpen] = useState(true);
+  
+
 
     useEffect(() => {
         const querydb = getFirestore();
@@ -41,7 +44,7 @@ function SearchBar() {
     // }
     return (
         <Box sx={{ width: 220 }}>
-            <Autocomplete
+            <Autocomplete 
                 
                 open={searchOpen}
                 // onSelect={handleSelect}
@@ -62,7 +65,7 @@ function SearchBar() {
                         navigate(`/detalle2/${option.id}`);
                         setSearchOpen(false);
                         
-                   }} sx={{color:'info.main'}} >
+                   }} >
                         {option.nombre}
                         <img className='mini' src={option.img} alt='x'></img>
                  
@@ -71,9 +74,11 @@ function SearchBar() {
                 renderInput={(params) => (
 
                     <TextField 
+                       
                         {...params}
-                        label="Buscar..."
+                        label="Buscar..." sx={{pb:2,mt:2}}
                         value={searchTerm}
+                        variant='standard'
                         onChange={(event) => setSearchTerm(event.target.value)}
                         placeholder='Ej: mate, maceta...'
                         InputProps={{
