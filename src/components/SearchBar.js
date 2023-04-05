@@ -13,6 +13,7 @@ function SearchBar() {
     const [options, setOptions] = useState([]);
     const [selectedItemId, setSelectedItemId] = useState(null);
     const navigate = useNavigate();
+    const [searchOpen, setSearchOpen] = useState(true);
 
     useEffect(() => {
         const querydb = getFirestore();
@@ -30,26 +31,40 @@ function SearchBar() {
         if (newValue) {
             setSelectedItemId(newValue.id);
             navigate(`/detalle2/${newValue.id}`);
+            setSearchTerm(''); // aquí se establece el término de búsqueda en cadena vacía
         } else {
             setSelectedItemId(null);
         }
     };
-
+    // const handleSelect = () => {
+    //     setSearchOpen(false);
+    // }
     return (
         <Box sx={{ width: 220 }}>
             <Autocomplete
                 sx={{ borderRadius: 8, color: 'fondo.main', height: 30, mt: 1 }}
-
-                disablePortal={true}
+                open={searchOpen}
+                // onSelect={handleSelect}
+                onOpen={() => {
+                    setSearchOpen(true);
+                }}
+                onClose={() => {
+                    setSearchOpen(false);
+                }}
+                disablePortal={false}
+                // open={options.length > 0}
+                noOptionsText={false}
                 options={options}
                 getOptionLabel={(option) => option.nombre}
                 renderOption={(props, option) => (
                     <li {...props} key={option.id} onClick={() => {
                         setSelectedItemId(option.id);
                         navigate(`/detalle2/${option.id}`);
+                        setSearchOpen(false);
                     }}>
                         {option.nombre}
                         <img className='mini' src={option.img} alt='x'></img>
+                     
                     </li>
                 )}
                 renderInput={(params) => (
@@ -60,6 +75,16 @@ function SearchBar() {
                         value={searchTerm}
                         onChange={(event) => setSearchTerm(event.target.value)}
                         placeholder='Ej: mate, maceta...'
+                        InputProps={{
+                            ...params.InputProps,
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <SearchIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                  
+                  
                     />
                 )}
                 onChange={handleChange}

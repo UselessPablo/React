@@ -111,7 +111,12 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   width: 60px;
   border-radius: 0.4rem;
  margin-left: 60px;
- 
+
+}
+.css-6wwd73-MuiAutocomplete-noOptions {
+    color: rgb(0 0 0 / 11%);
+  display: none;
+    padding: 14px 16px;
 }
 .small {
   font-size: 0.5rem;
