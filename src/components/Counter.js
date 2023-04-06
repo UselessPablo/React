@@ -31,7 +31,7 @@ const openPopover = (event) =>{
         <Button size="small" sx={{ mr: 1, height:20, width:40, minWidth:40 }} variant="contained" color='primary' className="rest" onClick={onRest} >-</Button>  
       <span className="bold">{Valor}</span>
         <Button size="small" sx={{ ml: 1, mr: 2,height:20, width: 40, minWidth: 40 }} variant="contained" color='primary' className="add" onClick={onAdds}>+</Button>
-        <Button size="small" sx={{ mr: 1 }} variant="contained" color='success' className="agregar" onClick={() => onAdd(Valor, setValor(0))} onClickCapture={Valor ? openPopover   : null} >Agregar</Button>
+        <Button size="small" sx={{ mr: 1, backgroundColor:'success.main' }} variant="contained"  className="agregar" onClick={() => onAdd(Valor, setValor(0))} onClickCapture={Valor ? openPopover   : null} >Agregar</Button>
              </div>    
     <Popover
     open={Boolean(anchor)}

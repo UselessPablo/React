@@ -1,7 +1,7 @@
 import Router from './utils/Router';
 import CartProvider from './components/CartContext';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
-import {purple, deepPurple, green, orange, yellow} from '@mui/material/colors';
+import {purple, deepPurple, green, orange, yellow, lightGreen} from '@mui/material/colors';
 import './index.css'
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         main: yellow[100],
       },
       success: {
-        main: deepPurple[400],
+        main: lightGreen[700],
       },
       info: {
         main: purple[500],
@@ -32,7 +32,10 @@ const App = () => {
         main:orange[600],
       },
  fondoDrawer: {
-         main: deepPurple['A100'],
+         main: lightGreen['A100'],
+       },
+       fondoCard: {
+        main:lightGreen[100],
        },
     },
   })
