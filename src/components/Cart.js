@@ -109,7 +109,7 @@ const Cart = () => {
           <Input sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
           <Input sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           <h3 > Total: $ {totalPrice()}</h3>
-          <Button size='small'  variant="contained" color={'fondo'}  sx={{ mt: 2, width:160}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
+          <Button size='small'  variant="contained" color={'info'}  sx={{ mt: 2, width:160}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           
         </form>
       </Box>

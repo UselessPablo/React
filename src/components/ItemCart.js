@@ -12,7 +12,7 @@ const ItemCart = ({ product, cantidad }) => {
 
     <div className='center3'>
 
-      <Card sx={{ maxWidth: 300, borderRadius: 2, backgroundColor: 'info2.main' }}>
+      <Card sx={{ maxWidth: 200, borderRadius: 2, backgroundColor: 'info2.main' }}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {product.name}
@@ -25,7 +25,7 @@ const ItemCart = ({ product, cantidad }) => {
           </Typography>
         </CardContent>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: 70 }}
           image={product.img}
           title={product.name}
         />

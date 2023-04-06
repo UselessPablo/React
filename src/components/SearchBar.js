@@ -74,9 +74,10 @@ function SearchBar() {
                     <TextField
 
                         {...params}
-                        label="Buscar..." sx={{ pb: 2, mt: 2 }}
+                        label= "Buscar..." sx={{ pb: 2, mt: 2 }}
+                        color='success'
                         value={searchTerm}
-                        variant='standard'
+                        variant='filled'
                         onChange={(event) => setSearchTerm(event.target.value)}
                         placeholder='Ej: mate, maceta...'
                         InputProps={{

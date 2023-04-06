@@ -23,7 +23,7 @@ const App = () => {
         main: purple[500],
       },
       info2: {
-        main: purple[100],
+        main: purple[200],
       },
       fondo: {
         main: green[400],
