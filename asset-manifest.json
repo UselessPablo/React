@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.c160701c.css",
-    "main.js": "/React/static/js/main.2b01003e.js",
+    "main.css": "/React/static/css/main.66195087.css",
+    "main.js": "/React/static/js/main.9fa4604a.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
     "static/media/fondoVioleta.png": "/React/static/media/fondoVioleta.f2ef45698e81c93e15a6.png",
     "static/media/1.jpg": "/React/static/media/1.2f64f89d7b72b11bf36c.jpg",
@@ -26,12 +26,12 @@
     "static/media/instagram.png": "/React/static/media/instagram.9836f120000f0e2b6e3c.png",
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
-    "main.c160701c.css.map": "/React/static/css/main.c160701c.css.map",
-    "main.2b01003e.js.map": "/React/static/js/main.2b01003e.js.map",
+    "main.66195087.css.map": "/React/static/css/main.66195087.css.map",
+    "main.9fa4604a.js.map": "/React/static/js/main.9fa4604a.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c160701c.css",
-    "static/js/main.2b01003e.js"
+    "static/css/main.66195087.css",
+    "static/js/main.9fa4604a.js"
   ]
 }
