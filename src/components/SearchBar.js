@@ -41,9 +41,9 @@ function SearchBar() {
     };
 
     return (
-        <Box sx={{ width: 220 }}>
+        <Box sx={{ width: 280}}>
             <Autocomplete
-
+               
                 open={searchOpen}
                 // onSelect={handleSelect}
                 onOpen={() => {
@@ -72,19 +72,22 @@ function SearchBar() {
                 renderInput={(params) => (
 
                     <TextField
-
                         {...params}
-                        label= "Buscar..." sx={{ pb: 2, mt: 2 }}
+                        label="Buscar..." 
+                         sx={{ width: 250, mt: 3, pb: 1.5 }}
                         color='success'
                         value={searchTerm}
-                        variant='filled'
+                        variant='outlined'
                         onChange={(event) => setSearchTerm(event.target.value)}
                         placeholder='Ej: mate, maceta...'
                         InputProps={{
+                            sx: {
+                               borderRadius: 12,
+                            },
                             ...params.InputProps,
                             endAdornment: (
-                                <InputAdornment position="end">
-                                    <SearchIcon />
+                                <InputAdornment>
+                                    <SearchIcon  sx={{pb:0.1,ml:1, color:'info.main'}}/>
                                 </InputAdornment>
                             ),
                         }}

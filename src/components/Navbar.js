@@ -13,8 +13,12 @@ import Cart from './CartWidget';
 import { Box} from '@mui/material';
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
-import { Height } from '@mui/icons-material';
-
+import HomeIcon from '@mui/icons-material/Home';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ImageIcon from '@mui/icons-material/Image';
+import PaletteIcon from '@mui/icons-material/Palette';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import { ConnectWithoutContact } from '@mui/icons-material';
 
 export const ScrollToTop = () => {
     window.scrollTo(-110, -100);
@@ -71,17 +75,27 @@ const goContact = () =>{
                             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                                  
                                     <List sx={{ backgroundColor:'fondoDrawer.main', height:'100%'}}>
-                                    <ListItemButton  onClick={goHome} sx={{ backgroundColor: 'secondary.main', borderRadius: 3, mt: 6, mr: 1, ml: 6, textAlign:'center', width:'50%'}}>
-                                        <ListItemText primary="Inicio" />
+                                    <ListItemButton  onClick={goHome} sx={{ backgroundColor: 'secondary.main', borderRadius: 3,ml:6,padding:1, mr:3,mt:3,   textAlign: 'center', width: '50%'}}>
+                                        <ListItemIcon><HomeIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }}/>
+                                        <ListItemText sx={{fontWeight:'bold'}} primary="Inicio" />
+                                        </ListItemIcon>
                                     </ListItemButton> 
-                                    <ListItemButton onClick={goGaleria}  variant='text' sx={{ backgroundColor: 'fondo.main', borderRadius: 3, mt: 12, mr: 4, ml: 1 }} >
+                                    <ListItemButton onClick={goGaleria} sx={{ backgroundColor: 'fondo.main', borderRadius: 3, mt: 12, mr: 2, ml: 3, textAlign: 'center',fontWeight: 'body'}} >
+                                        <ListItemIcon><ImageIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
                                             <ListItemText primary="Galería" />
+                                        </ListItemIcon>
                                         </ListItemButton>
-                                        <ListItemButton onClick={goWorkshop} sx={{ backgroundColor: 'success.main', borderRadius: 3,mt:2, ml:4, mr:1 }}>
-                                            <ListItemText primary="WorkShops y Taller" />
+                                    
+                                    <ListItemButton onClick={goWorkshop} sx={{ backgroundColor: 'success.main', borderRadius: 3, mt: 2, ml: 3, mr: 2, textAlign: 'center' }}>
+                                        <ListItemIcon><PaletteIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
+                                            <ListItemText primary="WorkShops" />
+                                        </ListItemIcon>
                                         </ListItemButton>
-                                        <ListItemButton onClick={goContact} sx={{ backgroundColor: 'eliminar.main', borderRadius: 3, mt: 2, mb: 16, mr: 4, ml: 1}}>
+                                    
+                                    <ListItemButton onClick={goContact} sx={{ backgroundColor: 'eliminar.main', borderRadius: 3, mt: 2, mb: 16, mr: 2, ml: 3, textAlign: 'center' }}>
+                                        <ListItemIcon><ConnectWithoutContact sx={{ pt: 0.3, pr: 0.2, color: 'black',mr:1 }}/>
                                             <ListItemText primary="Contactame" />
+                                        </ListItemIcon>
                                         </ListItemButton>
                                     </List>
                                 </Drawer>

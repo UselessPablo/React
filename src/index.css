@@ -7,7 +7,7 @@ z-index: 0;
  overflow-x: hidden;
  overflow-y: scroll;
 height: 120vh;
-background-color: #b11dd671;
+background-color: #b11dd644;
 
 }
 .bgImage{
@@ -113,19 +113,10 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
  margin-left: 60px;
 
 }
-/* .css-6wwd73-MuiAutocomplete-noOptions {
-  display: none;
+
+.MuiTextField-root {
+  border-radius: 22px !important;
 }
-.MuiAutocomplete-hasPopupIcon.css-1enl5gk-MuiAutocomplete-root .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1enl5gk-MuiAutocomplete-root .MuiOutlinedInput-root {
-    padding-right: 39px;
- border-radius: 1.8rem;
-}
-.MuiAutocomplete-hasPopupIcon.css-1enl5gk-MuiAutocomplete-root .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1enl5gk-MuiAutocomplete-root .MuiOutlinedInput-root {
-    padding-right: 39px;
-    margin-bottom: 4px;
-    padding-bottom: 0.8rem;
-    color: rgb(96, 5, 124);
-} */
 .MuiAutocomplete-noOptions{
   display: none;
 }
@@ -936,6 +927,11 @@ margin-bottom: 40px;
   font-size: 0.9rem;
   color: rgb(50, 151, 46);
   margin: 3px;
+}
+.breadText:hover{
+  text-decoration: solid;
+  text-decoration-line: underline;
+  color: black;
 }
 .active{
   color: rgb(93, 27, 95);
