@@ -262,7 +262,7 @@ span {
   border-radius: 1rem;
 }
 .popup {
-  background-color: rgb(72, 21, 102);
+  background-color: rgba(152, 67, 155, 0.842);
   border-radius: 100rem 100rem 100rem 100rem;
   color: white;
   font-size: 0.6rem;
@@ -539,14 +539,6 @@ display: none;
     display: flex;
     flex-direction: row;
     
-  }
-  .popup {
-    background-color: rgb(72, 21, 102);
-    border-radius: 100rem 100rem 100rem 100rem;
-    color: white;
-    font-size: 0.8rem;
-    padding: 1;
-    position: absolute;
   }
 
   .AddCart{
