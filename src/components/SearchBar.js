@@ -41,7 +41,7 @@ function SearchBar() {
     };
 
     return (
-        <Box sx={{ width: 280}}>
+        <Box sx={{ width: 250, display: 'flex', justifyContent:'center'}}>
             <Autocomplete
                
                 open={searchOpen}
@@ -87,7 +87,8 @@ function SearchBar() {
                             ...params.InputProps,
                             endAdornment: (
                                 <InputAdornment>
-                                    <SearchIcon  sx={{pb:0.1,ml:1, color:'info.main'}}/>
+                                    <SearchIcon  sx={{pb:0.1,ml:3
+                                    , color:'info.main'}}/>
                                 </InputAdornment>
                             ),
                         }}

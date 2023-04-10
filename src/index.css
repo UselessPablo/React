@@ -308,7 +308,7 @@ span {
   text-align: center;
 }
 .slideInLeft {
-  
+   margin-left: 8px;
    -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
   -webkit-animation-duration: 1s;
