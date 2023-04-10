@@ -2,7 +2,7 @@ import React from 'react'
 import {Button} from '@mui/material';
 import { useState } from "react";
 
-import 'react-toastify/dist/ReactToastify.css';
+
 import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined';
 
 const AddCart = ({ stock, onAdd, initial }) => {
