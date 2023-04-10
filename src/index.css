@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Maven+Pro:wght@400;500&family=Roboto:wght@100;400&display=swap");
 body
 {
-  font-family: "maven pro";
+  font-family: "Roboto";
  /* margin: 3px; */
 z-index: 0;
  overflow-x: hidden;
@@ -22,7 +22,6 @@ width: auto;
 .parrafoMain{
   margin-left: 30%;
   margin-top: -97px;
-  font-family: 'maven pro';
   position: absolute;
 }
 .fondo{
@@ -51,7 +50,7 @@ a {
   font-size: 1.6rem;
 }
 h1 {
-  font-family: "maven pro";
+  
   font-size: 1.8rem;
   text-align: flex-start;
  width: 96%;
@@ -95,10 +94,9 @@ nav {
 -webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
 }
-.cartWidget {
+/* .cartWidget {
   cursor: pointer;
   text-align: center;
-  font-family: "maven pro";
   font-weight: 600;
   width: 60px;
   padding: 5px;
@@ -106,7 +104,7 @@ box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   border-radius: 1.2rem;
   border-style: none;
   background-color: rgba(131, 56, 202, 0.726);
-} 
+}  */
 .mini{
   width: 60px;
   border-radius: 0.4rem;
@@ -190,7 +188,7 @@ p {
   display: none;
 }
 .cart {
-  width: 40px;
+  width: 35px;
 }
 .item {
   justify-content: center;
@@ -263,7 +261,7 @@ span {
   background-color: rgb(72, 21, 102);
   border-radius: 100rem 100rem 100rem 100rem;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding: 2px 4px 2px 4px;
   margin-left: 10px;
   position: absolute;
@@ -290,7 +288,6 @@ span {
 #seguir {
   cursor: pointer;
   text-align: center;
-  font-family: "maven pro";
   width: 220px;
   font-size: 1rem;
   height: 30px;
@@ -576,9 +573,10 @@ display: none;
     } */
 .cartWidget {
   background-color: transparent;
-  width: auto;
   align-items: center;
   display: flex;
+  cursor: pointer;
+  border: none;
 }
  .carrito {
     display: flex;
@@ -890,7 +888,6 @@ width: 200px;
   height: 200px;
   border-radius: 0.2rem;
   background-color: rgba(255, 255, 255, 0.219);
-  font-family: 'maven pro';
   font-weight: 800;
   width: 80%;
  }

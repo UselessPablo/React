@@ -104,7 +104,7 @@ const Cart = () => {
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pb:10 }}>
         
         <form sx={{ mt: 2, mb:7}}  >
-          <Input sx={{m:1, width:'220px'}} required name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
+          <Input sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
           <Input sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
           <Input sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
           <Input sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />

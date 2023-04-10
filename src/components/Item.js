@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
-import { Button, Card, CardMedia, Box, CardActions, Typography, Grid } from "@mui/material";
+import { Button, Card, CardMedia, Box, CardActions, Typography, Grid, Paper } from "@mui/material";
 import { Badge } from '@mui/material'
 
 
@@ -61,21 +61,30 @@ const Item = ({ info }) => {
 
   return (
     <Box>
-      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 300, borderRadius: 3, backgroundColor: 'info2.main' }}>
+    
+      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 300, borderRadius: 2}}>
+      
         <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
-        <CardMedia sx={{ height: 140 }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
+        
+        <CardMedia sx={{ height: 180 }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
         <CardMedia image={info.offer} title={info.destacado} />
+       
         <Typography>
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
+      
         <CardActions>
+           
           <Box xs={{ width: 200 }} sx={{ height: 25, display: 'flex', justifyContent: 'space-around' }}>
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button data-product-id={info.id} color={'info'} size="small" sx={{ ml: 3, height: 23 }} variant="contained" onClick={() => handleProductClick(info.id)}>Info</Button>
           </Box>
+        
         </CardActions>
       </Card>
+       
       <div className='space3'></div>
+      
     </Box>
   )
 }
