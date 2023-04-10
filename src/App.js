@@ -14,7 +14,7 @@ const App = () => {
         main: purple[400],
       },
       secondary: {
-        main: yellow[100],
+        main: yellow[400],
       },
       success: {
         main: lightGreen[700],
@@ -30,6 +30,9 @@ const App = () => {
       },
       eliminar:{
         main:orange[600],
+      },
+      pop:{
+        main:yellow[800],
       },
  fondoDrawer: {
          main: lightGreen['A100'],

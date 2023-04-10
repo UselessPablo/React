@@ -6,41 +6,8 @@ import ItemCart from './ItemCart';
 import Date from './Date'
 import Compra from './Compra'
 import ItemListContainer from './ItemListContainer';
-import {  Input } from '@mui/material';
+import {  Input} from '@mui/material';
 import {  Button, Box } from '@mui/material';
-// import { MercadoPagoCheckout } from 'mercadopago';
-
-// const { cart } = UseCartContex();
-// const createPreference = async () => {
-//   const items = cart.map(producto => ({ id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad: producto.cantidad }))
-//   const preference = await MercadoPagoCheckout.createPreference({
-//     items,
-//     back_urls: {
-//       success: 'https://mi-aplicacion.com/pago-exitoso',
-//       failure: 'https://mi-aplicacion.com/pago-fallido',
-//       pending: 'https://mi-aplicacion.com/pago-pendiente'
-//     },
-//     auto_return: 'approved',
-//     notification_url: 'https://mi-aplicacion.com/actualizar-estado-pago',
-//     payment_methods: {
-//       excluded_payment_methods: [{ id: 'amex' }],
-//       excluded_payment_types: [{ id: 'atm' }],
-//       installments: 6
-//     }
-//   });
-//   return preference;
-// };
-
-// const checkout = async () => {
-//   const preference = await createPreference();
-//   window.location.href = preference.init_point;
-// };
-
-// <button onClick={checkout}>Pagar</button>
-
-
-
-
 
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();
@@ -54,8 +21,12 @@ const Cart = () => {
   const [comprador, setComprador] = useState(order);
   const inputCapture = (e) => {
     const { name, value } = e.target
+   console.log(name);
+    if (name === ''){
+    alert('faltan datos')
+   }else{
     setComprador({ ...comprador, [name]: value, date: new Date() })
-
+   }
   }
   const goHome = () => {
     navigate('/');
@@ -103,7 +74,7 @@ const Cart = () => {
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pb:10 }}>
         
-        <form sx={{ mt: 2, mb:7}}  >
+        <form sx={{ mt: 2, mb:7}} required >
           <Input sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
           <Input sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
           <Input sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />

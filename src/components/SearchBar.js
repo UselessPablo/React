@@ -22,7 +22,7 @@ function SearchBar() {
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'productos');
         if (searchTerm) {
-            const searchQuery = query(queryCollection, where('nombre', '>=', searchTerm), where('nombre', '<', searchTerm + '\uf8ff'));
+            const searchQuery = query(queryCollection, where('categoria', '>=', searchTerm), where('categoria', '<', searchTerm + '\uf8ff'));
             getDocs(searchQuery)
                 .then(res => setOptions(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))));
         } else {
@@ -56,7 +56,7 @@ function SearchBar() {
                 // open={options.length > 0}
                 noOptionsText={false}
                 options={options}
-                getOptionLabel={(option) => option.nombre}
+                getOptionLabel={(option) => option.categoria}
                 renderOption={(props, option) => (
                     <li  {...props} key={option.id} onClick={() => {
                         setSelectedItemId(option.id);
@@ -64,7 +64,7 @@ function SearchBar() {
                         setSearchOpen(false);
 
                     }} >
-                        {option.nombre}
+                        {option.categoria}
                         <img className='mini' src={option.img} alt='x'></img>
 
                     </li>

@@ -7,7 +7,7 @@ z-index: 0;
  overflow-x: hidden;
  overflow-y: scroll;
 height: 120vh;
-background-color: #e7a7f72c;
+background-color: #6160611a;
 
 }
 .bgImage{
@@ -50,10 +50,12 @@ a {
   font-size: 1.6rem;
 }
 h1 {
-  
+  font-weight: bold;
+  font-family: Lobster;
   font-size: 1.8rem;
   text-align: flex-start;
  width: 96%;
+     font-size: xx-large;
 }
 h2{
   text-align: center;

@@ -73,7 +73,7 @@ const Navbar = () => {
                             </ButtonBase>
                             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                                 <List sx={{ height: '100%' }}>
-                                    <ListItemButton onClick={goHome} sx={{ borderRadius: 3, ml: 6, padding: 1, mr: 3, mt: 3, textAlign: 'center', width: '50%' }}>
+                                    <ListItemButton onClick={goHome}  sx={{ borderRadius: 3, ml: 6, padding: 1, mr: 3, mt: 3, textAlign: 'center', width: '50%' }}>
                                         <ListItemIcon><HomeIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
                                             <ListItemText sx={{ fontWeight: 'bold' }} primary="Inicio" />
                                         </ListItemIcon>

@@ -64,7 +64,7 @@ const Item = ({ info }) => {
     
       <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 300, borderRadius: 2}}>
       
-        <Badge sx={{ ml: 2 }} badgeContent={getBadgetQuantity()} color='fondo'> </Badge>
+        <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
         
         <CardMedia sx={{ height: 180 }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
         <CardMedia image={info.offer} title={info.destacado} />
