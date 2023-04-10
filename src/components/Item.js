@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
-import { Button, Card, CardMedia, Box, CardActions, Typography, Grid, Paper } from "@mui/material";
+import { Button, Card, CardMedia, Box, CardActions, Typography, CardContent } from "@mui/material";
 import { Badge } from '@mui/material'
 
 
@@ -62,7 +62,7 @@ const Item = ({ info }) => {
   return (
     <Box>
     
-      <Card sx={{ maxWidth: 200, mr: 2, mt: 3, maxHeight: 300, borderRadius: 2}}>
+      <Card sx={{minWidth:160, maxWidth: 170, mr: 2, mt: 3,minHeight:320, maxHeight: 320, borderRadius: 2}}>
       
         <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
         
@@ -72,10 +72,14 @@ const Item = ({ info }) => {
         <Typography>
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
-      
+       <CardContent sx={{maxHeight:10, minHeight:10, textAlign:'center'}} >
+        <Typography  sx={{fontSize:10}}>
+          {info.detalle}
+        </Typography>
+        </CardContent>
         <CardActions>
-           
-          <Box xs={{ width: 200 }} sx={{ height: 25, display: 'flex', justifyContent: 'space-around' }}>
+          
+          <Box xs={{ width: 200 }} sx={{mt:4,mb:2, height: 25, display: 'flex', justifyContent: 'space-around' }}>
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button data-product-id={info.id} color={'info'} size="small" sx={{ ml: 3, height: 23 }} variant="contained" onClick={() => handleProductClick(info.id)}>Info</Button>
           </Box>
