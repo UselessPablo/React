@@ -77,7 +77,7 @@ function SearchBar() {
                          sx={{ width: 250, mt: 3, pb: 1.5 }}
                         color='success'
                         value={searchTerm}
-                        variant='outlined'
+                        variant='standard'
                         onChange={(event) => setSearchTerm(event.target.value)}
                         placeholder='Ej: mate, maceta...'
                         InputProps={{
