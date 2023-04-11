@@ -5,7 +5,7 @@ import { UseCartContex } from './CartContext'
 import ItemCart from './ItemCart';
 import Date from './Date'
 import Compra from './Compra'
-import {  Input, TextField} from '@mui/material';
+import {  Input} from '@mui/material';
 import {  Button, Box } from '@mui/material';
 
 
@@ -20,29 +20,41 @@ const Cart = () => {
   }
 
   const [comprador, setComprador] = useState(order);
+
   const inputCapture = (e) => {
     const { name, value } = e.target
-   console.log(name);
-    if (name.trim() === ' '){
-    alert('faltan datos')
-   }else{
-    setComprador({ ...comprador, [name]: value, date: new Date() })
-   }
+
+    if (value.trim() === '') {
+      alert('faltan datos')
+    } else {
+      setComprador({ ...comprador, [name]: value, date: new Date() })
+    }
   }
   const goHome = () => {
    
     navigate('/')
   }
+
   const handleClick = () => {
-
-    const db = getFirestore();
-    const ordersCollection = collection(db, 'order');
-    addDoc(ordersCollection, comprador)
-      .then(({ id }) => console.log(id));
-    cleanCart();
-    setSell(true);
-
+    const requiredFields = ['Nombre', 'email', 'dirección', 'Teléfono'];
+    const emptyFields = requiredFields.filter(field => !comprador[field]);
+    if (emptyFields.length > 0) {
+      alert('Faltan datos obligatorios para seguir con el envío');
+    } else {
+      const db = getFirestore();
+      const ordersCollection = collection(db, 'order');
+      addDoc(ordersCollection, comprador)
+        .then(({ id }) => console.log(id));
+      cleanCart();
+      setSell(true);
+    }
   }
+
+
+
+
+
+
 
   if (cart.length <= 0) {
 
@@ -77,10 +89,10 @@ const Cart = () => {
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pb:10 }}>
         
         <form sx={{ mt: 2, mb:7}} required >
-          <TextField required={true} sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
-          <TextField required={true} sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
-          <TextField required={true} sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
-          <TextField required={true} sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
+          <Input type='text' required={true} sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
+          <Input type='text' required={true} sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
+          <Input type='text' required={true} sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
+          <Input type='text' required={true} sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           <h3 > Total: $ {totalPrice()}</h3>
           <Button size='small'  variant="contained" color={'info'}  sx={{ mt: 2, width:160}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           
