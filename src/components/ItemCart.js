@@ -5,9 +5,11 @@ import { Button, CardContent, Card, CardMedia, CardActions, Typography } from '@
 
 const ItemCart = ({ product, cantidad }) => {
   const { removeProduct } = UseCartContex();
+
   if (cantidad === 0) {
     return null;
   }
+
   return (
 
     <div className='center3'>

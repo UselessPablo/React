@@ -5,9 +5,10 @@ import { UseCartContex } from './CartContext'
 import ItemCart from './ItemCart';
 import Date from './Date'
 import Compra from './Compra'
-import ItemListContainer from './ItemListContainer';
 import {  Input} from '@mui/material';
 import {  Button, Box } from '@mui/material';
+import { Home } from '@mui/icons-material';
+
 
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();
@@ -29,7 +30,8 @@ const Cart = () => {
    }
   }
   const goHome = () => {
-    navigate('/');
+   
+    navigate('/')
   }
   const handleClick = () => {
 
@@ -48,13 +50,17 @@ const Cart = () => {
       <>
         {
           sell ? <Compra comprador={comprador} /> :
-            <ItemListContainer />
-        }
+          
+        
+      
+        
         <div className='center2'>
           <p>Carrito Vacio</p>
           <Button variant="contained" color='success' onClick={goHome}>Seguir comprando</Button>
         </div>
-      </>
+      }
+      
+     </>
     );
   }
 

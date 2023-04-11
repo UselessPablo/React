@@ -19,10 +19,13 @@ import ImageIcon from '@mui/icons-material/Image';
 import PaletteIcon from '@mui/icons-material/Palette';
 import { ConnectWithoutContact } from '@mui/icons-material';
 
+
 export const ScrollToTop = () => {
     window.scrollTo(-110, -100);
 }
+
 const Navbar = () => {
+    
     const navigate = useNavigate();
     const cartBtn = () => {
         let path = `Cart`;
