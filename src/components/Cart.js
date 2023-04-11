@@ -5,9 +5,9 @@ import { UseCartContex } from './CartContext'
 import ItemCart from './ItemCart';
 import Date from './Date'
 import Compra from './Compra'
-import {  Input} from '@mui/material';
+import {  Input, TextField} from '@mui/material';
 import {  Button, Box } from '@mui/material';
-import { Home } from '@mui/icons-material';
+
 
 
 const Cart = () => {
@@ -23,7 +23,7 @@ const Cart = () => {
   const inputCapture = (e) => {
     const { name, value } = e.target
    console.log(name);
-    if (name === ''){
+    if (name.trim() === ' '){
     alert('faltan datos')
    }else{
     setComprador({ ...comprador, [name]: value, date: new Date() })
@@ -50,12 +50,8 @@ const Cart = () => {
       <>
         {
           sell ? <Compra comprador={comprador} /> :
-          
-        
-      
-        
         <div className='center2'>
-          <p>Carrito Vacio</p>
+          <p>El Carrito Está Vacio, continuar la compra...</p>
           <Button variant="contained" color='success' onClick={goHome}>Seguir comprando</Button>
         </div>
       }
@@ -81,10 +77,10 @@ const Cart = () => {
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pb:10 }}>
         
         <form sx={{ mt: 2, mb:7}} required >
-          <Input sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
-          <Input sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
-          <Input sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
-          <Input sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
+          <TextField required={true} sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
+          <TextField required={true} sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
+          <TextField required={true} sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
+          <TextField required={true} sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           <h3 > Total: $ {totalPrice()}</h3>
           <Button size='small'  variant="contained" color={'info'}  sx={{ mt: 2, width:160}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           
