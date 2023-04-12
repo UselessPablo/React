@@ -10,6 +10,8 @@ import {  Button, Box } from '@mui/material';
 
 
 
+
+
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();
   const [sell, setSell] = useState(false)
@@ -50,6 +52,43 @@ const Cart = () => {
     }
   }
 
+  // const handleClick = () => {
+  //   const requiredFields = ['Nombre', 'email', 'dirección', 'Teléfono'];
+  //   const emptyFields = requiredFields.filter(field => !comprador[field]);
+  //   if (emptyFields.length > 0) {
+  //     alert('Faltan datos obligatorios para seguir con el envío');
+  //   } else {
+  //     const db = getFirestore();
+  //     const ordersCollection = collection(db, 'order');
+  //     addDoc(ordersCollection, comprador)
+  //       .then(({ id }) => {
+  //         mercadopago.preferences.create({
+  //           items: order.items,
+  //           payer: {
+  //             name: comprador.Nombre,
+  //             email: comprador.email
+  //           },
+  //           payment_methods: {
+  //             excluded_payment_methods: [{ id: '1800286423148403' }],
+  //             excluded_payment_types: [{ id: 'fwTm3jsr2MoolJnwoqTjt3Mi7vyO8d1z' }]
+  //           },
+  //           back_urls: {
+  //             success: 'https://TU_DOMINIO/pago-exitoso',
+  //             failure: 'https://TU_DOMINIO/pago-fallido',
+  //             pending: 'https://TU_DOMINIO/pago-pendiente'
+  //           },
+  //           auto_return: 'approved',
+  //           notification_url: 'https://TU_DOMINIO/webhook-notificaciones'
+  //         })
+  //           .then(function (response) {
+  //             // Redireccionar al checkout de Mercado Pago
+  //             window.location.href = response.body.init_point;
+  //           })
+  //       });
+  //     cleanCart();
+  //     setSell(true);
+  //   }
+  // }
 
 
 
@@ -90,9 +129,9 @@ const Cart = () => {
         
         <form sx={{ mt: 2, mb:7}} required >
           <Input type='text' required={true} sx={{m:1, width:'220px'}}  name='Nombre' placeholder='Nombre y apellido' onChange={inputCapture} value={comprador.name} />  
-          <Input type='text' required={true} sx={{ m: 1 }} type='email' name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
-          <Input type='text' required={true} sx={{ m: 1 }} type='text' name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
-          <Input type='text' required={true} sx={{ m: 1 }} type='tel' name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
+          <Input type='text' required={true} sx={{ m: 1 }}  name='email' placeholder='Email' onChange={inputCapture} value={comprador.email} />
+          <Input type='text' required={true} sx={{ m: 1 }} name='dirección' placeholder='Dirección' onChange={inputCapture} value={comprador.addres} />
+          <Input type='text' required={true} sx={{ m: 1 }}  name='Teléfono' placeholder='Teléfono' onChange={inputCapture} value={comprador.phone} />
           <h3 > Total: $ {totalPrice()}</h3>
           <Button size='small'  variant="contained" color={'info'}  sx={{ mt: 2, width:160}} type='submit' value='Submit'  onClick={handleClick} >Confirmar Compra</Button>
           

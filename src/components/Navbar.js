@@ -10,7 +10,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box, Divider } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
