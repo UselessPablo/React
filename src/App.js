@@ -35,7 +35,7 @@ const App = () => {
         main:yellow[800],
       },
  fondoDrawer: {
-         main: lightGreen['A100'],
+         main: lightGreen[100],
        },
        fondoCard: {
         main:lightGreen[100],

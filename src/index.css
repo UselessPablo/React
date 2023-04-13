@@ -261,6 +261,10 @@ span {
   width: 180px;
   border-radius: 1rem;
 }
+.MuiPickersDay-dayDisabled {
+background-color: rgb(146, 95, 170);
+}
+
 .popup {
   background-color: rgba(152, 67, 155, 0.842);
   border-radius: 100rem 100rem 100rem 100rem;
