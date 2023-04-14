@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import {  Box, Grid,Typography} from '@mui/material'
+import { Box, Grid, Typography, Badge } from '@mui/material'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import dayjs from 'dayjs';
 import Modal from '@mui/material/Modal';
-import { getFirestore, collection, getDocs} from 'firebase/firestore';
-import { useEffect} from 'react';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { useEffect } from 'react';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers-pro';
 import 'dayjs/locale/es';
+import {day}
 
-
-  const style = {
-  position: 'absolute' ,
+const style = {
+  position: 'absolute',
   top: '40%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
@@ -43,25 +43,29 @@ const WorkShops = () => {
         setIsLoading(false);
       })
       .catch(error => console.log(error));
-    
+
   }, [])
- 
-  useEffect(()=>{
-   datos.map((dato) => setInformacion(dato))
- },[datos])
-  
-  useEffect(()=>{
-  setFecha(informacion.fecha)
-},[informacion.fecha])
- 
+
+  useEffect(() => {
+    datos.map((dato) => setInformacion(dato))
+  }, [datos])
+
+  useEffect(() => {
+    setFecha(informacion.fecha)
+  }, [informacion.fecha])
+
   const isSameDay = (a, b) => {
     return a.format('YYYY-MM-DD') === b.format('YYYY-MM-DD');
   }
 
   const shouldDisableDate = (day) => {
-    
+
     return !isSameDay(day, dayjs(fecha));
   }
+
+
+
+
 
   const info = (selectedDate) => {
     if (isSameDay(selectedDate, dayjs(fecha))) {
@@ -69,11 +73,11 @@ const WorkShops = () => {
     }
   }
   if (isLoading) {
-    return  <DayCalendarSkeleton sx={{mt:30}} />
+    return <DayCalendarSkeleton sx={{ mt: 30 }} />
   }
-
+  console.log(fecha);
   return (
-    <Box sx={{ mt: 8}} >
+    <Box sx={{ mt: 8 }} >
       <Grid container spacing={2}>
         <Grid sx={{ backgroundColor: 'info.main', display: 'flex', justifyContent: 'center', mt: 3, alignContent: 'center' }} item xs={6}>
           <Typography variant='h6'> Vitrofusión </Typography>
@@ -84,14 +88,10 @@ const WorkShops = () => {
       </Grid>
       <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center' }}  >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DateCalendar defaultValue={dayjs(fecha)} 
-            sx={{borderRadius:5 }}
-               value={value}
-           shouldDisableDate={shouldDisableDate}
-
+          <DateCalendar value={dayjs(fecha)}
+            shouldDisableDate={shouldDisableDate}
             onChange={(newValue) => info(newValue)}
-
-             />
+          />
         </LocalizationProvider>
       </Box>
 
@@ -109,9 +109,7 @@ const WorkShops = () => {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {informacion.info}
             <Typography>Horario: {informacion.horario} </Typography>
-
             <Typography>  Valor Total: $ {informacion.precio}</Typography>
-
           </Typography>
         </Box>
       </Modal>
