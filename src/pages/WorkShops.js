@@ -9,7 +9,7 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { useEffect } from 'react';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers-pro';
 import 'dayjs/locale/es';
-import {day}
+
 
 const style = {
   position: 'absolute',
@@ -62,10 +62,6 @@ const WorkShops = () => {
 
     return !isSameDay(day, dayjs(fecha));
   }
-
-
-
-
 
   const info = (selectedDate) => {
     if (isSameDay(selectedDate, dayjs(fecha))) {
