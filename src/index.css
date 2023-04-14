@@ -261,8 +261,18 @@ span {
   width: 180px;
   border-radius: 1rem;
 }
-.MuiPickersDay-dayDisabled {
-background-color: rgb(146, 95, 170);
+.MuiPickersDay-dayDisabled:only-of-type {
+  color: rgb(175, 41, 41) !important;
+ background-color: violet !important;
+  opacity: 0.5;
+ 
+}
+.Mui-selected-root:focus-visible {
+  background-color: rgb(141, 49, 150) !important;
+  color: white;
+}
+.css-1655due-MuiButtonBase-root-MuiPickersDay-root:focus {
+    background-color: rgba(168, 93, 197, 0.678) !important;
 }
 
 .popup {

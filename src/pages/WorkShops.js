@@ -8,6 +8,7 @@ import Modal from '@mui/material/Modal';
 import { getFirestore, collection, getDocs} from 'firebase/firestore';
 import { useEffect} from 'react';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers-pro';
+import 'dayjs/locale/es';
 
 
   const style = {
@@ -58,6 +59,7 @@ const WorkShops = () => {
   }
 
   const shouldDisableDate = (day) => {
+    
     return !isSameDay(day, dayjs(fecha));
   }
 
@@ -82,11 +84,14 @@ const WorkShops = () => {
       </Grid>
       <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center' }}  >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DateCalendar  defaultValue={dayjs(fecha)}
+          <DateCalendar defaultValue={dayjs(fecha)} 
             sx={{borderRadius:5 }}
                value={value}
            shouldDisableDate={shouldDisableDate}
-                onChange={(newValue) => info(newValue)}/>
+
+            onChange={(newValue) => info(newValue)}
+
+             />
         </LocalizationProvider>
       </Box>
 
