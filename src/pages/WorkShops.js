@@ -114,7 +114,7 @@ const WorkShops = () => {
             <Typography>Horario: {informacion.horario} </Typography>
             <Typography>  Valor Total: $ {informacion.precio}</Typography>
           </Typography>
-      <Button sx={{mt:2, ml:'88%', color:'white'}} variant='contained' onClick={goToContact}>contacto</Button>
+      <Button sx={{mt:2, color:'white'}} variant='contained' onClick={goToContact}>contacto</Button>
         </Box>
       </Modal>
     </Box>
