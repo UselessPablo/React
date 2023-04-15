@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Grid, Typography} from '@mui/material'
+import { Box, Grid, Typography, Button} from '@mui/material'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -9,7 +9,7 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { useEffect } from 'react';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers-pro';
 import 'dayjs/locale/es';
-
+import { useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -32,7 +32,7 @@ const WorkShops = () => {
   const [fecha, setFecha] = useState('');
   // const [value, setValue] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
+ const navigate = useNavigate();
   useEffect(() => {
 
     const querydb = getFirestore();
@@ -62,7 +62,9 @@ const WorkShops = () => {
 
     return !isSameDay(day, dayjs(fecha));
   }
-
+ const goToContact = ()=>{
+  navigate('/pages/QuienesSomos')
+ }
   const info = (selectedDate) => {
     if (isSameDay(selectedDate, dayjs(fecha))) {
       handleOpen();
@@ -112,6 +114,7 @@ const WorkShops = () => {
             <Typography>Horario: {informacion.horario} </Typography>
             <Typography>  Valor Total: $ {informacion.precio}</Typography>
           </Typography>
+      <Button sx={{mt:2, ml:'88%', color:'white'}} variant='contained' onClick={goToContact}>contacto</Button>
         </Box>
       </Modal>
     </Box>
