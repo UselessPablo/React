@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Grid, Typography, Badge } from '@mui/material'
+import { Box, Grid, Typography} from '@mui/material'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -16,8 +16,8 @@ const style = {
   top: '40%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'info2.main',
+  width: '70%',
+  bgcolor: 'fondoDrawer.main',
   borderRadius: 2,
   boxShadow: 20,
   p: 4,
@@ -30,7 +30,7 @@ const WorkShops = () => {
   const [datos, setDatos] = useState([])
   const [informacion, setInformacion] = useState([])
   const [fecha, setFecha] = useState('');
-  const [value, setValue] = useState(null);
+  // const [value, setValue] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -74,6 +74,9 @@ const WorkShops = () => {
   console.log(fecha);
   return (
     <Box sx={{ mt: 8 }} >
+      <Typography textAlign='center'sx={{mb:3,mt:3}} >
+        Puedes obtener informacion de los WorkShops, pulsando en la fecha marcada en el calendario
+      </Typography>
       <Grid container spacing={2}>
         <Grid sx={{ backgroundColor: 'info.main', display: 'flex', justifyContent: 'center', mt: 3, alignContent: 'center' }} item xs={6}>
           <Typography variant='h6'> Vitrofusión </Typography>
@@ -81,8 +84,10 @@ const WorkShops = () => {
         <Grid sx={{ backgroundColor: 'info2.main', display: 'flex', justifyContent: 'center', mt: 3, pb: 2 }} item xs={6}>
           <Typography variant='h6'> Cerámica </Typography>
         </Grid>
+      
       </Grid>
       <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center' }}  >
+    
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DateCalendar value={dayjs(fecha)}
             shouldDisableDate={shouldDisableDate}
