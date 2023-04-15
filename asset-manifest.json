@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React/static/css/main.334318af.css",
-    "main.js": "/React/static/js/main.6e7bd6ec.js",
+    "main.js": "/React/static/js/main.e320237d.js",
     "static/js/787.93c83cab.chunk.js": "/React/static/js/787.93c83cab.chunk.js",
     "static/media/fondoVioleta.png": "/React/static/media/fondoVioleta.f2ef45698e81c93e15a6.png",
     "static/media/1.jpg": "/React/static/media/1.2f64f89d7b72b11bf36c.jpg",
@@ -27,11 +27,11 @@
     "static/media/cart.svg": "/React/static/media/cart.aa9cbc0eafd6f3ae58914942f1b627e0.svg",
     "index.html": "/React/index.html",
     "main.334318af.css.map": "/React/static/css/main.334318af.css.map",
-    "main.6e7bd6ec.js.map": "/React/static/js/main.6e7bd6ec.js.map",
+    "main.e320237d.js.map": "/React/static/js/main.e320237d.js.map",
     "787.93c83cab.chunk.js.map": "/React/static/js/787.93c83cab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.334318af.css",
-    "static/js/main.6e7bd6ec.js"
+    "static/js/main.e320237d.js"
   ]
 }
