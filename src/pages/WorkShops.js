@@ -11,6 +11,7 @@ import { DayCalendarSkeleton } from '@mui/x-date-pickers-pro';
 import 'dayjs/locale/es';
 import { useNavigate } from 'react-router-dom';
 
+
 const style = {
   position: 'absolute',
   top: '40%',
@@ -73,9 +74,12 @@ const WorkShops = () => {
   if (isLoading) {
     return <DayCalendarSkeleton sx={{ mt: 30 }} />
   }
-  console.log(fecha);
+
   return (
+   
+   
     <Box sx={{ mt: 8 }} >
+     
       <Typography textAlign='center'sx={{mb:3,mt:3}} >
         Puedes obtener informacion de los WorkShops, pulsando en la fecha marcada en el calendario
       </Typography>
@@ -114,11 +118,14 @@ const WorkShops = () => {
             <Typography>Horario: {informacion.horario} </Typography>
             <Typography>  Valor Total: $ {informacion.precio}</Typography>
           </Typography>
-      <Button sx={{mt:2, color:'white'}} variant='contained' onClick={goToContact}>contacto</Button>
+   <Box sx={{display:'flex', justifyContent:'end'}}>
+      <Button sx={{mt:2, color:'white'}} size='small' variant='contained' onClick={goToContact}>contacto</Button>
+          </Box>
         </Box>
       </Modal>
     </Box>
-  )
+   
+ )
 }
 
 export default WorkShops

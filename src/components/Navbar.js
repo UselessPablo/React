@@ -10,22 +10,39 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import { Box, Button } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ImageIcon from '@mui/icons-material/Image';
 import PaletteIcon from '@mui/icons-material/Palette';
 import { ConnectWithoutContact } from '@mui/icons-material';
-
+import Notification from './Notification';
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import Badge from '@mui/material/Badge';
 
 export const ScrollToTop = () => {
     window.scrollTo(-110, -100);
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const [open, setOpen] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
+    const now = new Date();
+    const notificationTime = new Date();
+    notificationTime.setHours(14, 0, 0, 0);
     
+   console.log(props);
+    useEffect(() => {
+        if (now >= notificationTime) {
+            setShowNotification(true);
+            setTimeout(() => setShowNotification(false), 2000);
+        }
+    }, []);
+ 
+   
+   
     const navigate = useNavigate();
     const cartBtn = () => {
         let path = `Cart`;
@@ -33,7 +50,7 @@ const Navbar = () => {
     }
     ScrollToTop();
 
-    const [open, setOpen] = useState(false);
+   
 
     const toggleDrawer = () => {
         setOpen(!open);
@@ -99,9 +116,27 @@ const Navbar = () => {
                                 </List>
                             </Drawer>
                         </Toolbar>
-
+                     
                         <h1>Huma  Brc </h1>
-
+                        <Box >
+                           
+                            <Button  
+                            onClick={() => setShowNotification(true)}
+                            sx={{padding:'0'}}
+                            >
+                         
+                                <Badge color="error" variant="dot">
+                            <NotificationsIcon/>
+                                </Badge>
+                            </Button>
+                          
+                            <Notification
+                                open={showNotification}
+                               onClose={()=>{setShowNotification(false)}}
+                                 message="El Workshop a  finalizado"
+                            /> 
+                            
+                        </Box>
                         <div className='catw'>
                             <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                         </div>
