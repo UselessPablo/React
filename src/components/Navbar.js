@@ -26,21 +26,21 @@ export const ScrollToTop = () => {
     window.scrollTo(-110, -100);
 }
 
-const Navbar = (props) => {
+const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [showNotification, setShowNotification] = useState(false);
     const now = new Date();
     const notificationTime = new Date();
-    notificationTime.setHours(14, 0, 0, 0);
+    notificationTime.setHours(11, 0, 0, 0);
     
-   console.log(props);
-    useEffect(() => {
+   
+   const closeNotification = () =>{
         if (now >= notificationTime) {
-            setShowNotification(true);
-            setTimeout(() => setShowNotification(false), 2000);
+            // setShowNotification(true);
+            setTimeout(() => setShowNotification(false), 3000);
         }
-    }, []);
- 
+    }
+ closeNotification()
    
    
     const navigate = useNavigate();
@@ -124,17 +124,17 @@ const Navbar = (props) => {
                             onClick={() => setShowNotification(true)}
                             sx={{padding:'0'}}
                             >
-                         
-                                <Badge color="error" variant="dot">
+                          <Badge color="error" variant="dot" >
                             <NotificationsIcon/>
                                 </Badge>
+
+                                <Notification
+                                    open={showNotification}
+                                //  onClick={closeNotification}
+                                    message="El Workshop a  finalizado"
+                                /> 
                             </Button>
-                          
-                            <Notification
-                                open={showNotification}
-                               onClose={()=>{setShowNotification(false)}}
-                                 message="El Workshop a  finalizado"
-                            /> 
+                         
                             
                         </Box>
                         <div className='catw'>
