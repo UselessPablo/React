@@ -18,7 +18,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ImageIcon from '@mui/icons-material/Image';
 import PaletteIcon from '@mui/icons-material/Palette';
 import { ConnectWithoutContact } from '@mui/icons-material';
-import Notification from './Notification';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Badge from '@mui/material/Badge';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
@@ -106,15 +105,13 @@ console.log(fecha);
         };
     const goWorkshopDirect = () => {
         navigate('/pages/Workshops/');
+        setShowNotification(false)
      
     };
         const goHome = () => {
             navigate('/');
             toggleDrawer();
         };
-
-        console.log(final);
-        console.log(fecha);
 
         return (
 
@@ -123,17 +120,14 @@ console.log(fecha);
 
                 <AppBar>
                 </AppBar>
-
                 <nav className='sticky'>
                     <div className='navbar'>
                         <div className='logo'>
                             <Toolbar>
-
                                 <ButtonBase sx={{ display: 'block' }} onClick={toggleDrawer}>
                                     <IconButton edge="start" color="primary" aria-label="menu">
                                         <MenuIcon />
                                     </IconButton>
-
                                 </ButtonBase>
                                 <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                                     <List sx={{ height: '100%' }}>
@@ -160,44 +154,35 @@ console.log(fecha);
                                     </List>
                                 </Drawer>
                             </Toolbar>
-
                             <h1>Huma  Brc </h1>
-                        
-                    
                             <Box >
                                 <Button
                                     onClick={() => setShowNotification(!showNotification)}
                                     sx={{ padding: '0' }}
                                 >
-                                    <Badge color="error" variant="dot" >
+                                    <Badge color="error" variant={showNotification ? "standard" : "dot"} >
                                         <NotificationsIcon />
                                     </Badge>
                                 </Button>
                             </Box>
                             {showNotification && (
                                 <div className="notification">
-                                    <Button onClick={goWorkshopDirect}> 
                                     <span  className='workshopNotification'>{workshopNotification}</span>
-                                   </Button>
+                                    <Button size='small' variant='text' color='info' sx={{ ml:1}} onClick={goWorkshopDirect}>Workshop</Button>
                                 </div>
                             )}
                             <div className='catw'>
                                 <button className='cartWidget' onClick={cartBtn}><Cart /> </button>
                             </div>
                         </div>
-
-
                     </div>
                 </nav>
-
                 <div />
                 <div />
-
                 <Box >
                     <Box sx={{ display: 'flex', position: 'relative', mt: 8, justifyContent: 'center' }}>
                         <SearchBar />
                     </Box>
-
                     <div className='breadC' >
                         <NavLink className='breadText' to='/'>Home </NavLink> |
                         <NavLink className='breadText' to='/category/mate'>Mates</NavLink> |
@@ -207,9 +192,7 @@ console.log(fecha);
                         <NavLink className='breadText' to='/category/galeria'>Varios</NavLink> |
                         <NavLink className='breadText' to='/pages/QuienesSomos'>Contacto</NavLink> |
                         <NavLink className='breadText' to='/Cart'>Carrito</NavLink>
-
                     </div>
-
                 </Box>
 
             </>
