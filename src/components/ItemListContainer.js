@@ -3,7 +3,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
-
+import { Box } from "@mui/material";
 
 export const ItemListContainer = () => {
     const [data, setData] = useState([])
@@ -30,8 +30,10 @@ export const ItemListContainer = () => {
             {
                 <div className="main">
                     <div className="slideInLeft" >
+                    
                         <ItemList data={data} />
                         <div className="space3"></div>
+                    
                     </div>
                 </div>
             }

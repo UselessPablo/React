@@ -38,10 +38,6 @@ const Item = ({ info }) => {
     addProduct(info, cantidad);
   }
 
-  const goTo = () => {
-    setLastClickedProduct(info.id);
-    navigate(`/detalle/${info.id}`);
-  }
 
   const handleProductClick = (productId) => {
     setLastClickedProduct(productId);
@@ -62,13 +58,10 @@ const Item = ({ info }) => {
   return (
     <Box>
     
-      <Card sx={{minWidth:160, maxWidth: 170, mr: 2, mt: 3,minHeight:320, maxHeight: 320, borderRadius: 2}}>
-      
-        <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
-        
+      <Card sx={{minWidth:170, maxWidth: 170, mr: 2, mt: 3,minHeight:320, maxHeight: 320, borderRadius: 2}}>
+        <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge> 
         <CardMedia sx={{ height: 180 }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
         <CardMedia image={info.offer} title={info.destacado} />
-       
         <Typography>
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
@@ -78,15 +71,13 @@ const Item = ({ info }) => {
         </Typography>
         </CardContent>
         <CardActions>
-          
-          <Box xs={{ width: 200 }} sx={{mt:4,mb:2, height: 25, display: 'flex', justifyContent: 'space-around' }}>
+          <Box xs={{ width: 160 }} sx={{mt:4,mb:2, height: 25, display: 'flex', justifyContent: 'space-around' }}>
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button data-product-id={info.id} color={'info'} size="small" sx={{ ml: 3, height: 23 }} variant="contained" onClick={() => handleProductClick(info.id)}>Info</Button>
           </Box>
-        
         </CardActions>
       </Card>
-       
+      
       <div className='space3'></div>
       
     </Box>
