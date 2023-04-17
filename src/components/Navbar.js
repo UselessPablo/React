@@ -10,7 +10,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Link } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
@@ -104,7 +104,10 @@ console.log(fecha);
             navigate('/pages/Workshops/');
             toggleDrawer();
         };
-
+    const goWorkshopDirect = () => {
+        navigate('/pages/Workshops/');
+     
+    };
         const goHome = () => {
             navigate('/');
             toggleDrawer();
@@ -173,7 +176,9 @@ console.log(fecha);
                             </Box>
                             {showNotification && (
                                 <div className="notification">
+                                    <Button onClick={goWorkshopDirect}> 
                                     <span  className='workshopNotification'>{workshopNotification}</span>
+                                   </Button>
                                 </div>
                             )}
                             <div className='catw'>
