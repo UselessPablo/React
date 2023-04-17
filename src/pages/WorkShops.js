@@ -76,6 +76,7 @@ const WorkShops = () => {
   }
 
   return (
+  
    
    
     <Box sx={{ mt: 8 }} >

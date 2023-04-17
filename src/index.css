@@ -817,6 +817,17 @@ element.style {
     box-sizing: border-box;
     position: fixed;
 }
+.notification{
+  margin-top: 100px;
+  position: absolute;
+width: 95%;
+  display: flex;
+  justify-content: flex-end;
+}
+.workshopNotification{
+  font-weight: bold;
+  font-size: 0.9rem;
+}
 .top-right {
     top: 12px;
     right: 12px;
