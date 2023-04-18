@@ -43,8 +43,8 @@ const QuienesSomos = () => {
   return (
     <>
       <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', width:'100%',mt:7}}>
-       <Paper elevation={7} variant="elevation" sx={{padding:3, borderRadius:5, textAlign:'center'}}>
-        <h4 sx={{mb:3}} >Opiniones de nuestros clientes:👇 </h4>
+       <Paper elevation={7} variant="elevation" sx={{pl:2,pr:2,pb:2, borderRadius:5, textAlign:'center'}}>
+        <h4 sx={{}} >Opiniones de nuestros clientes:👇 </h4>
         <Typography color='green' >{mensajeActual}</Typography>
         </Paper>
       </Box>
