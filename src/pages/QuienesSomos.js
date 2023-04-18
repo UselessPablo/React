@@ -1,63 +1,56 @@
 
-import  { useState } from "react";
+import { useState } from "react";
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
- import { useNavigate } from "react-router-dom";
-import { Button,Input } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Button, Input } from "@mui/material";
 import Carrousel from '../components/Carrousel'
 
- const QuienesSomos = () => {
-   const navigate = useNavigate();
-  // const mensajes = {
-  //   email: mensaje,
-  //   mensaje: mensaje,
-  // }
+const QuienesSomos = () => {
+  const navigate = useNavigate();
 
   const [mensaje, setMensaje] = useState();
-const inputMessage = (e)=>{
 
- 
-  const {name, value} = e.target
-setMensaje({...mensaje, [name]: value})
-}
- 
+  const inputMessage = (e) => {
+    const { name, value } = e.target
+    setMensaje({ ...mensaje, [name]: value })
+  }
 
-
-const handleClick = () => {
+  const handleClick = () => {
 
     const db = getFirestore();
     const mensajesCollection = collection(db, 'mensajes');
     addDoc(mensajesCollection, mensaje)
       .then(({ id }) => console.log(id));
-   confirmation();
+    confirmation();
   }
 
+  const confirmation = () => {
+    navigate('/');
+  }
 
-const confirmation = () =>{
+  return (
+    <>
+      <Carrousel />
+      <div className="nosotros">
 
-navigate('/');
-}
- 
-
-return (
-   <>
-   <Carrousel/>
-   <div className="nosotros">
-      
-      <h2 className="parrafo"> Huma es un emprendimiento que nace por la pasión y gusto de transformar el barro en un producto único</h2>
-    </div>
- <div className="contacto">
- <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
- <form className="formContact">
-        <Input placeholder="Email" onChange={inputMessage} name='email' type='email' required='email' />
- <textarea onChange={inputMessage} name='mensaje' placeholder="Mensaje..."></textarea>
- 
- <Button variant='contained' size='small' color='success' type='button'sx={{mb:3, ml:1}} onClick={handleClick} >Enviar</Button>
-      
-      </form>
-     
- 
- </div>
+        <h2 className="parrafo"> Huma es un emprendimiento que nace por la pasión y gusto de transformar el barro en un producto único</h2>
+      </div>
+      <div className="contacto">
+        <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
+        <form className="formContact">
+          <Input
+            placeholder="Email"
+            onChange={inputMessage}
+            name="email"
+            type="email"
+            required={true}
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          />
+          <textarea onChange={inputMessage} name='mensaje' placeholder="Mensaje..."></textarea>
+          <Button variant='contained' size='small' color='success' type='button' sx={{ mb: 3, ml: 1 }} onClick={handleClick} >Enviar</Button>
+        </form>
+      </div>
     </>
- )
-  }
-export default  QuienesSomos;
+  )
+}
+export default QuienesSomos;

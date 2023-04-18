@@ -56,8 +56,7 @@ const Navbar = () => {
             setFinal(final);
 
             checkWorkshopNotification(fecha, final);
-            //     data.forEach((workshop) => checkWorkshopNotification(workshop));
-            // });
+           
         })
     },[]);
 
@@ -69,16 +68,29 @@ const Navbar = () => {
             const now = new Date();
             const startTime = new Date(fecha);
             const endTime = new Date(final);
-console.log(fecha);
+
             if (now < startTime) {
-                setWorkshopNotification(`Nuevo Workshop  ${fecha}`);
+                setWorkshopNotification(`Nuevo  ${fecha}`);
             } else if (now >= startTime && now <= endTime) {
-                setWorkshopNotification(`El Workshop está en curso.`);
+                setWorkshopNotification(` En Curso`);
             } else {
-                setWorkshopNotification(`El Workshop finalizado el ${final}`);
+                setWorkshopNotification(` Finalizado  ${final}`);
             }
         };
+    useEffect(() => {
+        let intervalId;
 
+        if (showNotification) {
+            intervalId = setInterval(() => {
+                setShowNotification(false);
+            }, 3000);
+        }
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [showNotification]);
+    
         const navigate = useNavigate();
 
         const cartBtn = () => {
@@ -105,7 +117,10 @@ console.log(fecha);
         };
     const goWorkshopDirect = () => {
         navigate('/pages/Workshops/');
-        setShowNotification(false)
+      setInterval(() => {
+          setShowNotification(false)
+      }, 3000);
+       
      
     };
         const goHome = () => {
@@ -166,9 +181,10 @@ console.log(fecha);
                                 </Button>
                             </Box>
                             {showNotification && (
+                             
                                 <div className="notification">
-                                    <span  className='workshopNotification'>{workshopNotification}</span>
-                                    <Button size='small' variant='text' color='info' sx={{ ml:1}} onClick={goWorkshopDirect}>Workshop</Button>
+                                    <Button size='small' variant='text' color='info' sx={{ pt:1}} onClick={goWorkshopDirect}>Workshop</Button>
+                                    <span className='workshopNotification'>{workshopNotification}</span>
                                 </div>
                             )}
                             <div className='catw'>
