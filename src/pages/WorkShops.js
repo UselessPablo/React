@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Grid, Typography, Button} from '@mui/material'
+import { Box, Grid, Typography, Button } from '@mui/material'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -31,9 +31,8 @@ const WorkShops = () => {
   const [datos, setDatos] = useState([])
   const [informacion, setInformacion] = useState([])
   const [fecha, setFecha] = useState('');
-  // const [value, setValue] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
- const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
 
     const querydb = getFirestore();
@@ -63,9 +62,9 @@ const WorkShops = () => {
 
     return !isSameDay(day, dayjs(fecha));
   }
- const goToContact = ()=>{
-  navigate('/pages/QuienesSomos')
- }
+  const goToContact = () => {
+    navigate('/pages/QuienesSomos')
+  }
   const info = (selectedDate) => {
     if (isSameDay(selectedDate, dayjs(fecha))) {
       handleOpen();
@@ -76,12 +75,8 @@ const WorkShops = () => {
   }
 
   return (
-  
-   
-   
     <Box sx={{ mt: 8 }} >
-     
-      <Typography textAlign='center'sx={{mb:3,mt:3}} >
+      <Typography textAlign='center' sx={{ mb: 3, mt: 3 }} >
         Puedes obtener informacion de los WorkShops, pulsando en la fecha marcada en el calendario
       </Typography>
       <Grid container spacing={2}>
@@ -91,10 +86,8 @@ const WorkShops = () => {
         <Grid sx={{ backgroundColor: 'info2.main', display: 'flex', justifyContent: 'center', mt: 3, pb: 2 }} item xs={6}>
           <Typography variant='h6'> Cerámica </Typography>
         </Grid>
-      
       </Grid>
       <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center' }}  >
-    
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DateCalendar value={dayjs(fecha)}
             shouldDisableDate={shouldDisableDate}
@@ -102,7 +95,6 @@ const WorkShops = () => {
           />
         </LocalizationProvider>
       </Box>
-
       <Modal
         open={open}
         onClose={handleClose}
@@ -119,14 +111,13 @@ const WorkShops = () => {
             <Typography>Horario: {informacion.horario} </Typography>
             <Typography>  Valor Total: $ {informacion.precio}</Typography>
           </Typography>
-   <Box sx={{display:'flex', justifyContent:'end'}}>
-      <Button sx={{mt:2, color:'white'}} size='small' variant='contained' onClick={goToContact}>contacto</Button>
+          <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+            <Button sx={{ mt: 2, color: 'white' }} size='small' variant='contained' onClick={goToContact}>contacto</Button>
           </Box>
         </Box>
       </Modal>
     </Box>
-   
- )
+  )
 }
 
 export default WorkShops

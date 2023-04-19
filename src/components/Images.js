@@ -21,7 +21,6 @@ const Images = () => {
   return (
 
     <Box>
-
       <h2 className='marginTop'>Arte..</h2>
       <ImageList
         sx={{ width: '98%', height: '200', borderRadius: 5, ml: 1 }}
@@ -41,7 +40,7 @@ const Images = () => {
       </ImageList>
       <Box sx={{ width: '98%', ml: 1 }}>
         <div className='display'>
-          
+
           <h2 className='conocenos'>Nuestros Productos</h2>
         </div>
       </Box>
@@ -75,7 +74,7 @@ const itemData = [
     img: budas,
     title: 'Budas',
     cols: 4,
-    rows:2,
+    rows: 2,
   },
 
 

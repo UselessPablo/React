@@ -17,7 +17,6 @@ export const ItemDetailContainer = () => {
       .then(res => setData({ id: res.id, ...res.data() }))
   }, [detalleid])
 
-
   return (
     <ItemDetail data={data} />
   )

@@ -245,8 +245,8 @@ background-image: linear-gradient(to right top, #e3bfe99a, #c8a0cfb0, #8d5591a2,
   justify-content: space-around;
   align-items: center;
   font-size: 1.6rem;
-  margin-bottom: 50px;
-  padding-bottom: 5rem;
+  /* margin-bottom: 50px;
+  padding-bottom: 5rem; */
 }
 .loader {
   display: flex;

@@ -13,7 +13,6 @@ const ItemCart = ({ product, cantidad }) => {
   return (
 
     <div className='center3'>
-
       <Card sx={{ maxWidth: 200, borderRadius: 2, backgroundColor: 'info2.main' }}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

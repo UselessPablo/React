@@ -10,13 +10,11 @@ export const ItemDetailSearch = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-
         const querydb = getFirestore();
         const queryDoc = doc(querydb, 'productos', itemId)
         getDoc(queryDoc)
             .then(res => setData({ id: res.id, ...res.data() }))
     }, [itemId])
-
 
     return (
         <ItemDetail data={data} />

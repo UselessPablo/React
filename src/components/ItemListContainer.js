@@ -3,7 +3,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
-import { Box, Grid } from "@mui/material";
+import { Box} from "@mui/material";
 
 export const ItemListContainer = () => {
     const [data, setData] = useState([])
@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
             {
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'center' }}>
                     <ItemList data={data} />
-                    <Box sx={{padding:'12.5rem'}}></Box>
+                    <Box sx={{ padding: '12.5rem' }}></Box>
                 </Box>
             }
         </Box>

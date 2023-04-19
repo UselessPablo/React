@@ -39,18 +39,16 @@ const QuienesSomos = () => {
     return () => clearInterval(interval);
   }, []);
 
-
   return (
     <>
-      <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', width:'100%',mt:7}}>
-       <Paper elevation={7} variant="elevation" sx={{pl:2,pr:2,pb:2, borderRadius:5, textAlign:'center'}}>
-        <h4 sx={{}} >Opiniones de nuestros clientes:👇 </h4>
-        <Typography color='green' >{mensajeActual}</Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '100%', mt: 7 }}>
+        <Paper elevation={7} variant="elevation" sx={{ pl: 2, pr: 2, pb: 2, borderRadius: 5, textAlign: 'center' }}>
+          <h4 sx={{}} >Opiniones de nuestros clientes:👇 </h4>
+          <Typography color='green' >{mensajeActual}</Typography>
         </Paper>
       </Box>
       <Carrousel />
       <div className="nosotros">
-
         <h2 className="parrafo"> Huma es un emprendimiento que nace por la pasión y gusto de transformar el barro en un producto único</h2>
       </div>
       <div className="contacto">
@@ -68,7 +66,6 @@ const QuienesSomos = () => {
           <Button variant='contained' size='small' color='success' type='button' sx={{ mb: 3, ml: 1 }} onClick={handleClick} >Enviar</Button>
         </form>
       </div>
-    
     </>
   )
 }

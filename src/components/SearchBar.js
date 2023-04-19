@@ -16,8 +16,6 @@ function SearchBar() {
     const navigate = useNavigate();
     const [searchOpen, setSearchOpen] = useState(true);
 
-
-
     useEffect(() => {
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'productos');
@@ -41,11 +39,9 @@ function SearchBar() {
     };
 
     return (
-        <Box sx={{ width: 250, display: 'flex', justifyContent:'center'}}>
+        <Box sx={{ width: 250, display: 'flex', justifyContent: 'center' }}>
             <Autocomplete
-               
                 open={searchOpen}
-                // onSelect={handleSelect}
                 onOpen={() => {
                     setSearchOpen(true);
                 }}
@@ -53,7 +49,6 @@ function SearchBar() {
                     setSearchOpen(false);
                 }}
                 disablePortal={false}
-                // open={options.length > 0}
                 noOptionsText={false}
                 options={options}
                 getOptionLabel={(option) => option.categoria}
@@ -62,19 +57,16 @@ function SearchBar() {
                         setSelectedItemId(option.id);
                         navigate(`/detalle2/${option.id}`);
                         setSearchOpen(false);
-
                     }} >
                         {option.categoria}
                         <img className='mini' src={option.img} alt='x'></img>
-
                     </li>
                 )}
                 renderInput={(params) => (
-
                     <TextField
                         {...params}
-                        label="Buscar..." 
-                         sx={{ width: 250, mt: 3, pb: 1.5 }}
+                        label="Buscar..."
+                        sx={{ width: 250, mt: 3, pb: 1.5 }}
                         color='success'
                         value={searchTerm}
                         variant='standard'
@@ -82,18 +74,18 @@ function SearchBar() {
                         placeholder='Ej: mate, maceta...'
                         InputProps={{
                             sx: {
-                               borderRadius: 12,
+                                borderRadius: 12,
                             },
                             ...params.InputProps,
                             endAdornment: (
                                 <InputAdornment>
-                                    <SearchIcon  sx={{pb:0.1,ml:3
-                                    , color:'info.main'}}/>
+                                    <SearchIcon sx={{
+                                        pb: 0.1, ml: 3
+                                        , color: 'info.main'
+                                    }} />
                                 </InputAdornment>
                             ),
                         }}
-
-
                     />
                 )}
                 onChange={handleChange}

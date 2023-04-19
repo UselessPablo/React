@@ -4,8 +4,6 @@ import { Box } from '@mui/system'
 import Images from './Images'
 import ItemListContainer from './ItemListContainer'
 
-
-
 const Home = () => {
   return (
     <Box >

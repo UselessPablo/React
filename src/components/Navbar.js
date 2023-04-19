@@ -121,7 +121,6 @@ const Navbar = () => {
             setShowNotification(false)
         }, 3000);
 
-
     };
     const goHome = () => {
         navigate('/');
@@ -129,10 +128,7 @@ const Navbar = () => {
     };
 
     return (
-
-
         <>
-
             <AppBar>
             </AppBar>
             <nav className='sticky'>
@@ -210,10 +206,8 @@ const Navbar = () => {
                     <NavLink className='breadText' to='/Cart'>Carrito</NavLink>
                 </div>
             </Box>
-
         </>
     );
-
 }
 
 export default Navbar;
