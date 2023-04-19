@@ -34,14 +34,13 @@ const Images = () => {
               {...srcset(item.img, 121, item.rows, item.cols)}
               alt={item.title}
               loading="lazy"
-
             />
           </ImageListItem>
         ))}
       </ImageList>
       <Box sx={{ width: '98%', ml: 1 }}>
         <div className='display'>
-          <h2>Cerámicas</h2>
+          
           <h2 className='conocenos'>Nuestros Productos</h2>
         </div>
       </Box>

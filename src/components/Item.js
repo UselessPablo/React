@@ -38,7 +38,6 @@ const Item = ({ info }) => {
     addProduct(info, cantidad);
   }
 
-
   const handleProductClick = (productId) => {
     setLastClickedProduct(productId);
     console.log(productId);
@@ -57,29 +56,29 @@ const Item = ({ info }) => {
 
   return (
     <Box>
-    
-      <Card sx={{minWidth:170, maxWidth: 170, mr: 2, mt: 3,minHeight:320, maxHeight: 320, borderRadius: 2}}>
-        <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge> 
-        <CardMedia sx={{ height: 180 }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
+
+      <Card sx={{ minWidth: 120, maxWidth: 140, mr: 1, mt: 3, minHeight: 320, maxHeight: 320, borderRadius: 2 }}>
+        <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
+        <CardMedia sx={{ height: 180, minWidth: 120, maxWidth: 160, }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
         <CardMedia image={info.offer} title={info.destacado} />
         <Typography>
           <h3 className="oferta"> {info.destacado}</h3>
         </Typography>
-       <CardContent sx={{maxHeight:10, minHeight:10, textAlign:'center'}} >
-        <Typography  sx={{fontSize:10}}>
-          {info.detalle}
-        </Typography>
+        <CardContent sx={{ maxHeight: 10, minHeight: 10, textAlign: 'center' }} >
+          <Typography sx={{ fontSize: 10 }}>
+            {info.detalle}
+          </Typography>
         </CardContent>
-        <CardActions>
-          <Box xs={{ width: 160 }} sx={{mt:4,mb:2, height: 25, display: 'flex', justifyContent: 'space-around' }}>
+        <CardActions sx={{ maxWidth: 140 }}>
+          <Box sx={{ mt: 4, mb: 2, height: 25, display: 'flex', justifyContent: 'space-between', width: '100%', alignContent: 'center' }}>
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
-            <Button data-product-id={info.id} color={'info'} size="small" sx={{ ml: 3, height: 23 }} variant="contained" onClick={() => handleProductClick(info.id)}>Info</Button>
+            <Button data-product-id={info.id} color={'info'} size="small" sx={{ height: 23 }} variant="text" onClick={() => handleProductClick(info.id)}>Info</Button>
           </Box>
         </CardActions>
       </Card>
-      
+
       <div className='space3'></div>
-      
+
     </Box>
   )
 }

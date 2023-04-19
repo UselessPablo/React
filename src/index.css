@@ -228,9 +228,10 @@ footer{
   justify-content: center;
 }
 .display{
-  flex-wrap: wrap;
+  
   display: flex;
   flex-direction: column;
+  align-content: center;
   width: 100%;
   border-radius: 1.8rem;
 background-image: linear-gradient(to right top, #e3bfe99a, #c8a0cfb0, #8d5591a2, #be74c26c, #e4cde471);
@@ -373,7 +374,6 @@ span {
 }
 .conocenos{
   text-align: center;
-    margin-bottom: 40px;
 }
 .verticalRight{
   margin-left: 80%;

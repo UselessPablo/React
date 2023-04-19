@@ -14,28 +14,27 @@ import i from '../assets/img/galeria/9.jpg'
 import j from '../assets/img/galeria/10.jpg'
 
 const Galeria = () => {
- return(
-  <ImageList sx={{ width: '100%', minHeight: '950px', mt:5, mb:4, pb:6, pt:5 }}>
-    <ImageListItem key="Subheader" cols={2}>
-    
-    </ImageListItem>
-    {itemData.map((item) => (
-      <ImageListItem key={item.img}>
-        <img
-          src={`${item.img}?w=248&fit=crop&auto=format`}
-          srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-          alt={item.title}
-          loading="lazy"
-        />
-        <ImageListItemBar sx={{height:'50px'}}
-          title={item.title}
-          subtitle={item.author}
-        
-        />
+  return (
+    <ImageList sx={{ width: '100%', minHeight: '950px', mt: 5, mb: 4, pb: 6, pt: 5 }}>
+      <ImageListItem key="Subheader" cols={2}>
+
       </ImageListItem>
-    ))}
-  </ImageList>
-  
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            src={`${item.img}?w=248&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar sx={{ height: '50px' }}
+            title={item.title}
+            subtitle={item.author}
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
+
 
 
   )
@@ -101,6 +100,6 @@ const itemData = [
     title: 'Macetas Esgradiadas con Patas',
     author: '@AleQ',
   },
- 
+
 ];
 export default Galeria
