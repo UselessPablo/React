@@ -57,7 +57,7 @@ const Item = ({ info }) => {
   return (
     <Box>
 
-      <Card  sx={{ minWidth: 140, maxWidth: 140,ml:1, mr: 1, mt: 3, minHeight: 320, maxHeight: 320, borderRadius: 2 }}>
+      <Card  sx={{ minWidth: 150, maxWidth: 150,ml:1, mr: 1, mt: 3, minHeight: 320, maxHeight: 320, borderRadius: 2 }}>
         <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
         <CardMedia sx={{ height: 180, minWidth: 140, maxWidth: 140, }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
         <CardMedia image={info.offer} title={info.destacado} />
@@ -69,7 +69,7 @@ const Item = ({ info }) => {
             {info.detalle}
           </Typography>
         </CardContent>
-        <CardActions sx={{ maxWidth: 140 }}>
+        <CardActions sx={{ maxWidth: 150 }}>
           <Box sx={{ mt: 4, mb: 2, height: 25, display: 'flex', justifyContent: 'space-between', width: '100%', alignContent: 'center' }}>
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button data-product-id={info.id} color={'info'} size="small" sx={{ height: 23 }} variant="text" onClick={() => handleProductClick(info.id)}>Info</Button>

@@ -223,6 +223,8 @@ p {
   bottom: 0;
   position: fixed; 
 }
+
+
 footer{
   display: flex;
   justify-content: center;
