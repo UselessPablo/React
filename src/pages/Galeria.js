@@ -10,8 +10,8 @@ import e from '../assets/img/galeria/5.jpg'
 import f from '../assets/img/galeria/6.jpg'
 import g from '../assets/img/galeria/7.jpg'
 import h from '../assets/img/galeria/8.jpg'
-import i from '../assets/img/galeria/9.jpg'
-import j from '../assets/img/galeria/10.jpg'
+import i from '../assets/img/galeria/10.jpg'
+import j from '../assets/img/galeria/9.jpg'
 
 const Galeria = () => {
   return (

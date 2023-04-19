@@ -5,8 +5,9 @@ import ImageListItem from '@mui/material/ImageListItem';
 import wandb from '../assets/img/b&w.jpg';
 import mate from '../assets/img/artmate.jpg';
 import nieve from '../assets/img/artnieve.jpg';
-import budas from '../assets/img/budasmuchos.jpg';
 import platos from '../assets/img/platitolechu.jpg';
+import budas from '../assets/img/budasmuchos.jpg';
+
 
 const Images = () => {
   function srcset(image, size, rows = 1, cols = 1) {
@@ -26,7 +27,7 @@ const Images = () => {
         sx={{ width: '98%', height: '200', borderRadius: 5, ml: 1 }}
         variant="quilted"
         cols={4}
-        rowHeight={121}
+        rowHeight={110}
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
@@ -65,16 +66,18 @@ const itemData = [
     rows: 2,
   },
   {
-    img: budas,
-    title: 'Budas',
-    cols: 4,
-  },
-  {
     img: platos,
     title: 'Platos',
     cols: 4,
-    rows: 3,
+    rows: 1,
   },
+  {
+    img: budas,
+    title: 'Budas',
+    cols: 4,
+    rows:2,
+  },
+
 
 ];
 
