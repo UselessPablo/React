@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
             {
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'center' }}>
                     <ItemList data={data} />
-                    <div className="space3"></div>
+                    <Box sx={{padding:'12.5rem'}}></Box>
                 </Box>
             }
         </Box>
