@@ -18,10 +18,10 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '70%',
-  bgcolor: 'fondoDrawer.main',
+  bgcolor: 'white',
   borderRadius: 2,
   boxShadow: 20,
-  p: 4,
+  p: 3,
 };
 
 const WorkShops = () => {
@@ -108,8 +108,8 @@ const WorkShops = () => {
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {informacion.info}
-            <Typography>Horario: {informacion.horario} </Typography>
-            <Typography>  Valor Total: $ {informacion.precio}</Typography>
+            <Typography sx={{fontWeight:'bold', textAlign:'center', mt:1.5}}>Horario: {informacion.horario} </Typography>
+            <Typography sx={{fontWeight:'bold', color:'green', textAlign:'center',mt:1}}>  Valor Total: $ {informacion.precio}</Typography>
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'end' }}>
             <Button sx={{ mt: 2, color: 'white' }} size='small' variant='contained' onClick={goToContact}>contacto</Button>
