@@ -72,12 +72,8 @@ console.log(rating);
   return (
     <Box>
       <Card variant="elevation" elevation={2} sx={{ minWidth: 170, maxWidth: 170, ml: 1, mr: 1, mt: 3, maxHeight: 350, borderRadius: 2 }}>
-        <Box
-          sx={{
-            '& > legend': { mt: 0,mb:0 },
-          }}
-        >
-          <StyledRating sx={{display:'flex', justifyContent:'end',mt:1}}
+      
+          <StyledRating sx={{display:'flex', justifyContent:'end',mt:0.5}}
             name="customized-color"
             value={productRating}
             onChange={(event, newValue) => {
@@ -86,11 +82,11 @@ console.log(rating);
             getLabelText={(value: number) => `${value} Heart${value !== 1 ? 's' : ''}`}
             precision={1}
             max={1}
-            icon={<FavoriteIcon fontSize="2rem" />}
-            emptyIcon={<FavoriteBorderIcon fontSize="2rem" />}
+            icon={<FavoriteIcon fontSize="medium" />}
+            emptyIcon={<FavoriteBorderIcon fontSize="medium" />}
           />
         {/* <AddFavorites onAdd={onAdd} initial={-0} /> */}
-        </Box>
+      
         <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
       
         <CardMedia sx={{ height: 180, minWidth: 170, maxWidth: 170, display: 'flex', justifyContent: 'center' }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
