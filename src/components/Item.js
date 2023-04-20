@@ -74,10 +74,10 @@ console.log(rating);
       <Card variant="elevation" elevation={2} sx={{ minWidth: 170, maxWidth: 170, ml: 1, mr: 1, mt: 3, maxHeight: 350, borderRadius: 2 }}>
         <Box
           sx={{
-            '& > legend': { mt: 0,mb:3 },
+            '& > legend': { mt: 0,mb:0 },
           }}
         >
-          <StyledRating sx={{display:'flex', justifyContent:'end'}}
+          <StyledRating sx={{display:'flex', justifyContent:'end',mt:1}}
             name="customized-color"
             value={productRating}
             onChange={(event, newValue) => {
@@ -86,8 +86,8 @@ console.log(rating);
             getLabelText={(value: number) => `${value} Heart${value !== 1 ? 's' : ''}`}
             precision={1}
             max={1}
-            icon={<FavoriteIcon fontSize="inherit" />}
-            emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+            icon={<FavoriteIcon fontSize="2rem" />}
+            emptyIcon={<FavoriteBorderIcon fontSize="2rem" />}
           />
         {/* <AddFavorites onAdd={onAdd} initial={-0} /> */}
         </Box>
