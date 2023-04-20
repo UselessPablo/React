@@ -1,8 +1,6 @@
 import React from 'react'
 import {Button} from '@mui/material';
 import { useState } from "react";
-
-
 import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined';
 
 const AddCart = ({ stock, onAdd, initial }) => {
