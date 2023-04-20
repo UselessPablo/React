@@ -38,7 +38,7 @@ const ItemDetail = ({ data }) => {
     <Box>
       <div className='center2 '>
 
-        <Card sx={{ width: 345, mt: 7, borderRadius: 2, backgroundColor: 'info2.main' }}>
+        <Card variant='elevation' sx={{ width: 345, mt: 7, borderRadius: 2}}>
           <CardMedia
             sx={{ height: 140, width: 345 }}
             image={data.img}
@@ -48,7 +48,7 @@ const ItemDetail = ({ data }) => {
             <Typography gutterBottom variant="h5" component="div">
               $  {data.precio}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" sx={{fontWeight:'bold'}}>
               {data.detalle}
             </Typography>
           </CardContent>

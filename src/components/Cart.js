@@ -124,8 +124,8 @@ const Cart = () => {
           <Input type='text' required={true} sx={{ m: 1 }} name='email' placeholder=' * Email' onChange={inputCapture} value={comprador.email} />
           <Input type='text' required={true} sx={{ m: 1 }} name='dirección' placeholder=' * Dirección' onChange={inputCapture} value={comprador.addres} />
           <Input type='text' required={true} sx={{ m: 1 }} name='Teléfono' placeholder=' * Teléfono' onChange={inputCapture} value={comprador.phone} />
-          <h3 > Total: $ {totalPrice()}</h3>
-          <Button size='small' variant="contained" color={'info'} sx={{ mt: 2, width: 160 }} type='submit' value='Submit' onClick={handleClick} >Confirmar Compra</Button>
+          <h3> Total: $ {totalPrice()}</h3>
+          <Button size='small' variant="contained" color={'info'} sx={{ mt: 2, }} type='submit' value='Submit' onClick={handleClick} > Comprar</Button>
         </form>
       </Box>
 

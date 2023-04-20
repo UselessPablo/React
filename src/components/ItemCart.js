@@ -13,7 +13,7 @@ const ItemCart = ({ product, cantidad }) => {
   return (
 
     <div className='center3'>
-      <Card sx={{ maxWidth: 200, borderRadius: 2, backgroundColor: 'info2.main' }}>
+      <Card variant='elevation' sx={{ maxWidth: 200, borderRadius: 2}}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {product.name}
@@ -21,7 +21,7 @@ const ItemCart = ({ product, cantidad }) => {
           <Typography variant="body2" color="text.secondary">
             $ {product.precio} x {product.cantidad} Unidade/s
           </Typography>
-          <Typography variant='h6' color='text.primary'>
+          <Typography variant='body' color='text.primary'>
             Subtotal : $ {product.cantidad * product.precio}
           </Typography>
         </CardContent>
