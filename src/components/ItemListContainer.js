@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
 
         <Box>
             {
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'center' }}>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly ', alignContent: 'center' }}>
                     <ItemList data={data} />
                     <Box sx={{ padding: '12.5rem' }}></Box>
                 </Box>

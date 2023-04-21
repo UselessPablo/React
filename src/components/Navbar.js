@@ -10,7 +10,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box, Button, Link } from '@mui/material';
+import { Box, Button,  Badge } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
@@ -19,9 +19,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import PaletteIcon from '@mui/icons-material/Palette';
 import { ConnectWithoutContact } from '@mui/icons-material';
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import Badge from '@mui/material/Badge';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-
 export const ScrollToTop = () => {
     window.scrollTo(-110, -100);
 }
@@ -36,9 +34,10 @@ const Navbar = () => {
     const [workshopNotification, setWorkshopNotification] = useState('');
     const [final, setFinal] = useState('')
     const [fecha, setFecha] = useState('');
-
     const notificationTime = new Date();
     notificationTime.setHours(11, 0, 0, 0);
+
+   
 
     useEffect(() => {
         const querydb = getFirestore();
@@ -165,6 +164,7 @@ const Navbar = () => {
                                 </List>
                             </Drawer>
                         </Toolbar>
+              
                         <h1>Huma  Brc </h1>
                         <Box >
                             <Button
@@ -177,7 +177,6 @@ const Navbar = () => {
                             </Button>
                         </Box>
                         {showNotification && (
-
                             <div className="notification">
                                 <Button size='small' variant='text' color='info' sx={{ pt: 1 }} onClick={goWorkshopDirect}>Workshop</Button>
                                 <span className='workshopNotification'>{workshopNotification}</span>

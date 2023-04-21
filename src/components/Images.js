@@ -74,7 +74,7 @@ const itemData = [
     img: budas,
     title: 'Budas',
     cols: 4,
-    rows: 2,
+    rows: 1,
   },
 
 

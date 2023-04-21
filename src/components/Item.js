@@ -4,30 +4,17 @@ import { UseCartContex } from './CartContext';
 import AddCart from "./AddCart";
 import { Button, Card, CardMedia, Box, CardActions, Typography, CardContent } from "@mui/material";
 import { Badge } from '@mui/material'
-import Rating from '@mui/material/Rating';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { styled } from '@mui/material/styles';
-// import AddFavorites from "./AddFavorites";
-
-const StyledRating = styled(Rating)({
-  '& .MuiRating-iconFilled': {
-    color: '#ff6d75',
-  },
-  '& .MuiRating-iconHover': {
-    color: '#ff3d47',
-  },
-});
 
 
 const Item = ({ info }) => {
-  const navigate = useNavigate();
+  
   const { addProduct, isInCart, getCartProduct } = UseCartContex();
+  const navigate = useNavigate();
   const [goToCart, setGoToCart] = useState(false);
   const [lastClickedProduct, setLastClickedProduct] = useState();
   const productsContainerRef = useRef(null);
-  const [rating, setRating] = useState(0);
-  const [productRating, setProductRating] = useState(0);
+
+  
   const getStock = () => {
     const item = isInCart(info.id)
 
@@ -59,6 +46,7 @@ const Item = ({ info }) => {
     navigate(`/detalle/${info.id}`);
   };
 
+
   useEffect(() => {
     if (lastClickedProduct && productsContainerRef.current) {
       const lastClickedProductElement = productsContainerRef.current.querySelector(`[data-product-id='${lastClickedProduct}']`);
@@ -68,25 +56,11 @@ const Item = ({ info }) => {
       }
     }
   }, [lastClickedProduct]);
-console.log(rating);
+
   return (
     <Box>
-      <Card variant="elevation" elevation={2} sx={{ minWidth: 170, maxWidth: 170, ml: 1, mr: 1, mt: 3, maxHeight: 350, borderRadius: 2 }}>
-      
-          <StyledRating sx={{display:'flex', justifyContent:'end',mt:0.5}}
-            name="customized-color"
-            value={productRating}
-            onChange={(event, newValue) => {
-              setProductRating(newValue);
-            }}
-            getLabelText={(value: number) => `${value} Heart${value !== 1 ? 's' : ''}`}
-            precision={1}
-            max={1}
-            icon={<FavoriteIcon fontSize="medium" />}
-            emptyIcon={<FavoriteBorderIcon fontSize="medium" />}
-          />
-        {/* <AddFavorites onAdd={onAdd} initial={-0} /> */}
-      
+      <Card variant="elevation" elevation={2} sx={{ minWidth: 170, maxWidth: 170, ml: 1, mr: 1, mt: 3,minHeight:280, maxHeight: 350, borderRadius: 2 }}>
+     
         <Badge sx={{ ml: 1.3 }} badgeContent={getBadgetQuantity()} color='pop'> </Badge>
       
         <CardMedia sx={{ height: 180, minWidth: 170, maxWidth: 170, display: 'flex', justifyContent: 'center' }} image={info.img} onClick={() => handleProductClick(info.id)} title="HUMABRC" />
@@ -101,7 +75,7 @@ console.log(rating);
         </CardContent>
       
         <CardActions sx={{ maxWidth: 170 }}>
-          <Box sx={{ mt: 4, mb: 2, height: 25, display: 'flex', justifyContent: 'space-between', width: '100%', alignContent: 'center' }}>
+          <Box sx={{ mt: 4, mb: 1, height: 25, display: 'flex', justifyContent: 'space-between', width: '100%', alignContent: 'center' }}>
             <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
             <Button data-product-id={info.id} color={'info'} size="small" sx={{ height: 23 }} variant="outlined" onClick={() => handleProductClick(info.id)}>Info</Button>
           </Box>
