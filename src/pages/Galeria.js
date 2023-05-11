@@ -42,8 +42,8 @@ const Galeria = () => {
       <Modal sx={{width:'98%', display:'flex', justifyContent:'center', alignItems:'center'}} open={Boolean(selectedImage)} onClose={() => setSelectedImage(null)}>
         <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
           <img className='galeryImg' src={selectedImage} alt="Imagen seleccionada" />
-        <Box sx={{position:'absolute', ml:'50%'}}>
-            <Button variant='contained' sx={{mt:'1px', position:'absolute', color:'purple', backgroundColor:'white' }}  onClick={() => setSelectedImage(null)}> <CloseIcon  /></Button> 
+        <Box sx={{position:'absolute', ml:'40%', mt:1}}>
+            <Button size='small' variant='contained' sx={{mt:'1px', position:'absolute', color:'purple', backgroundColor:'white', maxWidth:'10px', maxHeight:'20px', padding:0 }}  onClick={() => setSelectedImage(null)}> <CloseIcon/></Button> 
           </Box>
         </Box>
       </Modal>
