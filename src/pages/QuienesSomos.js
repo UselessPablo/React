@@ -62,7 +62,7 @@ const QuienesSomos = () => {
             open={openSnackbar}
             autoHideDuration={3000}
             onClose={confirmation}
-            anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }} 
           >
             <Alert onClose={() => setOpenSnackbar(false)} severity="success" sx={{ width: '100%' }}>
               {snackbarMessage}

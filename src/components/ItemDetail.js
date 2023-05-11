@@ -35,9 +35,8 @@ const ItemDetail = ({ data }) => {
 
 
   return (
-    <Box>
+    <Box sx={{mt:8}}>
       <div className='center2 '>
-
         <Card variant='elevation' sx={{ width: 345, mt: 7, borderRadius: 2}}>
           <CardMedia
             sx={{ height: 140, width: 345 }}

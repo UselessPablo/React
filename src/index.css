@@ -303,7 +303,9 @@ span {
   background-color: rgba(166, 14, 226, 0.315);
   height: 15px;
 }
-
+.galeryImg{
+  width: 80%;
+}
 
 
 #seguir {
