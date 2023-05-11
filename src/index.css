@@ -304,7 +304,9 @@ span {
   height: 15px;
 }
 .galeryImg{
-  width: 80%;
+  max-width:800px;
+min-width:300px;
+border-radius: 0.6rem;
 }
 
 
@@ -518,7 +520,11 @@ form {
   .parrafoMain{
 display: none;
 }
-
+.galeryImg{
+  max-width:300px;
+  max-height: 400px;
+border-radius: 0.6rem;
+}
   .detalleInfo{
     position: fixed;
     top: 100px;

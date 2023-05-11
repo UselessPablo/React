@@ -39,11 +39,11 @@ const Galeria = () => {
         </ImageListItem>
       ))}
     </ImageList>
-      <Modal sx={{ width: '90%', mt: '10vh' }} open={Boolean(selectedImage)} onClose={() => setSelectedImage(null)}>
+      <Modal sx={{width:'98%', display:'flex', justifyContent:'center', alignItems:'center'}} open={Boolean(selectedImage)} onClose={() => setSelectedImage(null)}>
         <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
           <img className='galeryImg' src={selectedImage} alt="Imagen seleccionada" />
-        <Box sx={{position:'absolute',ml:'69%'}}>
-            <Button variant='contained' sx={{mt:1}} color='pop' onClick={() => setSelectedImage(null)}> <CloseIcon  />Cerrar</Button> 
+        <Box sx={{position:'absolute', ml:'50%'}}>
+            <Button variant='contained' sx={{mt:'1px', position:'absolute', color:'purple', backgroundColor:'white' }}  onClick={() => setSelectedImage(null)}> <CloseIcon  /></Button> 
           </Box>
         </Box>
       </Modal>
