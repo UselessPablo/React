@@ -10,7 +10,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box, Button,  Badge } from '@mui/material';
+import { Box, Button,  Badge} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
@@ -20,6 +20,11 @@ import PaletteIcon from '@mui/icons-material/Palette';
 import { ConnectWithoutContact } from '@mui/icons-material';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+
+
+
+
+
 export const ScrollToTop = () => {
     window.scrollTo(-110, -100);
 }
@@ -38,7 +43,6 @@ const Navbar = () => {
     notificationTime.setHours(11, 0, 0, 0);
 
    
-
     useEffect(() => {
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'workshop');
@@ -127,7 +131,8 @@ const Navbar = () => {
     };
 
     return (
-        <>
+        
+       <>
             <AppBar>
             </AppBar>
             <nav className='sticky'>
@@ -206,6 +211,7 @@ const Navbar = () => {
                 </div>
             </Box>
         </>
+  
     );
 }
 

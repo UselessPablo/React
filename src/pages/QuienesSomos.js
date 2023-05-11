@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useNavigate } from "react-router-dom";
-import { Button, Input, Box, Paper, Typography } from "@mui/material";
+import { Button, Input, Box, Paper, Typography, Alert,Snackbar } from "@mui/material";
 import Carrousel from '../components/Carrousel'
 
 const QuienesSomos = () => {
@@ -9,6 +9,8 @@ const QuienesSomos = () => {
 
   const [mensaje, setMensaje] = useState();
   const [mensajeActual, setMensajeActual] = useState(opiniones[Math.floor(Math.random() * opiniones.length)]);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
 
   const inputMessage = (e) => {
     const { name, value } = e.target;
@@ -20,7 +22,9 @@ const QuienesSomos = () => {
     const mensajesCollection = collection(db, 'mensajes');
     addDoc(mensajesCollection, mensaje)
       .then(({ id }) => console.log(id));
-    confirmation();
+    setSnackbarMessage('Mensaje enviado con éxito');
+    setOpenSnackbar(true);
+     
   }
 
   const confirmation = () => {
@@ -53,18 +57,30 @@ const QuienesSomos = () => {
       </div>
       <div className="contacto">
         <h3> Para productos personalizados o consultas envianos un Email y te responderemos a la brevedad</h3>
-        <form className="formContact">
-          <Input
-            placeholder="Email"
-            onChange={inputMessage}
-            name="email"
-            type="email"
-            required={true}
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          />
-          <textarea onChange={inputMessage} name='mensaje' placeholder="Mensaje..."></textarea>
-          <Button variant='contained' size='small' color='success' type='button' sx={{ mb: 3, ml: 1 }} onClick={handleClick} >Enviar</Button>
-        </form>
+        <Box sx={{ position: 'relative' }}>
+          <Snackbar
+            open={openSnackbar}
+            autoHideDuration={3000}
+            onClose={confirmation}
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+          >
+            <Alert onClose={() => setOpenSnackbar(false)} severity="success" sx={{ width: '100%' }}>
+              {snackbarMessage}
+            </Alert>
+          </Snackbar>
+          <form className="formContact">
+            <Input
+              placeholder="Email"
+              onChange={inputMessage}
+              name="email"
+              type="email"
+              required={true}
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <textarea onChange={inputMessage} name='mensaje' placeholder="Mensaje..."></textarea>
+            <Button variant='contained' size='small' color='success' type='button' sx={{ mb: 3, ml: 1 }} onClick={handleClick} >Enviar</Button>
+          </form>
+        </Box>
       </div>
     </>
   )
