@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { logInWithEmailAndPassword } from '../utils/Config';
-import { Box, Input, TextField } from '@mui/material';
+import { logInWithEmailAndPassword, signInWithGoogle } from '../utils/Config';
+import { Box, Input, TextField, Button } from '@mui/material';
 import { useNavigate, Link } from 'react-router-dom';
-import { auth } from '../utils/Config';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ const Login = () => {
             alert('Error al iniciar sesión');
         }
     };
-
+  
     return (
         <Box>
             <h2>Login</h2>
@@ -42,6 +42,7 @@ const Login = () => {
                 <br />
                 <button type="submit">Iniciar sesión</button>
             </form>
+            <Button onClick={signInWithGoogle}>Iniciar sesión con Google</Button>
             <p>No tienes una cuenta? Regístrate <Link to="/registro">aquí</Link>.</p>
         </Box>
     );

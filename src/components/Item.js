@@ -56,7 +56,7 @@ const Item = ({ info }) => {
       }
     }
   }, [lastClickedProduct]);
-  console.log(info.cantidad);
+ 
   return (
     <Box>
       <Card variant="elevation" elevation={2} sx={{ minWidth: 170, maxWidth: 170, ml: 1, mr: 1, mt: 3,minHeight:280, maxHeight: 350, borderRadius: 2 }}>
