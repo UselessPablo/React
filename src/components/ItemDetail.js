@@ -6,8 +6,8 @@ import { UseCartContex } from './CartContext';
 import { Card, CardContent, Box, Typography } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-
-
+import { WhatsappShareButton, WhatsappIcon } from 'react-share';
+import ShareIcon from '@mui/icons-material/Share';
 
 const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
@@ -31,6 +31,11 @@ const ItemDetail = ({ data }) => {
     setGoToCart(true);
     addProduct(data, cantidad)
   }
+  const shareProduct = () => {
+    const shareUrl = window.location.href; // Obtén la URL actual del producto
+    const message = `¡Hola, Mirá este producto: ${data.detalle}\n\nPrecio: $${data.precio}\n\n${shareUrl}`;
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`);
+  };
 
 
 
@@ -50,7 +55,17 @@ const ItemDetail = ({ data }) => {
             <Typography variant="body2" color="text.secondary" sx={{fontWeight:'bold'}}>
               {data.detalle}
             </Typography>
+          
           </CardContent>
+          <WhatsappShareButton // Usa el componente WhatsappShareButton
+            url={window.location.href} // Pasa la URL actual del producto
+            title={data.detalle} // Pasa el título/detalle del producto
+            separator=" " // Puedes ajustar el separador entre el título y la URL
+            onClick={shareProduct} // Llama a la función shareProduct al hacer clic en el botón de compartir
+          >
+            <ShareIcon size={24}  sx={{ml:'600%', mb:1}} title='compartir' />
+            <span style={{ display: 'none'}} color='primary'>Compartir en WhatsApp</span>
+          </WhatsappShareButton>
         </Card>
 
         <Button onClick={goTo} variant="contained" color='fondo' sx={{ mt: 3, mb: 2 }}>Seguir Comprando</Button>

@@ -147,14 +147,14 @@ const goLogin = ()=>{
                                 </IconButton>
                             </ButtonBase>
                             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
-                                <List sx={{ height: '100%', display:'flex', flexDirection:'column', alignContent:'center', alignItems:'center' }}>
+                                <List sx={{ height: '80%', display:'flex', flexDirection:'column', alignContent:'center', alignItems:'center' }}>
                                     <ListItemButton onClick={goHome} sx={{ borderRadius: 3, ml: 6, padding: 1, mr: 3, mt: 3, textAlign: 'center', width: '50%' }}>
                                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
                                             <Avatar variant='rounded' className='logo' src={logo} sx={{ width: '50%', height: 'auto' }} />
                                             <ListItemText sx={{ fontWeight: 'bold', textAlign: 'center' }} primary="Inicio" />
                                         </Box>
                                     </ListItemButton>
-                                    <ListItemButton onClick={goGaleria} sx={{ borderRadius: 3, mt: 12,  textAlign: 'center', fontWeight: 'body' }} >
+                                    <ListItemButton onClick={goGaleria} sx={{ borderRadius: 3, mt: 7,  textAlign: 'center'}} >
                                         <ListItemIcon><ImageIcon sx={{ pt: 0.3, pr: 0.2, color: 'primary.main', mr: 1 }} />
                                             <ListItemText primary="Galería" />
                                         </ListItemIcon>
