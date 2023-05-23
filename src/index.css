@@ -687,6 +687,10 @@ ul{
   display: flex;
   flex-direction: row;
 }
+.logo{
+  width: 10px;
+  height: 10px;
+}
 /* .agregar{
   background-color: rgb(255, 255, 255);
   width: 90px;

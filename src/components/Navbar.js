@@ -10,17 +10,17 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../index.css'
 import Cart from './CartWidget';
-import { Box, Button,  Badge} from '@mui/material';
+import { Box, Button,  Badge, Avatar} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ImageIcon from '@mui/icons-material/Image';
 import PaletteIcon from '@mui/icons-material/Palette';
-import { ConnectWithoutContact, Login } from '@mui/icons-material';
+import { ConnectWithoutContact, Image, Login } from '@mui/icons-material';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-
+import logo from '../assets/img/logohuma.png'
 
 
 
@@ -147,24 +147,25 @@ const goLogin = ()=>{
                                 </IconButton>
                             </ButtonBase>
                             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
-                                <List sx={{ height: '100%' }}>
+                                <List sx={{ height: '100%', display:'flex', flexDirection:'column', alignContent:'center', alignItems:'center' }}>
                                     <ListItemButton onClick={goHome} sx={{ borderRadius: 3, ml: 6, padding: 1, mr: 3, mt: 3, textAlign: 'center', width: '50%' }}>
-                                        <ListItemIcon><HomeIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
-                                            <ListItemText sx={{ fontWeight: 'bold' }} primary="Inicio" />
-                                        </ListItemIcon>
+                                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
+                                            <Avatar variant='rounded' className='logo' src={logo} sx={{ width: '50%', height: 'auto' }} />
+                                            <ListItemText sx={{ fontWeight: 'bold', textAlign: 'center' }} primary="Inicio" />
+                                        </Box>
                                     </ListItemButton>
-                                    <ListItemButton onClick={goGaleria} sx={{ borderRadius: 3, mt: 12, mr: 2, ml: 3, textAlign: 'center', fontWeight: 'body' }} >
-                                        <ListItemIcon><ImageIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
+                                    <ListItemButton onClick={goGaleria} sx={{ borderRadius: 3, mt: 12,  textAlign: 'center', fontWeight: 'body' }} >
+                                        <ListItemIcon><ImageIcon sx={{ pt: 0.3, pr: 0.2, color: 'primary.main', mr: 1 }} />
                                             <ListItemText primary="Galería" />
                                         </ListItemIcon>
                                     </ListItemButton>
-                                    <ListItemButton onClick={goWorkshop} sx={{ borderRadius: 3, mt: 2, ml: 3, mr: 2, textAlign: 'center' }}>
-                                        <ListItemIcon><PaletteIcon sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
+                                    <ListItemButton onClick={goWorkshop} sx={{ borderRadius: 3, mt: 1, textAlign: 'center' }}>
+                                        <ListItemIcon><PaletteIcon sx={{ pt: 0.3, pr: 0.2, color: 'pop.main', mr: 1 }} />
                                             <ListItemText primary="WorkShops" />
                                         </ListItemIcon>
                                     </ListItemButton>
-                                    <ListItemButton onClick={goContact} sx={{ borderRadius: 3, mt: 2, mb: 16, mr: 2, ml: 3, textAlign: 'center' }}>
-                                        <ListItemIcon><ConnectWithoutContact sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
+                                    <ListItemButton onClick={goContact} sx={{ borderRadius: 3, mt: 1, mb: 16, mr: 2, ml: 3, textAlign: 'center' }}>
+                                        <ListItemIcon><ConnectWithoutContact sx={{ pt: 0.3, pr: 0.2, color: 'red', mr: 1 }} />
                                             <ListItemText primary="Contactame" />
                                         </ListItemIcon>
                                     
