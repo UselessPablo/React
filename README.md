@@ -16,4 +16,8 @@ Al finalizar compra se guardan los datos en Firebase con sus respectivos detalle
 - items seleccionados y cantidad,
 - dirección y teléfono.
 
+- Update: al agregar productos despliega un badge.
+- al agregar cierta cantidad de productos y se alcanza el stock, figura sin stock.
+- whatsapp e Instagram redireccionan a sus respectivos links.
+- Agregado el boton de compartir cuando se ve el detalle de un producto.
 ### Pablo Auterio react, javascript, css.
