@@ -70,7 +70,7 @@ const ItemDetail = ({ data }) => {
             : <Counter stock={getStock()} onAdd={onAdd} initial={-0} />
         }
       </div>
-      <div id={`producto-${data.id}`}></div>
+      
     </Box>
   )
 }

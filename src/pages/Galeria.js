@@ -16,6 +16,7 @@ import Modal from '@mui/material/Modal';
 import { Box, IconButton, Button } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 const Galeria = () => {
   const [selectedImage, setSelectedImage] = React.useState(null);
   return (
@@ -102,14 +103,14 @@ const itemData = [
   },
   {
     img: i,
-    title: 'Varios Barros',
+    title:'Macetas Esgradiadas con Patas',
     author: '@PabloA',
     rows: 2,
     cols: 2,
   },
   {
-    img: j,
-    title: 'Macetas Esgradiadas con Patas',
+    img: j, 
+    title: 'Varios Barros',
     author: '@AleQ',
   },
 
