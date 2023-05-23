@@ -10,17 +10,18 @@ const Footer = () => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 
+  const redirectToInstagram = () => {
+    window.open("https://www.instagram.com/huma.brc", "_blank");
+  };
+
   return (
     <footer>
       <div className="footer">
-        <a className='footImg' target="_blank" rel="noreferrer" onClick={redirectToWhatsApp}>
+        <a className='footImg' rel="noreferrer" onClick={redirectToWhatsApp}>
           <img className='footImg' src={Whatsapp} alt='whatsapp logo' />
         </a>
-        <a className='footImg' href='https://www.instagram.com/' target="_blank" rel="noreferrer" >
+        <a className='footImg'  rel="noreferrer" onClick={redirectToInstagram}>
           <img className='footImg' src={Instagram} alt='Instagram logo' />
-        </a>
-        <a className='footImg' href='https://www.facebook.com/' target="_blank" rel="noreferrer" >
-          <img className='footImg' src={Facebook} alt='Facebook logo' />
         </a>
         <p>Copyright Pablo A.</p>
       </div>
@@ -29,3 +30,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

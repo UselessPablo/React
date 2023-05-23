@@ -37,12 +37,10 @@ const ItemDetail = ({ data }) => {
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`);
   };
 
-
-
   return (
-    <Box sx={{mt:8}}>
+    <Box sx={{ mt: 8 }}>
       <div className='center2 '>
-        <Card variant='elevation' sx={{ width: 345, mt: 7, borderRadius: 2}}>
+        <Card variant='elevation' sx={{ width: 345, mt: 7, borderRadius: 2 }}>
           <CardMedia
             sx={{ height: 140, width: 345 }}
             image={data.img}
@@ -52,22 +50,19 @@ const ItemDetail = ({ data }) => {
             <Typography gutterBottom variant="h5" component="div">
               $  {data.precio}
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{fontWeight:'bold'}}>
+            <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
               {data.detalle}
             </Typography>
-          
           </CardContent>
           <WhatsappShareButton // Usa el componente WhatsappShareButton
             url={window.location.href} // Pasa la URL actual del producto
             title={data.detalle} // Pasa el título/detalle del producto
-            separator=" " // Puedes ajustar el separador entre el título y la URL
-            onClick={shareProduct} // Llama a la función shareProduct al hacer clic en el botón de compartir
-          >
-            <ShareIcon size={24}  sx={{ml:'600%', mb:1}} title='compartir' />
-            <span style={{ display: 'none'}} color='primary'>Compartir en WhatsApp</span>
+            separator="  " // Puedes ajustar el separador entre el título y la URL
+            onClick={shareProduct}>
+            <ShareIcon size={24} sx={{ ml: '600%', mb: 1 }} title='compartir' />
+            <span style={{ display: 'none' }} color='primary'>Compartir en WhatsApp</span>
           </WhatsappShareButton>
         </Card>
-
         <Button onClick={goTo} variant="contained" color='fondo' sx={{ mt: 3, mb: 2 }}>Seguir Comprando</Button>
         {
           goToCart
