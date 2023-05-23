@@ -13,7 +13,7 @@ const Item = ({ info }) => {
   const [goToCart, setGoToCart] = useState(false);
   const [lastClickedProduct, setLastClickedProduct] = useState();
   const productsContainerRef = useRef(null);
-
+ 
   
   const getStock = () => {
     const item = isInCart(info.id)
@@ -56,7 +56,7 @@ const Item = ({ info }) => {
       }
     }
   }, [lastClickedProduct]);
-
+  console.log(info.cantidad);
   return (
     <Box>
       <Card variant="elevation" elevation={2} sx={{ minWidth: 170, maxWidth: 170, ml: 1, mr: 1, mt: 3,minHeight:280, maxHeight: 350, borderRadius: 2 }}>
@@ -76,8 +76,21 @@ const Item = ({ info }) => {
       
         <CardActions sx={{ maxWidth: 170 }}>
           <Box sx={{ mt: 4, mb: 1, height: 25, display: 'flex', justifyContent: 'space-between', width: '100%', alignContent: 'center' }}>
-            <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
+            {info.cantidad === 0 ? (
+              <Typography variant="body2" color="error">
+                Sin Stock
+              </Typography>
+            ) : (
+              getBadgetQuantity() >= info.cantidad ? (
+                <Typography variant="body2" color="error" sx={{fontWeight:'bold', mt:0.3, ml:1.4}}>
+                  Sin Stock
+                </Typography>
+              ) : (
+                <AddCart stock={getStock()} onAdd={onAdd} initial={-0} />
+              )
+            )}
             <Button data-product-id={info.id} color={'info'} size="small" sx={{ height: 23 }} variant="outlined" onClick={() => handleProductClick(info.id)}>Info</Button>
+           
           </Box>
         </CardActions>
       </Card>

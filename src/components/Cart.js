@@ -7,29 +7,8 @@ import Date from './Date'
 import Compra from './Compra'
 import { Input } from '@mui/material';
 import { Button, Box } from '@mui/material';
-// import PaymentService from './Servicios/PaymentService';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
-
-// const paymentService = new PaymentService();
-
-// const handleCreatePayment = async () => {
-//   const name = 'Producto de ejemplo';
-//   const price = 1000;
-//   const unit = 1;
-//   const img = 'https://ruta/a/imagen.jpg';
-
-//   const payment = await paymentService.createPaymentMercadoPago(name, price, unit, img);
-
-//   // Aquí podrías procesar la respuesta del método createPaymentMercadoPago
-// };
-
-
-
-
-
-
-
 
 const Cart = () => {
   const { cart, totalPrice, cleanCart } = UseCartContex();

@@ -12,7 +12,6 @@ const AddCart = ({ stock, onAdd, initial }) => {
                 setValor(Valor + 1);
             }
         }
- 
         return (
 
             <>

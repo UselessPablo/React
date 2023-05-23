@@ -17,7 +17,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ImageIcon from '@mui/icons-material/Image';
 import PaletteIcon from '@mui/icons-material/Palette';
-import { ConnectWithoutContact } from '@mui/icons-material';
+import { ConnectWithoutContact, Login } from '@mui/icons-material';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
@@ -129,7 +129,9 @@ const Navbar = () => {
         navigate('/');
         toggleDrawer();
     };
-
+const goLogin = ()=>{
+    navigate('/Login')
+}
     return (
         
        <>
@@ -165,8 +167,11 @@ const Navbar = () => {
                                         <ListItemIcon><ConnectWithoutContact sx={{ pt: 0.3, pr: 0.2, color: 'black', mr: 1 }} />
                                             <ListItemText primary="Contactame" />
                                         </ListItemIcon>
+                                    
                                     </ListItemButton>
                                 </List>
+                                <Button onClick={goLogin}>Login</Button>
+                           
                             </Drawer>
                         </Toolbar>
               

@@ -9,9 +9,13 @@ import QuienesSomos from "../pages/QuienesSomos";
 import Home from '../components/Home'
 import Galeria from "../pages/Galeria";
 import WorkShops from "../pages/WorkShops";
+import {AuthProvider} from '../components/Auth'
+import Login from "../components/Login";
+import Register from "../components/Register";
 const Router = () => (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <HashRouter basemane='/'>
+    <AuthProvider>
+       <HashRouter basemane='/'>
         
         <Routes>
             <Route element={<Layout />}>
@@ -24,13 +28,14 @@ const Router = () => (
                 <Route path='/Cart' element={<Cart />} />
                 <Route path='/page2/Compra' element={<Compra />} />
                 <Route path='/pages/QuienesSomos' element={<QuienesSomos />} />
-                {/* <Route path='/Registration' element={<Registration/>} /> */}
-                {/* <Route path='/Login' element={<Login />} /> */}
+                <Route path='/Registro' element={<Register/>} />
+                <Route path='/Login' element={<Login />} />
                 {/* <Route path='/Reset' element={<Reset />} /> */}
             </Route>
         </Routes>
            
         </HashRouter>
+    </AuthProvider>
     // </BrowserRouter>
 )
 export default Router;

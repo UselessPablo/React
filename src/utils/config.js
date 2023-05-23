@@ -19,12 +19,9 @@ import {
     collection,
     where,
     addDoc,
+    doc,
+    getDoc,
 } from "firebase/firestore";
-
-
-
-
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyAOngbwz8O6K3yrIMDsnYdF0zK8DO74Mqg",
@@ -61,44 +58,65 @@ const signInWithGoogle = async () => {
         alert(err.message);
     }
 };
+
 const logInWithEmailAndPassword = async (email, password) => {
     try {
-        await signInWithEmailAndPassword(auth, email, password);
+        // Inicia sesión con el email y la contraseña proporcionados
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Obtén el documento del usuario desde Firestore
+        const userDocRef = doc(db, 'users', user.uid);
+        const userDocSnap = await getDoc(userDocRef);
+
+        console.log(userDocSnap.exists(), userDocSnap.data()); // Verificar los valores del documento
+
+        // Verifica si el usuario tiene el permiso de administrador
+        if (userDocSnap.exists() && userDocSnap.data().isAdmin === 1) {
+            return true;
+        } else {
+            throw new Error('No tienes permisos de administrador');
+        }
     } catch (err) {
         console.error(err);
         alert(err.message);
+        return false;
     }
 };
-const registerWithEmailAndPassword = async (name, email, password) => {
+
+
+const registerWithEmailAndPassword = async ( email, password) => {
     try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
         const user = res.user;
+        // Agregar el campo "isAdmin" al documento del usuario en Firestore
         await addDoc(collection(db, "users"), {
             uid: user.uid,
-            name,
             authProvider: "local",
             email,
+            isAdmin: 0, // Set the default value of isAdmin to 0
         });
     } catch (err) {
         console.error(err);
         alert(err.message);
     }
 };
+
 const sendPasswordReset = async (email) => {
     try {
         await sendPasswordResetEmail(auth, email);
-        alert("Password reset link sent!");
+        alert("¡Se envió el enlace para restablecer la contraseña!");
     } catch (err) {
         console.error(err);
         alert(err.message);
     }
 };
+
 const logout = () => {
     signOut(auth);
 };
 
-
-export  {
+export {
     auth,
     db,
     signInWithGoogle,

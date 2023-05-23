@@ -2,7 +2,6 @@
 import { UseCartContex } from './CartContext'
 import { Button, CardContent, Card, CardMedia, CardActions, Typography } from '@mui/material';
 
-
 const ItemCart = ({ product, cantidad }) => {
   const { removeProduct } = UseCartContex();
 
