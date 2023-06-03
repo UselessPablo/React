@@ -49,7 +49,7 @@ const Item = ({ info }) => {
     // Simular una carga de base de datos con un retardo de 2 segundos
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
     return () => {
       clearTimeout(timer);
     };
